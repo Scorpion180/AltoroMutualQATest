@@ -1,0 +1,4 @@
+03/23/2021 06:16:20 PM - MainPage - INFO: Element list found with locator: a and  locatorType: css
+03/23/2021 06:16:48 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + BROKEN_LINKS http://demo.testfire.net/cgi.exe 404 http://demo.testfire.net/default.jsp?content=security.htm 404 http://www-142.ibm.com/software/products/us/en/subcategory/SWI10 Time out 
+03/23/2021 06:16:48 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/BROKEN_LINKS .1616545008103.png
+03/23/2021 06:16:48 PM - TestStatus - ERROR: test_links ### TEST FAILED
