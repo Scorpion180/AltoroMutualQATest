@@ -1,4 +1,56 @@
-03/23/2021 06:16:20 PM - MainPage - INFO: Element list found with locator: a and  locatorType: css
-03/23/2021 06:16:48 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + BROKEN_LINKS http://demo.testfire.net/cgi.exe 404 http://demo.testfire.net/default.jsp?content=security.htm 404 http://www-142.ibm.com/software/products/us/en/subcategory/SWI10 Time out 
-03/23/2021 06:16:48 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/BROKEN_LINKS .1616545008103.png
-03/23/2021 06:16:48 PM - TestStatus - ERROR: test_links ### TEST FAILED
+03/23/2021 06:50:05 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/23/2021 06:50:05 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/23/2021 06:50:05 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/23/2021 06:50:05 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/23/2021 06:50:05 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/23/2021 06:50:05 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/23/2021 06:50:05 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/23/2021 06:50:06 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/23/2021 06:50:06 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/23/2021 06:50:06 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/23/2021 06:50:06 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/23/2021 06:50:06 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/23/2021 06:50:06 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/23/2021 06:50:06 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/23/2021 06:50:06 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/23/2021 06:50:06 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/23/2021 06:50:06 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/23/2021 06:50:06 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/23/2021 06:50:06 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/23/2021 06:50:06 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/23/2021 06:50:06 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/23/2021 06:50:07 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/23/2021 06:50:07 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/23/2021 06:50:07 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/23/2021 06:50:07 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/23/2021 06:50:07 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/23/2021 06:50:07 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/23/2021 06:50:07 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/23/2021 06:50:07 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/23/2021 06:50:07 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/23/2021 06:50:07 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/23/2021 06:50:07 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/23/2021 06:50:07 PM - MainPage - INFO: Element list found with locator: a and  locatorType: css
+03/23/2021 06:50:33 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + BROKEN_LINKS http://demo.testfire.net/cgi.exe 404 http://www-142.ibm.com/software/products/us/en/subcategory/SWI10 Time out 
+03/23/2021 06:50:33 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/BROKEN_LINKS .1616547033892.png
+03/23/2021 06:50:33 PM - TestStatus - ERROR: test_links ### TEST FAILED

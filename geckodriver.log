@@ -442,3 +442,14 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1616546999588	geckodriver	INFO	Listening on 127.0.0.1:63790
+1616547002594	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\halo3\\AppData\\Local\\Temp\\rust_mozprofileW4j1Ce"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616547004739	Marionette	INFO	Listening on port 63799
+1616547005217	Marionette	WARN	TLS certificate errors will be ignored for this session
+1616547005226	Marionette	ERROR	[15] No reply from Marionette:Register
+1616547033969	Marionette	INFO	Stopped listening on port 63799
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
