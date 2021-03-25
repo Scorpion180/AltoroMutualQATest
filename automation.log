@@ -1,56 +1,611 @@
-03/23/2021 06:50:05 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/23/2021 06:50:05 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/23/2021 06:50:05 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/23/2021 06:50:05 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/23/2021 06:50:05 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/23/2021 06:50:05 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/23/2021 06:50:05 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/23/2021 06:50:06 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
-03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
-03/23/2021 06:50:06 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
-03/23/2021 06:50:06 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
-03/23/2021 06:50:06 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
-03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/23/2021 06:50:06 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/23/2021 06:50:06 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/23/2021 06:50:06 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/23/2021 06:50:06 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
-03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
-03/23/2021 06:50:06 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
-03/23/2021 06:50:06 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
-03/23/2021 06:50:06 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
-03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/23/2021 06:50:06 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/23/2021 06:50:06 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/23/2021 06:50:06 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/23/2021 06:50:06 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/23/2021 06:50:07 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
-03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
-03/23/2021 06:50:07 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
-03/23/2021 06:50:07 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
-03/23/2021 06:50:07 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
-03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/23/2021 06:50:07 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/23/2021 06:50:07 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/23/2021 06:50:07 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/23/2021 06:50:07 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
-03/23/2021 06:50:07 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
-03/23/2021 06:50:07 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
-03/23/2021 06:50:07 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
-03/23/2021 06:50:07 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
-03/23/2021 06:50:07 PM - MainPage - INFO: Element list found with locator: a and  locatorType: css
-03/23/2021 06:50:33 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + BROKEN_LINKS http://demo.testfire.net/cgi.exe 404 http://www-142.ibm.com/software/products/us/en/subcategory/SWI10 Time out 
-03/23/2021 06:50:33 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/BROKEN_LINKS .1616547033892.png
-03/23/2021 06:50:33 PM - TestStatus - ERROR: test_links ### TEST FAILED
+03/25/2021 12:06:11 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:06:11 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:06:11 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:06:11 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:06:12 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:06:12 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:06:12 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:06:12 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:06:12 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:06:12 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:06:12 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:06:12 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:06:12 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:06:12 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:06:12 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:06:12 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:06:12 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:06:12 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:06:12 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:06:12 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:06:13 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:06:13 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:06:13 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:06:13 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:06:13 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:06:13 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:06:13 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:06:13 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:06:13 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:06:13 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:06:13 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:06:13 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:06:13 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:06:13 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:06:13 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:06:13 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:06:13 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:06:13 AM - MainPage - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 12:06:13 AM - MainPage - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 12:06:13 AM - MainPage - INFO: Cannot send data on the element with locator: '' locatorType: id
+03/25/2021 12:06:16 AM - MainPage - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 12:06:16 AM - MainPage - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 12:07:34 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:07:35 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:07:35 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:07:35 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:07:35 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:07:35 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:07:35 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:07:35 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:07:35 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:07:35 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:07:35 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:07:35 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:07:35 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:07:35 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:07:35 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:07:35 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:07:35 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:07:35 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:07:35 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:07:35 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:07:35 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:07:35 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:07:35 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:07:35 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:07:35 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:07:35 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:07:35 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:07:36 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:07:36 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:07:36 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:07:36 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:07:36 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:07:36 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:07:36 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:07:36 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:07:36 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:07:36 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:07:36 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:07:36 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:07:36 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:07:36 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:07:36 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:07:36 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:07:36 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:07:36 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:07:36 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:07:36 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:07:36 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:07:36 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:07:36 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:07:36 AM - MainPage - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 12:07:36 AM - MainPage - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 12:07:36 AM - MainPage - INFO: Cannot send data on the element with locator: '' locatorType: id
+03/25/2021 12:07:39 AM - MainPage - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 12:07:40 AM - MainPage - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 12:07:58 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:07:58 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:07:58 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:07:58 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:07:58 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:07:58 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:07:58 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:07:58 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:07:58 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:07:58 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:07:58 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:07:58 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:07:58 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:07:58 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:07:58 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:07:58 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:07:58 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:07:58 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:07:58 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:07:58 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:07:58 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:07:58 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:07:58 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:07:58 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:07:58 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:07:58 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:07:58 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:07:59 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:07:59 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:07:59 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:07:59 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:07:59 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:07:59 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:07:59 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:07:59 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:07:59 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:07:59 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:07:59 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:07:59 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:07:59 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:07:59 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:07:59 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:07:59 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:07:59 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:07:59 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:07:59 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:07:59 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:07:59 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:07:59 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:07:59 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:07:59 AM - MainPage - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 12:07:59 AM - MainPage - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 12:07:59 AM - MainPage - INFO: Cannot send data on the element with locator: '' locatorType: id
+03/25/2021 12:08:02 AM - MainPage - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 12:08:02 AM - MainPage - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 12:10:44 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:10:44 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:10:44 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:10:44 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:10:44 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:10:44 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:10:44 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:10:44 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:10:44 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:10:44 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:10:44 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:10:44 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:10:44 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:10:44 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:10:44 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:10:44 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:10:44 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:10:44 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:10:44 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:10:44 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:10:44 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:10:44 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:10:45 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:10:45 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:10:45 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:10:45 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:10:45 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:10:45 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:10:45 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:10:45 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:10:45 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:10:45 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:10:45 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:10:45 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:10:45 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:10:45 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:10:45 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:10:45 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:10:45 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:10:45 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:10:45 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:10:45 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:10:45 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:10:45 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:10:45 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:10:45 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:10:46 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:10:46 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:10:46 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:10:46 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:10:46 AM - MainPage - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 12:10:46 AM - MainPage - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 12:10:46 AM - MainPage - INFO: Cannot send data on the element with locator: '' locatorType: id
+03/25/2021 12:10:49 AM - MainPage - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 12:10:49 AM - MainPage - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 12:15:20 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:15:20 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:15:20 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:15:20 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:15:20 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:15:20 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:15:20 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:15:20 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:15:20 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:15:20 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:15:21 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:15:21 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:15:21 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:15:21 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:15:21 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:15:21 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:15:21 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:15:21 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:15:21 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:15:21 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:15:21 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:15:21 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:15:21 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:15:21 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:15:21 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:15:21 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:15:21 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:15:21 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:15:21 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:15:21 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:15:21 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:15:21 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:15:21 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:15:21 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:15:21 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:15:21 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:15:21 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:15:21 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:15:21 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:15:22 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:15:22 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:15:22 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:15:22 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:15:22 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:15:22 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:15:22 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:15:22 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:15:22 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:15:22 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:15:22 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:15:22 AM - MainPage - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 12:15:22 AM - MainPage - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 12:15:22 AM - MainPage - INFO: Cannot send data on the element with locator: '' locatorType: id
+03/25/2021 12:15:25 AM - MainPage - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 12:15:25 AM - MainPage - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 12:18:01 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:18:01 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:18:01 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:18:01 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:18:01 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:18:01 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:18:01 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:18:01 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:18:01 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:18:01 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:18:01 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:18:01 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:18:01 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:18:01 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:18:01 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:18:01 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:18:01 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:18:01 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:18:01 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:18:01 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:18:01 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:18:01 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:18:01 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:18:01 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:18:01 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:18:01 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:18:01 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:18:02 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:18:02 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:18:02 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:18:02 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:18:02 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:18:02 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:18:02 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:18:02 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:18:02 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:18:02 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:18:02 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:18:02 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:18:02 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:18:02 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:18:02 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:18:02 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:18:02 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:18:02 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:18:02 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:18:02 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:18:02 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:18:02 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:18:02 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:18:02 AM - MainPage - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 12:18:03 AM - MainPage - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 12:18:03 AM - MainPage - INFO: Cannot send data on the element with locator: '' locatorType: id
+03/25/2021 12:18:06 AM - MainPage - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 12:18:06 AM - MainPage - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 12:19:55 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:19:55 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:19:55 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:19:55 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:19:55 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:19:55 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:19:55 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:19:55 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:19:55 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:19:55 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:19:55 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:19:55 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:19:55 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:19:55 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:19:55 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:19:55 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:19:55 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:19:55 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:19:55 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:19:55 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:19:55 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:19:55 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:19:55 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:19:55 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:19:55 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:19:55 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:19:55 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:19:56 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:19:56 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:19:56 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:19:56 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:19:56 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:19:56 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:19:56 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:19:56 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:19:56 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:19:56 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:19:56 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:19:56 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:19:56 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:19:56 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:19:56 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:19:56 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:19:56 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:19:56 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:19:56 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:19:56 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:19:56 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:19:56 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:19:56 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:19:56 AM - MainPage - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 12:19:56 AM - MainPage - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 12:19:56 AM - MainPage - INFO: Cannot send data on the element with locator: '' locatorType: id
+03/25/2021 12:19:59 AM - MainPage - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 12:20:00 AM - MainPage - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 12:21:06 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:21:06 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:21:06 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:21:06 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:21:06 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:21:06 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:21:06 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:21:06 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:21:06 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:21:06 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:21:06 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:21:06 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:21:06 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:21:06 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:21:06 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:21:06 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:21:06 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:21:06 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:21:06 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:21:06 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:21:06 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:21:06 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:21:06 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:21:06 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:21:06 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:21:06 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:21:06 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:21:07 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:21:07 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:21:07 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:21:07 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:21:07 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:21:07 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:21:07 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:21:07 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:21:07 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:21:07 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:21:07 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:21:07 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:21:07 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:21:07 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:21:07 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:21:07 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:21:07 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:21:07 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:21:07 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:21:07 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:21:07 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:21:07 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:21:07 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:21:07 AM - MainPage - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 12:21:07 AM - MainPage - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 12:21:07 AM - MainPage - INFO: Cannot send data on the element with locator: '' locatorType: id
+03/25/2021 12:21:10 AM - MainPage - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 12:21:11 AM - MainPage - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 12:22:28 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:22:28 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:22:28 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:22:28 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:22:28 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:22:28 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:22:28 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:22:29 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:22:29 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:22:29 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:22:29 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:22:29 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:22:29 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:22:29 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:22:29 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:22:29 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:22:29 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:22:29 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:22:29 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:22:29 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:22:29 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:22:29 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:22:29 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:22:29 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:22:29 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:22:29 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:22:29 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:22:29 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:22:29 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:22:29 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:22:29 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:22:29 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:22:29 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:22:30 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:22:30 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:22:30 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:22:30 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:22:30 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:22:30 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:22:30 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:22:30 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:22:30 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:22:30 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:22:30 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:22:30 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:22:30 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:22:30 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:22:30 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:22:30 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:22:30 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:22:30 AM - MainPage - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 12:22:30 AM - MainPage - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 12:22:30 AM - MainPage - INFO: Cannot send data on the element with locator: '' locatorType: id
+03/25/2021 12:22:33 AM - MainPage - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 12:22:33 AM - MainPage - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 12:26:33 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:26:34 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:26:34 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:26:34 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:26:34 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:26:34 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:26:34 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:26:34 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:26:34 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:26:34 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:26:34 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:26:35 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:26:35 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:26:35 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:26:35 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:26:35 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:26:35 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:26:35 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:26:35 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:26:35 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:26:35 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:26:35 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:26:35 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:26:35 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:26:35 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:26:35 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:26:35 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:26:35 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:26:35 AM - MainPage - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 12:26:35 AM - MainPage - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 12:26:35 AM - MainPage - INFO: Cannot send data on the element with locator: '' locatorType: id
+03/25/2021 12:26:38 AM - MainPage - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 12:26:38 AM - MainPage - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 12:30:20 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:30:20 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:30:20 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:30:20 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:30:20 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:30:20 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:30:20 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:30:20 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:30:20 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:30:20 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:30:20 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:30:20 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:30:20 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:30:20 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:30:20 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:30:20 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:30:20 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:30:20 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:30:20 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:30:20 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:30:20 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:30:20 AM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 12:30:20 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:30:21 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:30:21 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 12:30:21 AM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 12:30:21 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:30:21 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:30:21 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:30:21 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:30:21 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:30:21 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:30:21 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:30:21 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:30:21 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:30:21 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 12:30:21 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 12:30:21 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:30:21 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:30:21 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 12:30:21 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 12:30:21 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 12:30:21 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 12:30:21 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 12:30:21 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 12:30:21 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 12:30:21 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 12:30:21 AM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 12:30:21 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 12:30:21 AM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 12:30:21 AM - MainPage - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 12:30:22 AM - MainPage - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 12:30:22 AM - MainPage - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 12:30:22 AM - MainPage - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 12:30:25 AM - MainPage - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 12:30:25 AM - MainPage - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 12:30:28 AM - MainPage - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 12:30:38 AM - MainPage - INFO: Alert not found
+03/25/2021 12:30:38 AM - TestStatus - ERROR: ### VERIFICATION FAILED :: + INVALID_DATE
+03/25/2021 12:30:38 AM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/INVALID_DATE.1616653838150.png
+03/25/2021 12:30:38 AM - TestStatus - ERROR: test_invalidDate ### TEST FAILED

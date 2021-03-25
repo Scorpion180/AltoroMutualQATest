@@ -194,6 +194,17 @@ class SeleniumDriver():
             print_stack()
         return element
 
+    def waitForAlert(self, timeout=10, pollFrequency=0.5):
+        try:
+            self.log.info("Waiting for maximum :: " + str(timeout) +
+                          " :: seconds for alert to be present")
+            WebDriverWait(self.driver, timeout, pollFrequency).until(EC.alert_is_present())
+            alert = self.driver.switch_to.alert
+            alert.accept()
+            self.log.info("Alert found")
+        except:
+            self.log.info("Alert not found")
+
     def webScroll(self, direction="up"):
         if direction == "up":
             # Scroll Up

@@ -3,6 +3,7 @@ import logging
 from base.basepage import BasePage
 import requests
 
+import time
 
 class MainPage(BasePage):
     log = cl.customLogger(logging.DEBUG)
@@ -35,6 +36,15 @@ class MainPage(BasePage):
     LOGIN_SUCCESSFUL = 'AccountLink'
     LOGIN_SUCCESSFUL_LOCATOR = 'id'
 
+    RECENT_TRANSACTIONS = 'View Recent Transactions'
+    RECENT_TRANSACTIONS_LOCATOR = 'link'
+
+    AFTER_DATE = 'startDate'
+    AFTER_DATE_LOCATOR = 'id'
+
+    SUBMIT_DATE = '//input[@value=\'Submit\']'
+    SUBMIT_DATE_LOCATOR = 'xpath'
+
     def clickLogin(self):
         self.elementClick(self.LOGIN, self.LOGIN_LOCATOR)
 
@@ -53,15 +63,40 @@ class MainPage(BasePage):
         self.sendCredentials(userName, password)
         self.clickLoginButton()
 
-    def verifyLoginSuccessful(self):
+    def verifyLoginSuccessful(self, _logOut = True):
         result = self.elementPresenceCheck(self.LOGIN_SUCCESSFUL, self.LOGIN_SUCCESSFUL_LOCATOR)
-        self.logOut()
+        if _logOut:
+            self.logOut()
         return result
 
     def verifyLoginFailed(self):
         result = self.elementPresenceCheck(self.LOGIN_FAILED, self.LOGIN_FAILED_LOCATOR)
         self.logOut()
         return result
+
+    def clickRecentTransactions(self):
+        self.elementClick(self.RECENT_TRANSACTIONS, self.RECENT_TRANSACTIONS_LOCATOR)
+
+    def sendAfterDate(self, date):
+        self.sendKeys(date, self.AFTER_DATE, self.AFTER_DATE_LOCATOR)
+
+    def clickSubmitDate(self):
+        self.elementClick(self.SUBMIT_DATE, self.SUBMIT_DATE_LOCATOR)
+
+    def clickAlert(self):
+        alert1 = self.driver.switch_to.alert
+        alert1.accept()
+
+    def check_invalidDate(self, date):
+        self.clickRecentTransactions()
+        self.sendAfterDate(date)
+        time.sleep(3)
+        self.clickSubmitDate()
+        time.sleep(3)
+        self.clickAlert()
+
+    def verify_invalidDate(self):
+        self.waitForAlert()
 
     def check_links(self, httpsLinksOnly = False):
         #Check if any link is broken in the given page
