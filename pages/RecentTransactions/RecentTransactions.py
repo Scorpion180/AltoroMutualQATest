@@ -56,6 +56,12 @@ class RecentTransactions(BasePage):
         self.sendBeforeDate(date)
         self.clickSubmitDate()
 
+    def check_dates(self, after, before):
+        self.clickRecentTransactions()
+        self.sendBeforeDate(before)
+        self.sendAfterDate(after)
+        self.clickSubmitDate()
+
     def clearRecentTransactionsFields(self):
         after = self.getElement(self.AFTER_DATE, self.AFTER_DATE_LOCATOR)
         before = self.getElement(self.BEFORE_DATE, self.BEFORE_DATE_LOCATOR)
@@ -70,21 +76,36 @@ class RecentTransactions(BasePage):
             return False
         return True
 
-    def verify_datesOnTable(self, date, type = ''):
-        dateArray = date.split('-')
-        _date1 = datetime.datetime(int(dateArray[0]), int(dateArray[1]), int(dateArray[2]))
+    def verify_datesOnTable(self, after='', before='', type=''):
+
+        if after != '':
+            dateArray = after.split('-')
+            _after = datetime.datetime(int(dateArray[0]), int(dateArray[1]), int(dateArray[2]))
+
+        if before != '':
+            dateArray = before.split('-')
+            _before = datetime.datetime(int(dateArray[0]), int(dateArray[1]), int(dateArray[2]))
+
         tableRows = self.getElementList(self.TABLE, self.TABLE_LOCATOR)
         #Delete first element because it's the header
         del tableRows[0]
+        print(len(tableRows))
         for row in tableRows:
             if row.text != '':
                 print(row.text.split()[1])
                 dateArray = row.text.split()[1].split('-')
-                _date2 = datetime.datetime(int(dateArray[0]), int(dateArray[1]), int(dateArray[2]))
+                _date = datetime.datetime(int(dateArray[0]), int(dateArray[1]), int(dateArray[2]))
                 if type == "AFTER":
-                    if _date1 > _date2:
+                    if _after > _date:
+                        self.log.error('Found invalid date, filter', _after, 'date ', _date)
                         return False
                 elif type == 'BEFORE':
-                    if _date1 < _date2:
+                    if _before < _date:
+                        self.log.error('Found invalid date, filter', _after, 'date ', _date)
                         return False
+                elif type == 'BOTH':
+                    if _before < _date or _after > _date:
+                        self.log.error('Found invalid date, filter', _after, _before, 'date ', _date)
+                        return False
+        self.log.info('No invalid date found')
         return True

@@ -1,3 +1,5 @@
+import time
+
 from pages.Main.MainPage import MainPage
 from pages.RecentTransactions.RecentTransactions import RecentTransactions
 from utilities.teststatus import TestStatus
@@ -21,17 +23,19 @@ class MainPage_tests(unittest.TestCase):
         self.rt.check_afterDate('2020-11-20')
         boolResult2 = self.rt.verify_validDate()
         self.ts.mark(boolResult2, "After_date_verified")
-        boolResult1 = self.rt.verify_datesOnTable('2020-11-20', 'AFTER')
+        boolResult1 = self.rt.verify_datesOnTable(after='2020-11-20', type='AFTER')
         self.ts.mark(boolResult1, "Dates_After_on_Table_verified")
 
-        self.rt.clearRecentTransactionsFields()
-
         self.rt.check_beforeDate('2021-03-20')
-        boolResult4 = self.rt.verify_datesOnTable('2021-03-20', 'BEFORE')
-        self.ts.mark(boolResult4, "Dates_Before_on_Table_verified")
-        boolResult3 = self.rt.verify_validDate()
-        self.ts.markFinal("test_validDate", boolResult3,
-                          "Table_Verified")
+        boolResult1 = self.rt.verify_validDate()
+        self.ts.mark(boolResult1, "Before_date_verified")
+        boolResult2 = self.rt.verify_datesOnTable(before='2021-03-20', type='BEFORE')
+        self.ts.mark(boolResult2, "Dates_Before_on_Table_verified")
+
+        self.rt.check_dates('2020-11-20', '2021-03-20')
+        time.sleep(5)
+        boolResult1 = self.rt.verify_datesOnTable('2020-11-20', '2021-03-20', 'BOTH')
+        self.ts.markFinal('test_validDate', boolResult1, "Valid_dates_verified")
 
     @pytest.mark.run(order=3)
     def test_invalidDate(self):

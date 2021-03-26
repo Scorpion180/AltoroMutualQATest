@@ -1,96 +1,714 @@
-03/25/2021 08:29:09 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/25/2021 08:29:09 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/25/2021 08:29:09 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/25/2021 08:29:09 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/25/2021 08:29:09 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/25/2021 08:29:09 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/25/2021 08:29:09 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/25/2021 08:29:09 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/25/2021 08:29:09 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
-03/25/2021 08:29:09 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
-03/25/2021 08:29:09 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
-03/25/2021 08:29:09 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
-03/25/2021 08:29:09 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
-03/25/2021 08:29:09 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/25/2021 08:29:09 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/25/2021 08:29:09 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/25/2021 08:29:09 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/25/2021 08:29:09 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/25/2021 08:29:09 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/25/2021 08:29:09 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/25/2021 08:29:10 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/25/2021 08:29:10 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
-03/25/2021 08:29:10 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
-03/25/2021 08:29:10 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
-03/25/2021 08:29:10 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
-03/25/2021 08:29:10 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
-03/25/2021 08:29:10 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/25/2021 08:29:10 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/25/2021 08:29:10 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/25/2021 08:29:10 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/25/2021 08:29:10 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/25/2021 08:29:10 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/25/2021 08:29:10 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/25/2021 08:29:10 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/25/2021 08:29:10 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
-03/25/2021 08:29:10 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
-03/25/2021 08:29:10 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
-03/25/2021 08:29:10 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
-03/25/2021 08:29:10 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
-03/25/2021 08:29:10 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/25/2021 08:29:10 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/25/2021 08:29:10 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/25/2021 08:29:10 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/25/2021 08:29:10 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/25/2021 08:29:10 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/25/2021 08:29:10 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/25/2021 08:29:11 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/25/2021 08:29:11 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
-03/25/2021 08:29:11 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
-03/25/2021 08:29:11 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Alert found
-03/25/2021 08:29:11 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Alert found
-03/25/2021 08:29:11 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
-03/25/2021 08:29:11 PM - TestStatus - INFO: test_invalidDate ### TEST SUCCESSFUL
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
-03/25/2021 08:29:11 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
-03/25/2021 08:29:21 PM - RecentTransactions - INFO: Alert not found
-03/25/2021 08:29:21 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
-03/25/2021 08:29:21 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
-03/25/2021 08:29:22 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_After_on_Table_verified
-03/25/2021 08:29:22 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
-03/25/2021 08:29:22 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
-03/25/2021 08:29:22 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
-03/25/2021 08:29:22 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
-03/25/2021 08:29:22 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
-03/25/2021 08:29:22 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
-03/25/2021 08:29:22 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
-03/25/2021 08:29:22 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
-03/25/2021 08:29:22 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
-03/25/2021 08:29:23 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_Before_on_Table_verified
-03/25/2021 08:29:23 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
-03/25/2021 08:29:33 PM - RecentTransactions - INFO: Alert not found
-03/25/2021 08:29:33 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Table_Verified
-03/25/2021 08:29:33 PM - TestStatus - INFO: test_validDate ### TEST SUCCESSFUL
+03/25/2021 08:58:41 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 08:58:41 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 08:58:42 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 08:58:42 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 08:58:42 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 08:58:42 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 08:58:42 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 08:58:42 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 08:58:42 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 08:58:42 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 08:58:42 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 08:58:43 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 08:58:43 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 08:58:43 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 08:58:43 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 08:58:43 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 08:58:43 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 08:58:43 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 08:58:43 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 08:58:43 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 08:58:43 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 08:58:43 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 08:58:43 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 08:58:43 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 08:58:43 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 08:58:43 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 08:58:43 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 08:58:43 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 08:58:43 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 08:58:43 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 08:58:43 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 08:58:43 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 08:58:43 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 08:58:43 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 08:58:43 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 08:58:43 PM - RecentTransactions - INFO: Alert found
+03/25/2021 08:58:43 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 08:58:43 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 08:58:43 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 08:58:43 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 08:58:43 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 08:58:43 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 08:58:44 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 08:58:44 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 08:58:44 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 08:58:44 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 08:58:44 PM - RecentTransactions - INFO: Alert found
+03/25/2021 08:58:44 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+03/25/2021 08:58:44 PM - TestStatus - INFO: test_invalidDate ### TEST SUCCESSFUL
+03/25/2021 08:58:44 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 08:58:44 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 08:58:44 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 08:58:44 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 08:58:44 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 08:58:44 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 08:58:44 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 08:58:54 PM - RecentTransactions - INFO: Alert not found
+03/25/2021 08:58:54 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 08:58:54 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 08:58:54 PM - RecentTransactions - INFO: No invalid date found
+03/25/2021 08:58:54 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_After_on_Table_verified
+03/25/2021 08:58:54 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 08:58:54 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 08:58:54 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 08:58:54 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 08:58:54 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 08:58:54 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 08:58:54 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 08:58:54 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 08:58:54 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 08:59:04 PM - RecentTransactions - INFO: Alert not found
+03/25/2021 08:59:04 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+03/25/2021 08:59:04 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 08:59:05 PM - RecentTransactions - INFO: No invalid date found
+03/25/2021 08:59:05 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_Before_on_Table_verified
+03/25/2021 08:59:06 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 08:59:06 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 08:59:06 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 08:59:06 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 08:59:06 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 08:59:06 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 08:59:06 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:02:54 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:02:54 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:02:54 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:02:54 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:02:54 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:02:54 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:02:54 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:02:54 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:02:54 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 09:02:54 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:02:54 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:02:54 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 09:02:54 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 09:02:54 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:02:54 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:02:54 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:02:54 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:02:54 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:02:54 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:02:54 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:02:55 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:02:55 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 09:02:55 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:02:55 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:02:55 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 09:02:55 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 09:02:55 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:02:55 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:02:55 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:02:55 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:02:55 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:02:55 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:02:55 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:02:55 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:02:55 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 09:02:55 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:02:55 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:02:55 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 09:02:55 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 09:02:55 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:02:55 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:02:55 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:02:55 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:02:55 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:02:55 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:02:55 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:02:56 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:02:56 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 09:02:56 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 09:02:56 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Alert found
+03/25/2021 09:02:56 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Alert found
+03/25/2021 09:02:56 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+03/25/2021 09:02:56 PM - TestStatus - INFO: test_invalidDate ### TEST SUCCESSFUL
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:02:56 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:03:06 PM - RecentTransactions - INFO: Alert not found
+03/25/2021 09:03:06 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 09:03:06 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:03:07 PM - RecentTransactions - INFO: No invalid date found
+03/25/2021 09:03:07 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_After_on_Table_verified
+03/25/2021 09:03:07 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:03:07 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:03:07 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:03:07 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:03:07 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:03:07 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 09:03:07 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:03:07 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:03:07 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:03:17 PM - RecentTransactions - INFO: Alert not found
+03/25/2021 09:03:17 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+03/25/2021 09:03:17 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:03:18 PM - RecentTransactions - INFO: No invalid date found
+03/25/2021 09:03:18 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_Before_on_Table_verified
+03/25/2021 09:03:18 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:03:18 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:03:18 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:03:18 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:03:18 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:03:18 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:03:18 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:03:48 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:03:48 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:03:48 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:03:48 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:03:48 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:03:48 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:03:48 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:03:48 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:03:48 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 09:03:48 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:03:48 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:03:48 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 09:03:48 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 09:03:48 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:03:48 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:03:48 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:03:48 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:03:48 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:03:48 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:03:48 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:03:48 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:03:48 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 09:03:48 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:03:48 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:03:48 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 09:03:48 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 09:03:48 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:03:49 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:03:49 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:03:49 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:03:49 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:03:49 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:03:49 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:03:49 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:03:49 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 09:03:49 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:03:49 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:03:49 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 09:03:49 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 09:03:49 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:03:49 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:03:49 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:03:49 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:03:49 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:03:49 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:03:49 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:03:49 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:03:49 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 09:03:49 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 09:03:49 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 09:03:49 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:03:49 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:03:49 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:03:49 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:03:49 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:03:49 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:03:49 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:03:49 PM - RecentTransactions - INFO: Alert found
+03/25/2021 09:03:49 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 09:03:49 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:03:49 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Alert found
+03/25/2021 09:03:50 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+03/25/2021 09:03:50 PM - TestStatus - INFO: test_invalidDate ### TEST SUCCESSFUL
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:03:50 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:04:00 PM - RecentTransactions - INFO: Alert not found
+03/25/2021 09:04:00 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 09:04:00 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:05:28 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:05:28 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:05:28 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:05:28 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:05:28 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:05:28 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:05:28 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:05:28 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:05:28 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 09:05:28 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:05:28 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:05:28 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 09:05:28 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 09:05:28 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:05:28 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:05:28 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:05:28 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:05:28 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:05:28 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:05:28 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:05:29 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:05:29 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 09:05:29 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:05:29 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:05:29 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 09:05:29 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 09:05:29 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:05:29 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:05:29 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:05:29 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:05:29 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:05:29 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:05:29 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:05:29 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:05:29 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 09:05:29 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:05:29 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:05:29 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 09:05:29 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 09:05:29 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:05:29 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:05:29 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:05:29 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:05:29 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:05:29 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:05:29 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:05:30 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:05:30 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 09:05:30 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 09:05:30 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Alert found
+03/25/2021 09:05:30 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Alert found
+03/25/2021 09:05:30 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+03/25/2021 09:05:30 PM - TestStatus - INFO: test_invalidDate ### TEST SUCCESSFUL
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:05:30 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:05:40 PM - RecentTransactions - INFO: Alert not found
+03/25/2021 09:05:40 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 09:05:40 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:05:41 PM - RecentTransactions - INFO: No invalid date found
+03/25/2021 09:05:41 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_After_on_Table_verified
+03/25/2021 09:05:41 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:05:41 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:05:41 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:05:41 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:05:41 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:05:41 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 09:05:41 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:05:41 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:05:41 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:05:51 PM - RecentTransactions - INFO: Alert not found
+03/25/2021 09:05:51 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+03/25/2021 09:05:51 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:05:52 PM - RecentTransactions - INFO: No invalid date found
+03/25/2021 09:05:52 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_Before_on_Table_verified
+03/25/2021 09:05:52 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:05:52 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:05:52 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:05:52 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:05:52 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:05:52 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:05:52 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:07:29 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:07:30 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:07:30 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:07:30 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:07:30 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:07:30 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:07:30 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:07:30 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:07:30 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 09:07:30 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:07:30 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:07:30 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 09:07:30 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 09:07:30 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:07:30 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:07:30 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:07:30 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:07:30 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:07:30 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:07:30 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:07:30 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:07:30 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 09:07:30 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:07:30 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:07:30 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 09:07:30 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 09:07:30 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:07:30 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:07:31 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:07:31 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:07:31 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:07:31 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:07:31 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:07:31 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:07:31 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 09:07:31 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:07:31 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:07:31 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 09:07:31 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 09:07:31 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:07:31 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:07:31 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:07:31 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:07:31 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:07:31 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:07:31 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:07:31 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:07:31 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 09:07:31 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 09:07:31 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 09:07:31 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:07:31 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:07:31 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:07:31 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:07:31 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:07:31 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:07:31 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:07:31 PM - RecentTransactions - INFO: Alert found
+03/25/2021 09:07:31 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 09:07:31 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:07:31 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Alert found
+03/25/2021 09:07:32 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+03/25/2021 09:07:32 PM - TestStatus - INFO: test_invalidDate ### TEST SUCCESSFUL
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:07:32 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:07:42 PM - RecentTransactions - INFO: Alert not found
+03/25/2021 09:07:42 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 09:07:42 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:07:42 PM - RecentTransactions - INFO: No invalid date found
+03/25/2021 09:07:42 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_After_on_Table_verified
+03/25/2021 09:07:42 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:07:42 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:07:42 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:07:42 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:07:42 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:07:42 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 09:07:42 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:07:43 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:07:43 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:07:53 PM - RecentTransactions - INFO: Alert not found
+03/25/2021 09:07:53 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+03/25/2021 09:07:53 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:07:54 PM - RecentTransactions - INFO: No invalid date found
+03/25/2021 09:07:54 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_Before_on_Table_verified
+03/25/2021 09:07:54 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:07:54 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:07:54 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:07:54 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:07:54 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:07:54 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:07:59 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:08:41 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:08:41 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:08:41 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:08:41 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:08:41 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:08:41 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:08:41 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:08:41 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:08:41 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 09:08:41 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:08:41 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:08:41 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 09:08:41 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 09:08:41 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:08:42 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:08:42 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:08:42 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:08:42 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:08:42 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:08:42 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:08:42 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:08:42 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 09:08:42 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:08:42 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:08:42 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 09:08:42 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 09:08:42 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:08:42 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:08:42 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:08:42 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:08:42 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:08:42 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:08:42 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:08:42 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:08:42 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 09:08:42 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:08:43 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:08:43 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 09:08:43 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 09:08:43 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:08:43 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:08:43 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:08:43 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:08:43 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:08:43 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:08:43 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:08:43 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:08:43 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 09:08:43 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 09:08:43 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Alert found
+03/25/2021 09:08:43 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Alert found
+03/25/2021 09:08:43 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+03/25/2021 09:08:43 PM - TestStatus - INFO: test_invalidDate ### TEST SUCCESSFUL
+03/25/2021 09:08:43 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:08:44 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:08:44 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:08:44 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:08:44 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:08:44 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:08:44 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:08:54 PM - RecentTransactions - INFO: Alert not found
+03/25/2021 09:08:54 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 09:08:54 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:08:54 PM - RecentTransactions - INFO: No invalid date found
+03/25/2021 09:08:54 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_After_on_Table_verified
+03/25/2021 09:08:54 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:08:54 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:08:54 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:08:54 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:08:54 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:08:54 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 09:08:54 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:08:54 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:08:54 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:09:04 PM - RecentTransactions - INFO: Alert not found
+03/25/2021 09:09:04 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+03/25/2021 09:09:04 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:09:05 PM - RecentTransactions - INFO: No invalid date found
+03/25/2021 09:09:05 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_Before_on_Table_verified
+03/25/2021 09:09:05 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:09:06 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:09:06 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:09:06 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 09:09:06 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:09:06 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:09:06 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:09:06 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:09:06 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:09:06 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:09:06 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:09:06 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:09:11 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:11:17 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:11:17 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:11:18 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:11:18 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 09:11:18 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:11:18 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:11:18 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: '//span[contains(text(),'Login Failed')]' and locatorType: xpath
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:11:18 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_FAILED
+03/25/2021 09:11:18 PM - TestStatus - INFO: test_loginFailed ### TEST SUCCESSFUL
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:11:18 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:11:18 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:11:19 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:11:19 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 09:11:19 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/25/2021 09:11:19 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/25/2021 09:11:19 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 09:11:19 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 09:11:19 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/25/2021 09:11:19 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/25/2021 09:11:19 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/25/2021 09:11:19 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/25/2021 09:11:19 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/25/2021 09:11:19 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/25/2021 09:11:19 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/25/2021 09:11:19 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/25/2021 09:11:19 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/25/2021 09:11:19 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + LOGIN_SUCCESSFUL
+03/25/2021 09:11:19 PM - TestStatus - INFO: test_loginSuccessful ### TEST SUCCESSFUL
+03/25/2021 09:11:19 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:11:19 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:11:19 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:11:19 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:11:19 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:11:19 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:11:19 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:11:19 PM - RecentTransactions - INFO: Alert found
+03/25/2021 09:11:19 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 09:11:19 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:11:19 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:11:19 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:11:19 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:11:20 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:11:20 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 09:11:20 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:11:20 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:11:20 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:11:20 PM - RecentTransactions - INFO: Alert found
+03/25/2021 09:11:20 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+03/25/2021 09:11:20 PM - TestStatus - INFO: test_invalidDate ### TEST SUCCESSFUL
+03/25/2021 09:11:20 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:11:20 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:11:20 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:11:20 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:11:20 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:11:20 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:11:20 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:11:30 PM - RecentTransactions - INFO: Alert not found
+03/25/2021 09:11:30 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + After_date_verified
+03/25/2021 09:11:30 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:11:31 PM - RecentTransactions - INFO: No invalid date found
+03/25/2021 09:11:31 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_After_on_Table_verified
+03/25/2021 09:11:31 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:11:31 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:11:31 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:11:31 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 09:11:32 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:11:32 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:11:32 PM - RecentTransactions - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/25/2021 09:11:42 PM - RecentTransactions - INFO: Alert not found
+03/25/2021 09:11:42 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+03/25/2021 09:11:42 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:11:43 PM - RecentTransactions - INFO: No invalid date found
+03/25/2021 09:11:43 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Dates_Before_on_Table_verified
+03/25/2021 09:11:43 PM - RecentTransactions - INFO: Element found with locator: 'View Recent Transactions' and locatorType: link text
+03/25/2021 09:11:43 PM - RecentTransactions - INFO: Clicked on element with locator: 'View Recent Transactions' locatorType: link clickType: click
+03/25/2021 09:11:43 PM - RecentTransactions - INFO: Element found with locator: 'endDate' and locatorType: id
+03/25/2021 09:11:43 PM - RecentTransactions - INFO: Sent data on element with locator: 'endDate' locatorType: id
+03/25/2021 09:11:43 PM - RecentTransactions - INFO: Element found with locator: 'startDate' and locatorType: id
+03/25/2021 09:11:43 PM - RecentTransactions - INFO: Sent data on element with locator: 'startDate' locatorType: id
+03/25/2021 09:11:43 PM - RecentTransactions - INFO: Element found with locator: '//input[@value='Submit']' and locatorType: xpath
+03/25/2021 09:11:43 PM - RecentTransactions - INFO: Clicked on element with locator: '//input[@value='Submit']' locatorType: xpath clickType: click
+03/25/2021 09:11:48 PM - RecentTransactions - INFO: Element list found with locator: //table[contains(@id,'MyTransactions')]//tbody//tr and  locatorType: xpath
+03/25/2021 09:11:48 PM - RecentTransactions - INFO: No invalid date found
+03/25/2021 09:11:48 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Valid_dates_verified
+03/25/2021 09:11:48 PM - TestStatus - INFO: test_validDate ### TEST SUCCESSFUL
