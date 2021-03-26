@@ -202,8 +202,10 @@ class SeleniumDriver():
             alert = self.driver.switch_to.alert
             alert.accept()
             self.log.info("Alert found")
+            return True
         except:
             self.log.info("Alert not found")
+            return False
 
     def webScroll(self, direction="up"):
         if direction == "up":

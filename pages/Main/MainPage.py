@@ -36,15 +36,6 @@ class MainPage(BasePage):
     LOGIN_SUCCESSFUL = 'AccountLink'
     LOGIN_SUCCESSFUL_LOCATOR = 'id'
 
-    RECENT_TRANSACTIONS = 'View Recent Transactions'
-    RECENT_TRANSACTIONS_LOCATOR = 'link'
-
-    AFTER_DATE = 'startDate'
-    AFTER_DATE_LOCATOR = 'id'
-
-    SUBMIT_DATE = '//input[@value=\'Submit\']'
-    SUBMIT_DATE_LOCATOR = 'xpath'
-
     def clickLogin(self):
         self.elementClick(self.LOGIN, self.LOGIN_LOCATOR)
 
@@ -74,30 +65,6 @@ class MainPage(BasePage):
         self.logOut()
         return result
 
-    def clickRecentTransactions(self):
-        self.elementClick(self.RECENT_TRANSACTIONS, self.RECENT_TRANSACTIONS_LOCATOR)
-
-    def sendAfterDate(self, date):
-        self.sendKeys(date, self.AFTER_DATE, self.AFTER_DATE_LOCATOR)
-
-    def clickSubmitDate(self):
-        self.elementClick(self.SUBMIT_DATE, self.SUBMIT_DATE_LOCATOR)
-
-    def clickAlert(self):
-        alert1 = self.driver.switch_to.alert
-        alert1.accept()
-
-    def check_invalidDate(self, date):
-        self.clickRecentTransactions()
-        self.sendAfterDate(date)
-        time.sleep(3)
-        self.clickSubmitDate()
-        time.sleep(3)
-        self.clickAlert()
-
-    def verify_invalidDate(self):
-        self.waitForAlert()
-
     def check_links(self, httpsLinksOnly = False):
         #Check if any link is broken in the given page
         self.brokenLinks = ''
@@ -119,3 +86,4 @@ class MainPage(BasePage):
         if self.brokenLinks == '':
             return True
         return False
+

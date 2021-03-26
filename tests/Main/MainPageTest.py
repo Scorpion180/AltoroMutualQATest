@@ -1,7 +1,9 @@
-from pages.Main.page import MainPage
+from pages.Main.MainPage import MainPage
+from pages.RecentTransactions.RecentTransactions import RecentTransactions
 from utilities.teststatus import TestStatus
 import unittest, pytest
 from ddt import ddt, data, unpack
+
 
 @pytest.mark.usefixtures("oneTimeSetUp", "setUp")
 @ddt
@@ -9,16 +11,38 @@ class MainPage_tests(unittest.TestCase):
 
     @pytest.fixture(autouse=True)
     def objectSetup(self, oneTimeSetUp):
-        #Instantiate here your test class located at "pages"
+        # Instantiate here your test class located at "pages"
         self.ts = TestStatus(self.driver)
         self.main = MainPage(self.driver)
+        self.rt = RecentTransactions(self.driver)
+
+    @pytest.mark.run(order=4)
+    def test_validDate(self):
+        self.rt.check_afterDate('2020-11-20')
+        boolResult2 = self.rt.verify_validDate()
+        self.ts.mark(boolResult2, "After_date_verified")
+        boolResult1 = self.rt.verify_datesOnTable('2020-11-20', 'AFTER')
+        self.ts.mark(boolResult1, "Dates_After_on_Table_verified")
+
+        self.rt.clearRecentTransactionsFields()
+
+        self.rt.check_beforeDate('2021-03-20')
+        boolResult4 = self.rt.verify_datesOnTable('2021-03-20', 'BEFORE')
+        self.ts.mark(boolResult4, "Dates_Before_on_Table_verified")
+        boolResult3 = self.rt.verify_validDate()
+        self.ts.markFinal("test_validDate", boolResult3,
+                          "Table_Verified")
 
     @pytest.mark.run(order=3)
     def test_invalidDate(self):
-        self.main.check_invalidDate('02/12/2015')
-        boolResult = self.main.verify_invalidDate()
-        self.ts.markFinal("test_invalidDate", boolResult,
-                          "INVALID_DATE")
+        self.rt.check_afterDate('02/12/2015')
+        boolResult1 = self.rt.verify_invalidDate()
+        self.ts.mark(boolResult1, "After_date_verified")
+        self.rt.clearRecentTransactionsFields()
+        self.rt.check_beforeDate('02/12/2015')
+        boolResult2 = self.rt.verify_invalidDate()
+        self.ts.markFinal("test_invalidDate", boolResult2,
+                          "Before_date_verified")
 
     @pytest.mark.run(order=2)
     @data(('jsmith', 'demo1234', True), ('admin', 'admin', False))
@@ -37,6 +61,8 @@ class MainPage_tests(unittest.TestCase):
         boolResult = self.main.verifyLoginFailed()
         self.ts.markFinal("test_loginFailed", boolResult,
                           "LOGIN_FAILED")
+
+
 '''
 
     @pytest.mark.run(order=4)
