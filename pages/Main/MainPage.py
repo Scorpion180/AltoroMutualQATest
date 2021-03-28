@@ -1,5 +1,4 @@
 
-
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 
@@ -58,6 +57,42 @@ class MainPage(BasePage):
     LINKS = '//a[@href]'
     LINKS_LOCATOR = 'xpath'
 
+    FEEDBACK = 'HyperLink4'
+    FEEDBACK_LOCATOR = 'id'
+
+    NAME = 'name'
+    NAME_LOCATOR = 'name'
+
+    EMAIL = 'email_addr'
+    EMAIL_LOCATOR = 'name'
+
+    SUBJECT = 'subject'
+    SUBJECT_LOCATOR = 'name'
+
+    COMMENT = 'comments'
+    COMMENT_LOCATOR = 'name'
+
+    SUBMIT = 'submit'
+    SUBMIT_LOCATOR = 'name'
+
+    CLEAR = 'reset'
+    CLEAR_LOCATOR = 'name'
+
+    FORM_MESSAGE = '//div[@class=\'fl\']//p'
+    FORM_MESSAGE_LOCATOR = 'xpath'
+
+    SUBSCRIBE = 'MenuHyperLink19'
+    SUBSCRIBE_LOCATOR = 'id'
+
+    SUBSCRIBE_EMAIL = 'txtEmail'
+    SUBSCRIBE_EMAIL_LOCATOR = 'id'
+
+    SUBSCRIBE_BTN = 'btnSubmit'
+    SUBSCRIBE_BTN_LOCATOR = 'name'
+
+    SUBSCRIBE_MSG = 'message'
+    SUBSCRIBE_MSG_LOCATOR = 'id'
+
     def clickLogin(self):
         self.elementClick(self.LOGIN, self.LOGIN_LOCATOR)
 
@@ -112,7 +147,7 @@ class MainPage(BasePage):
     def iFrameInContent(self, header, message):
         iframe = self.getElement(self.IFRAME, self.IFRAME_LOCATOR)
         if iframe is not None:
-            self.driver.switch_to.frame(iframe)
+            self.switchToFrame(iframe)
             element = self.getElement(self.CONTENT_TITLE, self.CONTENT_TITLE_LOCATOR)
             if element is None:
                 self.writeBrokenContent(header, message)
@@ -136,14 +171,14 @@ class MainPage(BasePage):
             for word in header.split():
                 if word.lower() in element.text.lower():
                     if switchedToIframe:
-                        self.driver.switch_to.default_content()
+                        self.switchToDefault()
                     return
                 else:
                     wordInText = False
             if not wordInText:
                 self.writeBrokenContent(header, message)
         if switchedToIframe:
-            self.driver.switch_to.default_content()
+            self.switchToDefault()
 
     def check_mainLinks(self):
         self.brokenContent = ''
@@ -158,21 +193,21 @@ class MainPage(BasePage):
                     key_up(Keys.CONTROL).\
                     perform()
                 windows = self.driver.window_handles
-                self.driver.switch_to.window(windows[1])
+                self.switchToWindow(windows[1])
                 self.check_contentH1(name, '_link_not_working')
                 self.closeAllButMain()
-                self.driver.switch_to.window(windows[0])
+                self.switchToWindow(windows[0])
 
     def closeAllButMain(self):
         windows = self.driver.window_handles
         while len(self.driver.window_handles) > 1:
-            self.driver.switch_to.window(windows[-1])
+            self.switchToWindow(windows[-1])
             self.driver.close()
 
     def iFramePresent(self):
         iframe = self.getElement(self.IFRAME, self.IFRAME_LOCATOR)
         if iframe is not None:
-            self.driver.switch_to.frame(iframe)
+            self.switchToFrame(iframe)
             return True, self.getElementList(self.LINKS, self.LINKS_LOCATOR)
         return False, None
 
@@ -191,9 +226,9 @@ class MainPage(BasePage):
                     key_up(Keys.CONTROL).\
                     perform()
                 if switchedToIframe:
-                    self.driver.switch_to.default_content()
+                    self.switchToDefault()
                 windows = self.driver.window_handles
-                self.driver.switch_to.window(windows[2])
+                self.switchToWindow(windows[2])
                 self.check_contentH1(name, '_link_not_working')
             return True
         return False
@@ -202,3 +237,63 @@ class MainPage(BasePage):
         if self.brokenContent == '':
             return True
         return False
+
+    def clickContactUs(self):
+        self.elementClick(self.FEEDBACK, self.FEEDBACK_LOCATOR)
+
+    def sendValuesToContactForm(self, name, email, subject, msg):
+        self.sendKeys(name, self.NAME, self.NAME_LOCATOR)
+        self.sendKeys(email, self.EMAIL, self.EMAIL_LOCATOR)
+        self.sendKeys(subject, self.SUBJECT, self.SUBJECT_LOCATOR)
+        self.sendKeys(msg, self.COMMENT, self.COMMENT_LOCATOR)
+
+    def clickSubmitForm(self):
+        self.elementClick(self.SUBMIT, self.SUBMIT_LOCATOR)
+
+    def clickClearForm(self):
+        self.elementClick(self.CLEAR, self.CLEAR_LOCATOR)
+
+    def check_contactForm(self, name, email, subject, msg):
+        self.clickContactUs()
+        self.sendValuesToContactForm(name, email, subject, msg)
+
+    def searchFormMessage(self, substring):
+        element = self.getElement(self.FORM_MESSAGE, self.FORM_MESSAGE_LOCATOR)
+        if substring in element.text:
+            return True
+        return False
+
+    def verify_formResultMessage(self, substring):
+        return self.searchFormMessage(substring)
+
+    def verify_clearForm(self):
+        name = self.getElement(self.NAME, self.NAME_LOCATOR)
+        email = self.getElement(self.EMAIL, self.EMAIL_LOCATOR)
+        subject = self.getElement(self.SUBJECT, self.SUBJECT_LOCATOR)
+        comment = self.getElement(self.COMMENT, self.COMMENT_LOCATOR)
+        if name.text == '' and email.text == '' and subject.text == '' and comment.text == '':
+            return True
+        return False
+
+    def clickSubscribe(self):
+        self.elementClick(self.SUBSCRIBE, self.SUBSCRIBE_LOCATOR)
+
+    def sendEmailToSubscribe(self, email):
+        self.sendKeys(email, self.SUBSCRIBE_EMAIL, self.SUBSCRIBE_EMAIL_LOCATOR)
+
+    def clickSubscribeBtn(self):
+        self.elementClick(self.SUBSCRIBE_BTN, self.SUBSCRIBE_BTN_LOCATOR)
+
+    def check_subscribeForm(self, email):
+        self.clickSubscribe()
+        self.sendEmailToSubscribe(email)
+        self.clickSubscribeBtn()
+
+    def verify_subscribeSuccessful(self):
+        element = self.getElement(self.SUBSCRIBE_MSG, self.SUBSCRIBE_MSG_LOCATOR)
+        if element is None:
+            return False
+        return True
+
+    def verify_subscribeUnsuccessful(self):
+        return self.waitForAlert()

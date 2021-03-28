@@ -16,7 +16,48 @@ class MainPage_tests(unittest.TestCase):
         self.ts = TestStatus(self.driver)
         self.main = MainPage(self.driver)
 
+    @pytest.mark.run(order=5)
+    def test_subscribeUnsuccessful(self):
+        self.main.check_subscribeForm('myname')
+        boolResult = self.main.verify_subscribeUnsuccessful()
+        self.ts.markFinal("test_subscribeUnsuccessful", boolResult,
+                          "Subscribe_working_correctly")
 
+    @pytest.mark.run(order=4)
+    def test_subscribeSuccessful(self):
+        self.main.check_subscribeForm('myname@email.com')
+        boolResult = self.main.verify_subscribeSuccessful()
+        self.ts.markFinal("test_subscribeSuccessful", boolResult,
+                          "Subscribe_working_correctly")
+
+    @pytest.mark.run(order=3)
+    def test_clearForm(self):
+        self.main.check_contactForm('Efren', 'efren', 'test', 'idk')
+        self.main.clickClearForm()
+        boolResult = self.main.verify_clearForm()
+        self.ts.markFinal("test_clearForm", boolResult,
+                          "Form_clear_successful ")
+
+    @pytest.mark.run(order=2)
+    def test_unsuccessfulContactForm(self):
+        self.main.check_contactForm('Efren', 'efren', 'test', 'idk')
+        self.main.clickSubmitForm()
+        boolResult = self.main.verify_formResultMessage('the email you gave is incorrect')
+        self.ts.markFinal("test_unsuccessfulContactForm", boolResult,
+                          "Form_unsuccessful_working ")
+
+    @pytest.mark.run(order=1)
+    def test_successfulContactForm(self):
+        self.main.check_contactForm('Efren', 'efren@gmail.com', 'test', 'idk')
+        self.main.clickSubmitForm()
+        boolResult = self.main.verify_formResultMessage('Our reply will be sent to your email')
+        self.ts.markFinal("test_successfulContactForm", boolResult,
+                          "Form_successful_working ")
+
+
+
+
+'''
 
     @pytest.mark.run(order=1)
     def test_mainLinks(self):
@@ -24,8 +65,6 @@ class MainPage_tests(unittest.TestCase):
         boolResult = self.main.verify_mainLinks()
         self.ts.markFinal("test_mainLinks", boolResult,
                           "MAIN_LINKS_WORKING ", self.main.brokenContent)
-
-'''
 
     @pytest.mark.run(order=4)
     def test_links(self):

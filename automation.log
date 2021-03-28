@@ -1,78 +1,37 @@
-03/27/2021 11:53:54 PM - MainPage - INFO: Element list found with locator: //a[@href] and  locatorType: xpath
-03/27/2021 11:53:55 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/27/2021 11:53:55 PM - MainPage - INFO: Element list found with locator: //td[@class='bb']//a and  locatorType: xpath
-03/27/2021 11:53:55 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/27/2021 11:53:55 PM - MainPage - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/online form_link_not_working.1616910835909.png
-03/27/2021 11:55:23 PM - MainPage - INFO: Element list found with locator: //a[@href] and  locatorType: xpath
-03/27/2021 11:55:23 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/27/2021 11:55:23 PM - MainPage - INFO: Element list found with locator: //td[@class='bb']//a and  locatorType: xpath
-03/27/2021 11:55:23 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/27/2021 11:55:23 PM - MainPage - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/online form_link_not_working.1616910923919.png
-03/27/2021 11:57:14 PM - MainPage - INFO: Element list found with locator: //a[@href] and  locatorType: xpath
-03/27/2021 11:57:15 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/27/2021 11:57:15 PM - MainPage - INFO: Element list found with locator: //td[@class='bb']//a[@href and not(@target)] and  locatorType: xpath
-03/27/2021 11:57:15 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/27/2021 11:57:15 PM - MainPage - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/online form_link_not_working.1616911035864.png
-03/27/2021 11:58:07 PM - MainPage - INFO: Element list found with locator: //a[@href] and  locatorType: xpath
-03/27/2021 11:58:07 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/27/2021 11:58:08 PM - MainPage - INFO: Element list found with locator: //td[@class='bb']//a[@href and not(@target)] and  locatorType: xpath
-03/27/2021 11:58:08 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/27/2021 11:58:08 PM - MainPage - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/online form_link_not_working.1616911088435.png
-03/27/2021 11:59:03 PM - MainPage - INFO: Element list found with locator: //a[@href] and  locatorType: xpath
-03/27/2021 11:59:04 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/27/2021 11:59:04 PM - MainPage - INFO: Element list found with locator: //td[@class='bb']//a[@href and not(@target)] and  locatorType: xpath
-03/27/2021 11:59:04 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/27/2021 11:59:04 PM - MainPage - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/online form_link_not_working.1616911144530.png
-03/27/2021 11:59:05 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/27/2021 11:59:05 PM - MainPage - INFO: Element list found with locator: //td[@class='bb']//a[@href and not(@target)] and  locatorType: xpath
-03/27/2021 11:59:05 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:00:37 AM - MainPage - INFO: Element list not found with locator: //a[@href] and  locatorType: xpath
-03/28/2021 12:01:14 AM - MainPage - INFO: Element list not found with locator: //a[@href] and  locatorType: xpath
-03/28/2021 12:02:01 AM - MainPage - INFO: Element list found with locator: //a[@href] and  locatorType: xpath
-03/28/2021 12:02:01 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:02:01 AM - MainPage - INFO: Element list found with locator: //td[@class='bb']//a[@href and not(@target)] and  locatorType: xpath
-03/28/2021 12:02:01 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:02:02 AM - MainPage - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/online form_link_not_working.1616911321983.png
-03/28/2021 12:06:28 AM - MainPage - INFO: Element list found with locator: //a[@href] and  locatorType: xpath
-03/28/2021 12:06:28 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:28 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:29 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:29 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:30 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:30 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:30 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:31 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:31 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:32 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:32 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:32 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:33 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:33 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:34 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:34 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:45 AM - MainPage - INFO: Element not found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:45 AM - MainPage - INFO: Element found with locator: '//iframe' and locatorType: xpath
-03/28/2021 12:06:45 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:45 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:46 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:46 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:47 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:47 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:47 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:48 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:06:59 AM - MainPage - INFO: Element not found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:07:09 AM - MainPage - INFO: Element not found with locator: '//iframe' and locatorType: xpath
-03/28/2021 12:07:10 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:07:10 AM - MainPage - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/Real Estate Financing_link_not_working.1616911630291.png
-03/28/2021 12:07:10 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:07:21 AM - MainPage - INFO: Element not found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:07:21 AM - MainPage - INFO: Element found with locator: '//iframe' and locatorType: xpath
-03/28/2021 12:07:21 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:07:22 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:07:22 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:07:22 AM - MainPage - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/security_link_not_working.1616911642482.png
-03/28/2021 12:07:22 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:07:23 AM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/28/2021 12:07:23 AM - TestStatus - ERROR: ### VERIFICATION FAILED :: + MAIN_LINKS_WORKING Real Estate Financing_link_not_working | security_link_not_working | 
-03/28/2021 12:07:23 AM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/MAIN_LINKS_WORKING .1616911643361.png
-03/28/2021 12:07:23 AM - TestStatus - ERROR: test_mainLinks ### TEST FAILED
+03/28/2021 01:44:38 PM - JobsPage - INFO: Element found with locator: 'MenuHyperLink18' and locatorType: id
+03/28/2021 01:44:38 PM - JobsPage - INFO: Clicked on element with locator: 'MenuHyperLink18' locatorType: id clickType: click
+03/28/2021 01:44:38 PM - JobsPage - INFO: Element found with locator: 'Current Job Openings' and locatorType: link text
+03/28/2021 01:44:38 PM - JobsPage - INFO: Clicked on element with locator: 'Current Job Openings' locatorType: link clickType: click
+03/28/2021 01:44:38 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table' and locatorType: xpath
+03/28/2021 01:44:38 PM - JobsPage - INFO: Switched to window about:blank
+03/28/2021 01:44:38 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[1]//td[2]' and locatorType: xpath
+03/28/2021 01:44:38 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[2]//td[2]' and locatorType: xpath
+03/28/2021 01:44:38 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/28/2021 01:44:38 PM - JobsPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+03/28/2021 01:44:38 PM - JobsPage - INFO: Switched to window about:blank
+03/28/2021 01:44:38 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[1]//td[2]' and locatorType: xpath
+03/28/2021 01:44:38 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[2]//td[2]' and locatorType: xpath
+03/28/2021 01:44:38 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/28/2021 01:44:38 PM - JobsPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+03/28/2021 01:44:38 PM - JobsPage - INFO: Switched to window about:blank
+03/28/2021 01:44:38 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[1]//td[2]' and locatorType: xpath
+03/28/2021 01:44:38 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[2]//td[2]' and locatorType: xpath
+03/28/2021 01:44:38 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/28/2021 01:44:38 PM - JobsPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+03/28/2021 01:44:38 PM - JobsPage - INFO: Switched to window about:blank
+03/28/2021 01:44:39 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[1]//td[2]' and locatorType: xpath
+03/28/2021 01:44:39 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[2]//td[2]' and locatorType: xpath
+03/28/2021 01:44:39 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/28/2021 01:44:39 PM - JobsPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+03/28/2021 01:44:39 PM - JobsPage - INFO: Switched to window about:blank
+03/28/2021 01:44:39 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[1]//td[2]' and locatorType: xpath
+03/28/2021 01:44:39 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[2]//td[2]' and locatorType: xpath
+03/28/2021 01:44:39 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/28/2021 01:44:39 PM - JobsPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+03/28/2021 01:44:39 PM - JobsPage - INFO: Switched to window about:blank
+03/28/2021 01:44:39 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[1]//td[2]' and locatorType: xpath
+03/28/2021 01:44:39 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[2]//td[2]' and locatorType: xpath
+03/28/2021 01:44:39 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/28/2021 01:44:39 PM - JobsPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+03/28/2021 01:44:39 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Jobs_info_correct
+03/28/2021 01:44:39 PM - TestStatus - INFO: test_jobsList ### TEST SUCCESSFUL

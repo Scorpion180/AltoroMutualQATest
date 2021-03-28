@@ -231,3 +231,11 @@ class SeleniumDriver():
         except:
             self.log.info("Cannot switch back to default window")
             print_stack()
+
+    def switchToWindow(self, window):
+        try:
+            self.driver.switch_to.window(window)
+            self.log.info("Switched to window "+self.driver.current_url)
+        except:
+            self.log.error("Failed to get switch to window")
+            print_stack()
