@@ -36,7 +36,7 @@ class MainPage(BasePage):
     LOGIN_BTN = 'btnSubmit'
     LOGIN_BTN_LOCATOR = 'name'
 
-    LOGIN_FAILED = '//span[contains(text(),\'Login Failed\')]'
+    LOGIN_FAILED = '//span[contains(text(),\'User Failed\')]'
     LOGIN_FAILED_LOCATOR = 'xpath'
 
     LOGIN_SUCCESSFUL = 'AccountLink'
