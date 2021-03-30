@@ -39,8 +39,8 @@ class MainPage(BasePage):
     LOGIN_FAILED = '//span[contains(text(),\'User Failed\')]'
     LOGIN_FAILED_LOCATOR = 'xpath'
 
-    LOGIN_SUCCESSFUL = 'AccountLink'
-    LOGIN_SUCCESSFUL_LOCATOR = 'id'
+    LOGIN_SUCCESSFUL = 'MY ACCOUNT'
+    LOGIN_SUCCESSFUL_LOCATOR = 'link'
 
     CONTENT_TITLE = '//div[@class=\'fl\']//h1'
     CONTENT_TITLE_LOCATOR = 'xpath'
@@ -111,7 +111,7 @@ class MainPage(BasePage):
         self.sendCredentials(userName, password)
         self.clickLoginButton()
 
-    def verifyLoginSuccessful(self, _logOut=True):
+    def verify_loginSuccessful(self, _logOut=True):
         result = self.elementPresenceCheck(self.LOGIN_SUCCESSFUL, self.LOGIN_SUCCESSFUL_LOCATOR)
         if _logOut:
             self.logOut()

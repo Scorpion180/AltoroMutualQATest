@@ -239,3 +239,11 @@ class SeleniumDriver():
         except:
             self.log.error("Failed to get switch to window")
             print_stack()
+
+    def selectByIndex(self, index, element):
+        try:
+            element.select_by_index(index)
+            self.log.info("Selected index: " + index)
+        except:
+            self.log.error("Failed to select index: " + index)
+            print_stack()

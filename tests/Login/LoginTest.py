@@ -53,7 +53,7 @@ class MainPage_tests(unittest.TestCase):
     @unpack
     def test_loginSuccessful(self, userName, password, logOut):
         self.main.check_Login(userName, password)
-        boolResult = self.main.verifyLoginSuccessful(logOut)
+        boolResult = self.main.verify_loginSuccessful(logOut)
         self.ts.markFinal("test_loginSuccessful", boolResult,
                           "LOGIN_SUCCESSFUL")
 
