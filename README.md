@@ -11,8 +11,11 @@ This is a project for automated AQ testing with selenium for the practice page [
 
 ### Runnig the project 🔧
 > Running as test suite
+
 py.test -v -s tests/test_suite.py --browser DESIRED_BROWSER_HERE --html=report.html --capture=tee-sys
+
 > Running as single test
+
 py.test -v -s PATH_TO_TEST --browser DESIRED_BROWSER_HERE --html=report.html --capture=tee-sys
 
 ### Possible browsers
