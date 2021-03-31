@@ -1,158 +1,160 @@
-03/30/2021 01:05:39 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/30/2021 01:05:39 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/30/2021 01:05:40 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/30/2021 01:05:40 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/30/2021 01:05:40 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/30/2021 01:05:40 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/30/2021 01:05:40 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/30/2021 01:05:40 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/30/2021 01:05:40 AM - UserPage - INFO: Element list found with locator: //select//option and  locatorType: xpath
-03/30/2021 01:05:40 AM - UserPage - INFO: Element found with locator: '//select//option[1]' and locatorType: xpath
-03/30/2021 01:05:40 AM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
-03/30/2021 01:05:40 AM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
-03/30/2021 01:05:40 AM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
-03/30/2021 01:05:40 AM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/30/2021 01:05:40 AM - UserPage - INFO: Element found with locator: '//select//option[2]' and locatorType: xpath
-03/30/2021 01:05:40 AM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
-03/30/2021 01:05:40 AM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
-03/30/2021 01:05:40 AM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
-03/30/2021 01:05:41 AM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/30/2021 01:05:41 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + admin_account_summary_correct
-03/30/2021 01:05:41 AM - UserPage - INFO: Element found with locator: 'Here' and locatorType: link text
-03/30/2021 01:05:41 AM - UserPage - INFO: Clicked on element with locator: 'Here' locatorType: Link clickType: click
-03/30/2021 01:05:41 AM - UserPage - INFO: Element found with locator: 'passwd' and locatorType: name
-03/30/2021 01:05:41 AM - UserPage - INFO: Sent data on element with locator: 'passwd' locatorType: name
-03/30/2021 01:05:41 AM - UserPage - INFO: Element found with locator: 'Submit' and locatorType: name
-03/30/2021 01:05:41 AM - UserPage - INFO: Clicked on element with locator: 'Submit' locatorType: name clickType: click
-03/30/2021 01:05:41 AM - UserPage - INFO: Element found with locator: '//div[@class='fl']//span' and locatorType: xpath
-03/30/2021 01:05:41 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + admin_apply_form_correct
-03/30/2021 01:05:41 AM - UserPage - INFO: Element found with locator: 'MenuHyperLink3' and locatorType: id
-03/30/2021 01:05:41 AM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink3' locatorType: id clickType: click
-03/30/2021 01:05:41 AM - UserPage - INFO: Element found with locator: 'fromAccount' and locatorType: id
-03/30/2021 01:05:41 AM - UserPage - INFO: Element found with locator: 'toAccount' and locatorType: id
-03/30/2021 01:05:41 AM - UserPage - INFO: Element found with locator: 'transferAmount' and locatorType: id
-03/30/2021 01:05:41 AM - UserPage - INFO: Sent data on element with locator: 'transferAmount' locatorType: id
-03/30/2021 01:05:41 AM - UserPage - INFO: Element found with locator: 'transfer' and locatorType: id
-03/30/2021 01:05:41 AM - UserPage - INFO: Clicked on element with locator: 'transfer' locatorType: id clickType: click
-03/30/2021 01:05:41 AM - UserPage - INFO: Element found with locator: '//form[@id='tForm']//tr[6]//span//span' and locatorType: xpath
-03/30/2021 01:05:41 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + admin_transfer_successful_correct
-03/30/2021 01:05:41 AM - UserPage - INFO: Element found with locator: 'MenuHyperLink3' and locatorType: id
-03/30/2021 01:05:42 AM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink3' locatorType: id clickType: click
-03/30/2021 01:05:42 AM - UserPage - INFO: Element found with locator: 'fromAccount' and locatorType: id
-03/30/2021 01:05:42 AM - UserPage - INFO: Element found with locator: 'toAccount' and locatorType: id
-03/30/2021 01:05:42 AM - UserPage - INFO: Element found with locator: 'transfer' and locatorType: id
-03/30/2021 01:05:42 AM - UserPage - INFO: Clicked on element with locator: 'transfer' locatorType: id clickType: click
-03/30/2021 01:05:42 AM - UserPage - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
-03/30/2021 01:05:42 AM - UserPage - INFO: Alert found
-03/30/2021 01:05:42 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + admin_transfer_unsuccessful_correct
-03/30/2021 01:05:42 AM - UserPage - INFO: Element found with locator: 'MenuHyperLink4' and locatorType: id
-03/30/2021 01:05:42 AM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink4' locatorType: id clickType: click
-03/30/2021 01:05:42 AM - UserPage - INFO: Element found with locator: 'query' and locatorType: id
-03/30/2021 01:05:42 AM - UserPage - INFO: Sent data on element with locator: 'query' locatorType: id
-03/30/2021 01:05:42 AM - UserPage - INFO: Element found with locator: 'Button1' and locatorType: id
-03/30/2021 01:05:42 AM - UserPage - INFO: Clicked on element with locator: 'Button1' locatorType: id clickType: click
-03/30/2021 01:05:42 AM - UserPage - INFO: Element found with locator: 'QueryXpath' and locatorType: id
-03/30/2021 01:05:42 AM - TestStatus - ERROR: ### VERIFICATION FAILED :: + admin_article_search_successful
-03/30/2021 01:05:42 AM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_article_search_successful.1617087942440.png
-03/30/2021 01:05:42 AM - UserPage - INFO: Element found with locator: 'MenuHyperLink1' and locatorType: id
-03/30/2021 01:05:42 AM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink1' locatorType: id clickType: click
-03/30/2021 01:05:42 AM - UserPage - INFO: Element list found with locator: //select//option and  locatorType: xpath
-03/30/2021 01:05:42 AM - UserPage - INFO: Element found with locator: 'Edit Users' and locatorType: link text
-03/30/2021 01:05:42 AM - UserPage - INFO: Clicked on element with locator: 'Edit Users' locatorType: link clickType: click
-03/30/2021 01:05:42 AM - UserPage - INFO: Element found with locator: '(//form[@id='addAccount']/following-sibling::tbody//select)[1]' and locatorType: xpath
-03/30/2021 01:05:42 AM - UserPage - INFO: Element found with locator: 'accttypes' and locatorType: name
-03/30/2021 01:05:42 AM - UserPage - INFO: Element found with locator: 'MenuHyperLink1' and locatorType: id
-03/30/2021 01:05:42 AM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink1' locatorType: id clickType: click
-03/30/2021 01:05:42 AM - UserPage - INFO: Element list found with locator: //select//option and  locatorType: xpath
-03/30/2021 01:05:42 AM - TestStatus - ERROR: ### VERIFICATION FAILED :: + admin_add_account_successful
-03/30/2021 01:05:42 AM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_add_account_successful.1617087942879.png
-03/30/2021 01:05:42 AM - UserPage - INFO: Element found with locator: 'Edit Users' and locatorType: link text
-03/30/2021 01:05:43 AM - UserPage - INFO: Clicked on element with locator: 'Edit Users' locatorType: link clickType: click
-03/30/2021 01:05:43 AM - UserPage - INFO: Element found with locator: '((//form[@id='addAccount']/following-sibling::tbody//select)[3])//option[contains(text(),'admin')]' and locatorType: xpath
-03/30/2021 01:05:43 AM - UserPage - INFO: Clicked on element with locator: '((//form[@id='addAccount']/following-sibling::tbody//select)[3])//option[contains(text(),'admin')]' locatorType: xpath clickType: click
-03/30/2021 01:05:43 AM - UserPage - INFO: Element found with locator: '(//input[@name='password1'])[1]' and locatorType: xpath
-03/30/2021 01:05:43 AM - UserPage - INFO: Sent data on element with locator: '(//input[@name='password1'])[1]' locatorType: xpath
-03/30/2021 01:05:43 AM - UserPage - INFO: Element found with locator: '(//input[@name='password2'])[1]' and locatorType: xpath
-03/30/2021 01:05:43 AM - UserPage - INFO: Sent data on element with locator: '(//input[@name='password2'])[1]' locatorType: xpath
-03/30/2021 01:05:43 AM - UserPage - INFO: Element found with locator: 'change' and locatorType: name
-03/30/2021 01:05:43 AM - UserPage - INFO: Clicked on element with locator: 'change' locatorType: name clickType: click
-03/30/2021 01:05:43 AM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
-03/30/2021 01:05:43 AM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
-03/30/2021 01:05:43 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/30/2021 01:05:43 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/30/2021 01:05:43 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/30/2021 01:05:43 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/30/2021 01:05:43 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/30/2021 01:05:43 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/30/2021 01:05:43 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/30/2021 01:05:43 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/30/2021 01:05:43 AM - MainPage - INFO: Element not found with locator: 'MY ACCOUNT' and locatorType: link
-03/30/2021 01:05:43 AM - TestStatus - ERROR: ### VERIFICATION FAILED :: + admin_change_password_successful
-03/30/2021 01:05:43 AM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_change_password_successful.1617087943941.png
-03/30/2021 01:05:43 AM - TestStatus - ERROR: ### VERIFICATION FAILED :: + admin_test_successful
-03/30/2021 01:05:44 AM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_test_successful.1617087943998.png
-03/30/2021 01:05:44 AM - TestStatus - ERROR: test_accountOptions ### TEST FAILED
-03/30/2021 01:05:44 AM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/30/2021 01:05:44 AM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/30/2021 01:05:44 AM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/30/2021 01:05:44 AM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/30/2021 01:05:44 AM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/30/2021 01:05:44 AM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/30/2021 01:05:44 AM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/30/2021 01:05:44 AM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/30/2021 01:05:44 AM - UserPage - INFO: Element list found with locator: //select//option and  locatorType: xpath
-03/30/2021 01:05:44 AM - UserPage - INFO: Element found with locator: '//select//option[1]' and locatorType: xpath
-03/30/2021 01:05:44 AM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
-03/30/2021 01:05:44 AM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
-03/30/2021 01:05:44 AM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
-03/30/2021 01:05:44 AM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/30/2021 01:05:44 AM - UserPage - INFO: Element found with locator: '//select//option[2]' and locatorType: xpath
-03/30/2021 01:05:44 AM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
-03/30/2021 01:05:45 AM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
-03/30/2021 01:05:45 AM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
-03/30/2021 01:05:45 AM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/30/2021 01:05:45 AM - UserPage - INFO: Element found with locator: '//select//option[3]' and locatorType: xpath
-03/30/2021 01:05:45 AM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
-03/30/2021 01:05:45 AM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
-03/30/2021 01:05:45 AM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
-03/30/2021 01:05:45 AM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/30/2021 01:05:45 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + jsmith_account_summary_correct
-03/30/2021 01:05:45 AM - UserPage - INFO: Element found with locator: 'Here' and locatorType: link text
-03/30/2021 01:05:45 AM - UserPage - INFO: Clicked on element with locator: 'Here' locatorType: Link clickType: click
-03/30/2021 01:05:45 AM - UserPage - INFO: Element found with locator: 'passwd' and locatorType: name
-03/30/2021 01:05:45 AM - UserPage - INFO: Sent data on element with locator: 'passwd' locatorType: name
-03/30/2021 01:05:45 AM - UserPage - INFO: Element found with locator: 'Submit' and locatorType: name
-03/30/2021 01:05:45 AM - UserPage - INFO: Clicked on element with locator: 'Submit' locatorType: name clickType: click
-03/30/2021 01:05:45 AM - UserPage - INFO: Element found with locator: '//div[@class='fl']//span' and locatorType: xpath
-03/30/2021 01:05:45 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + jsmith_apply_form_correct
-03/30/2021 01:05:45 AM - UserPage - INFO: Element found with locator: 'MenuHyperLink3' and locatorType: id
-03/30/2021 01:05:45 AM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink3' locatorType: id clickType: click
-03/30/2021 01:05:46 AM - UserPage - INFO: Element found with locator: 'fromAccount' and locatorType: id
-03/30/2021 01:05:46 AM - UserPage - INFO: Element found with locator: 'toAccount' and locatorType: id
-03/30/2021 01:05:46 AM - UserPage - INFO: Element found with locator: 'transferAmount' and locatorType: id
-03/30/2021 01:05:46 AM - UserPage - INFO: Sent data on element with locator: 'transferAmount' locatorType: id
-03/30/2021 01:05:46 AM - UserPage - INFO: Element found with locator: 'transfer' and locatorType: id
-03/30/2021 01:05:46 AM - UserPage - INFO: Clicked on element with locator: 'transfer' locatorType: id clickType: click
-03/30/2021 01:05:46 AM - UserPage - INFO: Element found with locator: '//form[@id='tForm']//tr[6]//span//span' and locatorType: xpath
-03/30/2021 01:05:46 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + jsmith_transfer_successful_correct
-03/30/2021 01:05:46 AM - UserPage - INFO: Element found with locator: 'MenuHyperLink3' and locatorType: id
-03/30/2021 01:05:46 AM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink3' locatorType: id clickType: click
-03/30/2021 01:05:46 AM - UserPage - INFO: Element found with locator: 'fromAccount' and locatorType: id
-03/30/2021 01:05:46 AM - UserPage - INFO: Element found with locator: 'toAccount' and locatorType: id
-03/30/2021 01:05:46 AM - UserPage - INFO: Element found with locator: 'transfer' and locatorType: id
-03/30/2021 01:05:46 AM - UserPage - INFO: Clicked on element with locator: 'transfer' locatorType: id clickType: click
-03/30/2021 01:05:46 AM - UserPage - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
-03/30/2021 01:05:46 AM - UserPage - INFO: Alert found
-03/30/2021 01:05:46 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + jsmith_transfer_unsuccessful_correct
-03/30/2021 01:05:46 AM - UserPage - INFO: Element found with locator: 'MenuHyperLink4' and locatorType: id
-03/30/2021 01:05:46 AM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink4' locatorType: id clickType: click
-03/30/2021 01:05:46 AM - UserPage - INFO: Element found with locator: 'query' and locatorType: id
-03/30/2021 01:05:46 AM - UserPage - INFO: Sent data on element with locator: 'query' locatorType: id
-03/30/2021 01:05:46 AM - UserPage - INFO: Element found with locator: 'Button1' and locatorType: id
-03/30/2021 01:05:46 AM - UserPage - INFO: Clicked on element with locator: 'Button1' locatorType: id clickType: click
-03/30/2021 01:05:46 AM - UserPage - INFO: Element found with locator: 'QueryXpath' and locatorType: id
-03/30/2021 01:05:46 AM - TestStatus - ERROR: ### VERIFICATION FAILED :: + jsmith_article_search_successful
-03/30/2021 01:05:46 AM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/jsmith_article_search_successful.1617087946913.png
-03/30/2021 01:05:46 AM - TestStatus - ERROR: ### VERIFICATION FAILED :: + jsmith_test_successful
-03/30/2021 01:05:47 AM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/jsmith_test_successful.1617087946963.png
-03/30/2021 01:05:47 AM - TestStatus - ERROR: test_accountOptions ### TEST FAILED
+03/30/2021 05:28:00 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/30/2021 05:28:00 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/30/2021 05:28:00 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/30/2021 05:28:00 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/30/2021 05:28:00 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/30/2021 05:28:00 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/30/2021 05:28:00 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/30/2021 05:28:00 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/30/2021 05:28:00 PM - UserPage - INFO: Element list found with locator: //select//option and  locatorType: xpath
+03/30/2021 05:28:00 PM - UserPage - INFO: Element found with locator: '//select//option[1]' and locatorType: xpath
+03/30/2021 05:28:01 PM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
+03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
+03/30/2021 05:28:01 PM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
+03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: '//select//option[2]' and locatorType: xpath
+03/30/2021 05:28:01 PM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
+03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
+03/30/2021 05:28:01 PM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
+03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 05:28:01 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + admin_account_summary_correct
+03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: 'Here' and locatorType: link text
+03/30/2021 05:28:01 PM - UserPage - INFO: Clicked on element with locator: 'Here' locatorType: Link clickType: click
+03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: 'passwd' and locatorType: name
+03/30/2021 05:28:01 PM - UserPage - INFO: Sent data on element with locator: 'passwd' locatorType: name
+03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: 'Submit' and locatorType: name
+03/30/2021 05:28:02 PM - UserPage - INFO: Clicked on element with locator: 'Submit' locatorType: name clickType: click
+03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//span' and locatorType: xpath
+03/30/2021 05:28:02 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + admin_apply_form_correct
+03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink3' and locatorType: id
+03/30/2021 05:28:02 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink3' locatorType: id clickType: click
+03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'fromAccount' and locatorType: id
+03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'toAccount' and locatorType: id
+03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'transferAmount' and locatorType: id
+03/30/2021 05:28:02 PM - UserPage - INFO: Sent data on element with locator: 'transferAmount' locatorType: id
+03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'transfer' and locatorType: id
+03/30/2021 05:28:02 PM - UserPage - INFO: Clicked on element with locator: 'transfer' locatorType: id clickType: click
+03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: '//form[@id='tForm']//tr[6]//span//span' and locatorType: xpath
+03/30/2021 05:28:02 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + admin_transfer_successful_correct
+03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink3' and locatorType: id
+03/30/2021 05:28:02 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink3' locatorType: id clickType: click
+03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'fromAccount' and locatorType: id
+03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'toAccount' and locatorType: id
+03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'transfer' and locatorType: id
+03/30/2021 05:28:02 PM - UserPage - INFO: Clicked on element with locator: 'transfer' locatorType: id clickType: click
+03/30/2021 05:28:02 PM - UserPage - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/30/2021 05:28:02 PM - UserPage - INFO: Alert found
+03/30/2021 05:28:02 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + admin_transfer_unsuccessful_correct
+03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink4' and locatorType: id
+03/30/2021 05:28:02 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink4' locatorType: id clickType: click
+03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'query' and locatorType: id
+03/30/2021 05:28:02 PM - UserPage - INFO: Sent data on element with locator: 'query' locatorType: id
+03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'Button1' and locatorType: id
+03/30/2021 05:28:03 PM - UserPage - INFO: Clicked on element with locator: 'Button1' locatorType: id clickType: click
+03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'QueryXpath' and locatorType: id
+03/30/2021 05:28:03 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + admin_article_search_successful
+03/30/2021 05:28:03 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_article_search_successful.1617146883128.png
+03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink1' and locatorType: id
+03/30/2021 05:28:03 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink1' locatorType: id clickType: click
+03/30/2021 05:28:03 PM - UserPage - INFO: Element list found with locator: //select//option and  locatorType: xpath
+03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'Edit Users' and locatorType: link text
+03/30/2021 05:28:03 PM - UserPage - INFO: Clicked on element with locator: 'Edit Users' locatorType: link clickType: click
+03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: '(//form[@id='addAccount']/following-sibling::tbody//select)[1]' and locatorType: xpath
+03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'accttypes' and locatorType: name
+03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink1' and locatorType: id
+03/30/2021 05:28:03 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink1' locatorType: id clickType: click
+03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: '//select' and locatorType: xpath
+03/30/2021 05:28:03 PM - UserPage - INFO: Clicked on element with locator: '//select' locatorType: xpath clickType: click
+03/30/2021 05:28:03 PM - UserPage - INFO: Element list found with locator: //select//option and  locatorType: xpath
+03/30/2021 05:28:03 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + admin_add_account_successful
+03/30/2021 05:28:03 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_add_account_successful.1617146883821.png
+03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'Edit Users' and locatorType: link text
+03/30/2021 05:28:03 PM - UserPage - INFO: Clicked on element with locator: 'Edit Users' locatorType: link clickType: click
+03/30/2021 05:28:04 PM - UserPage - INFO: Element found with locator: '((//form[@id='addAccount']/following-sibling::tbody//select)[3])//option[contains(text(),'admin')]' and locatorType: xpath
+03/30/2021 05:28:04 PM - UserPage - INFO: Clicked on element with locator: '((//form[@id='addAccount']/following-sibling::tbody//select)[3])//option[contains(text(),'admin')]' locatorType: xpath clickType: click
+03/30/2021 05:28:04 PM - UserPage - INFO: Element found with locator: '(//input[@name='password1'])[1]' and locatorType: xpath
+03/30/2021 05:28:04 PM - UserPage - INFO: Sent data on element with locator: '(//input[@name='password1'])[1]' locatorType: xpath
+03/30/2021 05:28:04 PM - UserPage - INFO: Element found with locator: '(//input[@name='password2'])[1]' and locatorType: xpath
+03/30/2021 05:28:04 PM - UserPage - INFO: Sent data on element with locator: '(//input[@name='password2'])[1]' locatorType: xpath
+03/30/2021 05:28:04 PM - UserPage - INFO: Element found with locator: 'change' and locatorType: name
+03/30/2021 05:28:04 PM - UserPage - INFO: Clicked on element with locator: 'change' locatorType: name clickType: click
+03/30/2021 05:28:04 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
+03/30/2021 05:28:04 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
+03/30/2021 05:28:04 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/30/2021 05:28:04 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/30/2021 05:28:04 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/30/2021 05:28:04 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/30/2021 05:28:04 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/30/2021 05:28:04 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/30/2021 05:28:04 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/30/2021 05:28:04 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/30/2021 05:28:04 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
+03/30/2021 05:28:04 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + admin_change_password_successful
+03/30/2021 05:28:04 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_change_password_successful.1617146884935.png
+03/30/2021 05:28:04 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + admin_test_successful
+03/30/2021 05:28:05 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_test_successful.1617146884989.png
+03/30/2021 05:28:05 PM - TestStatus - ERROR: test_accountOptions ### TEST FAILED
+03/30/2021 05:28:05 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
+03/30/2021 05:28:05 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
+03/30/2021 05:28:05 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
+03/30/2021 05:28:05 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
+03/30/2021 05:28:05 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
+03/30/2021 05:28:05 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
+03/30/2021 05:28:05 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/30/2021 05:28:05 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/30/2021 05:28:05 PM - UserPage - INFO: Element list found with locator: //select//option and  locatorType: xpath
+03/30/2021 05:28:05 PM - UserPage - INFO: Element found with locator: '//select//option[1]' and locatorType: xpath
+03/30/2021 05:28:05 PM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
+03/30/2021 05:28:05 PM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
+03/30/2021 05:28:05 PM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
+03/30/2021 05:28:05 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 05:28:05 PM - UserPage - INFO: Element found with locator: '//select//option[2]' and locatorType: xpath
+03/30/2021 05:28:06 PM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
+03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
+03/30/2021 05:28:06 PM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
+03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: '//select//option[3]' and locatorType: xpath
+03/30/2021 05:28:06 PM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
+03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
+03/30/2021 05:28:06 PM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
+03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 05:28:06 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + jsmith_account_summary_correct
+03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: 'Here' and locatorType: link text
+03/30/2021 05:28:06 PM - UserPage - INFO: Clicked on element with locator: 'Here' locatorType: Link clickType: click
+03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: 'passwd' and locatorType: name
+03/30/2021 05:28:06 PM - UserPage - INFO: Sent data on element with locator: 'passwd' locatorType: name
+03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: 'Submit' and locatorType: name
+03/30/2021 05:28:06 PM - UserPage - INFO: Clicked on element with locator: 'Submit' locatorType: name clickType: click
+03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//span' and locatorType: xpath
+03/30/2021 05:28:06 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + jsmith_apply_form_correct
+03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink3' and locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink3' locatorType: id clickType: click
+03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'fromAccount' and locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'toAccount' and locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'transferAmount' and locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Sent data on element with locator: 'transferAmount' locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'transfer' and locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Clicked on element with locator: 'transfer' locatorType: id clickType: click
+03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: '//form[@id='tForm']//tr[6]//span//span' and locatorType: xpath
+03/30/2021 05:28:07 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + jsmith_transfer_successful_correct
+03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink3' and locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink3' locatorType: id clickType: click
+03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'fromAccount' and locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'toAccount' and locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'transfer' and locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Clicked on element with locator: 'transfer' locatorType: id clickType: click
+03/30/2021 05:28:07 PM - UserPage - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/30/2021 05:28:07 PM - UserPage - INFO: Alert found
+03/30/2021 05:28:07 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + jsmith_transfer_unsuccessful_correct
+03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink4' and locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink4' locatorType: id clickType: click
+03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'query' and locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Sent data on element with locator: 'query' locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'Button1' and locatorType: id
+03/30/2021 05:28:07 PM - UserPage - INFO: Clicked on element with locator: 'Button1' locatorType: id clickType: click
+03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'QueryXpath' and locatorType: id
+03/30/2021 05:28:07 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + jsmith_article_search_successful
+03/30/2021 05:28:08 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/jsmith_article_search_successful.1617146887987.png
+03/30/2021 05:28:08 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + jsmith_test_successful
+03/30/2021 05:28:08 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/jsmith_test_successful.1617146888039.png
+03/30/2021 05:28:08 PM - TestStatus - ERROR: test_accountOptions ### TEST FAILED

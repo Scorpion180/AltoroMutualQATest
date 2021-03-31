@@ -26,6 +26,9 @@ class UserPage(BasePage):
     ACCOUNT_SELECT = '//select//option'
     ACCOUNT_SELECT_LOCATOR = 'xpath'
 
+    ACCOUNT_DROPDOWN = '//select'
+    ACCOUNT_DROPDOWN_LOCATOR = 'xpath'
+
     ACCOUNT_BTN = 'btnGetAccount'
     ACCOUNT_BTN_LOCATOR = 'id'
 
@@ -244,6 +247,7 @@ class UserPage(BasePage):
 
     def verify_addedAccount(self):
         self.clickAccountSummary()
+        self.elementClick(self.ACCOUNT_DROPDOWN, self.ACCOUNT_DROPDOWN_LOCATOR)
         if self.accountQuantity + 1 == self.getAccountQuantity():
             return True
         return False

@@ -20,5 +20,6 @@ class Jobs_tests(unittest.TestCase):
     def test_jobsList(self):
         self.jobs.check_jobOpenings()
         boolResult = self.jobs.verify_correctInfo()
+        self.ts.mark(boolResult, 'info_correct')
         self.ts.markFinal("test_jobsList", boolResult,
                           "Jobs_info_correct")

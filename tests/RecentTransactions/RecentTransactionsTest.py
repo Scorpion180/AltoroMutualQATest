@@ -9,7 +9,7 @@ from ddt import ddt, data, unpack
 
 @pytest.mark.usefixtures("oneTimeSetUp", "setUp")
 @ddt
-class MainPage_tests(unittest.TestCase):
+class RecentTransactions_test(unittest.TestCase):
 
     @pytest.fixture(autouse=True)
     def objectSetup(self, oneTimeSetUp):
