@@ -2,6 +2,7 @@ import time
 
 from pages.Jobs.JobsPage import JobsPage
 from pages.Main.MainPage import MainPage
+from pages.RecentTransactions.RecentTransactions import RecentTransactions
 from pages.User.UserPage import UserPage
 from utilities.teststatus import TestStatus
 import unittest, pytest
@@ -18,6 +19,38 @@ class User_tests(unittest.TestCase):
         self.main = MainPage(self.driver)
         self.page = UserPage(self.driver)
         self.ts = TestStatus(self.driver)
+        self.rt = RecentTransactions(self.driver)
+
+    def validDate(self):
+        results = []
+        self.rt.check_afterDate('2020-11-20')
+        results.append(self.rt.verify_validDate())
+        self.ts.mark(results[-1], "After_date_verified")
+        results.append(self.rt.verify_datesOnTable(after='2020-11-20', type='AFTER'))
+        self.ts.mark(results[-1], "Dates_After_on_Table_verified")
+
+        self.rt.check_beforeDate('2021-03-20')
+        results.append(self.rt.verify_validDate())
+        self.ts.mark(results[-1], "Before_date_verified")
+        results.append(self.rt.verify_datesOnTable(before='2021-03-20', type='BEFORE'))
+        self.ts.mark(results[-1], "Dates_Before_on_Table_verified")
+
+        self.rt.check_dates('2020-11-20', '2021-03-20')
+        results.append(self.rt.verify_datesOnTable('2020-11-20', '2021-03-20', 'BOTH'))
+        self.ts.mark(results[-1], "Valid_dates_verified")
+        self.ts.markFinal('test_validDate', all(x == results[0] for x in results), "dates_test_successful")
+
+    def invalidDate(self):
+        results = []
+        self.rt.check_afterDate('02/12/2015')
+        results.append(self.rt.verify_invalidDate())
+        self.ts.mark(results[-1], "After_date_verified")
+        self.rt.clearRecentTransactionsFields()
+        self.rt.check_beforeDate('02/12/2015')
+        results.append(self.rt.verify_invalidDate())
+        self.ts.mark(results[-1], "Before_date_verified")
+        self.ts.markFinal("test_invalidDate", all(x == results[0] for x in results),
+                          "invalid_date_test_successful")
 
     @pytest.mark.run(order=1)
     @data(('admin', 'admin', 'watchfire', 'Savings', '456datil'), ('jsmith', 'demo1234',  'watchfire', '', ''))
@@ -44,6 +77,11 @@ class User_tests(unittest.TestCase):
         self.page.check_articlesSearch(articleName)
         results.append(self.page.verify_querySuccessful())
         self.ts.mark(results[-1], username + '_article_search_successful')
+
+        self.validDate()
+
+        self.invalidDate()
+
         if username == 'admin':
 
             self.page.check_addAccount(username, accountType)

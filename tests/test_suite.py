@@ -12,16 +12,14 @@ unittest.TextTestRunner(verbosity=2).run(smokeTest)
 '''
 import unittest
 
-from tests.Jobs.JobsTest import Jobs_tests
 from tests.Login.LoginTest import Login_tests
 from tests.Main.MainPageTest import MainPage_tests
 from tests.User.UserTest import User_tests
 
 tc1 = unittest.TestLoader().loadTestsFromTestCase(MainPage_tests)
-tc2 = unittest.TestLoader().loadTestsFromTestCase(Jobs_tests)
-tc4 = unittest.TestLoader().loadTestsFromTestCase(Login_tests)
-tc5 = unittest.TestLoader().loadTestsFromTestCase(User_tests)
+tc2 = unittest.TestLoader().loadTestsFromTestCase(Login_tests)
+tc3 = unittest.TestLoader().loadTestsFromTestCase(User_tests)
 
-smokeTest = unittest.TestSuite([tc1, tc2, tc4, tc5])
+smokeTest = unittest.TestSuite([tc1, tc2, tc3])
 
 unittest.TextTestRunner(verbosity=2).run(smokeTest)

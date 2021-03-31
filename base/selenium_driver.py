@@ -56,8 +56,18 @@ class SeleniumDriver():
             self.log.info("Locator type " + locatorType + " not correct/supported")
         return False
 
-    def getElement(self, locator, locatorType="id"):
-        element = None
+    def findElement(self, property, locator = '', locatorType='id', element = None):
+        try:
+            if element is None:
+                self.getElement(locator, locatorType)
+            byType = self.getByType(locatorType)
+            if By.XPATH == byType:
+                element.find_element_by_xpath(locator).get_property(property)
+            self.log.info('Element found in element by ' + byType + ' and property ' + property)
+        except:
+            self.log.info('Element not found in element by ' + locatorType + ' and property ' + property)
+
+    def getElement(self, locator, locatorType="id", element = None):
         try:
             locatorType = locatorType.lower()
             byType = self.getByType(locatorType)
@@ -65,7 +75,7 @@ class SeleniumDriver():
                 EC.visibility_of_element_located((byType, locator)))
             self.log.info("Element found with locator: '" + locator + "' and locatorType: " + byType)
         except:
-            self.log.info("Element not found with locator: '" + locator + "' and locatorType: " + byType)
+            self.log.info("Element not found with locator: '" + locator + "' and locatorType: " + locatorType)
         return element
 
     def getElementList(self, locator, locatorType="id"):
@@ -110,7 +120,7 @@ class SeleniumDriver():
             if len(text) == 0:
                 text = element.get_attribute("innerText")
             if len(text) != 0:
-                self.log.info("Getting text on element :: " +  info)
+                self.log.info("Getting text on element :: " + info)
                 self.log.info("The text is :: '" + text + "'")
                 text = text.strip()
         except:
@@ -246,4 +256,12 @@ class SeleniumDriver():
             self.log.info("Selected index: " + index)
         except:
             self.log.error("Failed to select index: " + index)
+            print_stack()
+
+    def executeScript(self, script):
+        try:
+            self.driver.execute_script(script)
+            self.log.info("Executed script: " + script)
+        except:
+            self.log.info("Cannot execute script: " + script)
             print_stack()

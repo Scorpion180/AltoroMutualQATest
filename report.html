@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) { // eslint-disable-line no-redeclare
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function findAll(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sortColumn(elem) {
+    toggleSortStates(elem);
+    const colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    let key;
+    if (elem.classList.contains('result')) {
+        key = keyResult;
+    } else if (elem.classList.contains('links')) {
+        key = keyLink;
+    } else {
+        key = keyAlpha;
+    }
+    sortTable(elem, key(colIndex));
+}
+
+function showAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(showExtras);
+}
+
+function hideAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(hideExtras);
+}
+
+function showExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.remove('collapsed');
+    expandcollapse.classList.remove('expander');
+    expandcollapse.classList.add('collapser');
+}
+
+function hideExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.add('collapsed');
+    expandcollapse.classList.remove('collapser');
+    expandcollapse.classList.add('expander');
+}
+
+function showFilters() {
+    const filterItems = document.getElementsByClassName('filter');
+    for (let i = 0; i < filterItems.length; i++)
+        filterItems[i].hidden = false;
+}
+
+function addCollapse() {
+    // Add links for show/hide all
+    const resulttable = find('table#results-table');
+    const showhideall = document.createElement('p');
+    showhideall.innerHTML = '<a href="javascript:showAllExtras()">Show all details</a> / ' +
+                            '<a href="javascript:hideAllExtras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    findAll('.col-result').forEach(function(elem) {
+        const collapsed = getQueryParameter('collapsed') || 'Passed';
+        const extras = elem.parentNode.nextElementSibling;
+        const expandcollapse = document.createElement('span');
+        if (extras.classList.contains('collapsed')) {
+            expandcollapse.classList.add('expander');
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add('collapsed');
+            expandcollapse.classList.add('expander');
+        } else {
+            expandcollapse.classList.add('collapser');
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener('click', function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains('collapsed')) {
+                showExtras(event.currentTarget);
+            } else {
+                hideExtras(event.currentTarget);
+            }
+        });
+    });
+}
+
+function getQueryParameter(name) {
+    const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () { // eslint-disable-line no-unused-vars
+    resetSortHeaders();
+
+    addCollapse();
+
+    showFilters();
+
+    sortColumn(find('.initial-sort'));
+
+    findAll('.sortable').forEach(function(elem) {
+        elem.addEventListener('click',
+            function() {
+                sortColumn(elem);
+            }, false);
+    });
+}
+
+function sortTable(clicked, keyFunc) {
+    const rows = findAll('.results-table-row');
+    const reversed = !clicked.classList.contains('asc');
+    const sortedRows = sort(rows, keyFunc, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    const thead = document.getElementById('results-table-head');
+    document.getElementById('results-table').remove();
+    const parent = document.createElement('table');
+    parent.id = 'results-table';
+    parent.appendChild(thead);
+    sortedRows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName('BODY')[0].appendChild(parent);
+}
+
+function sort(items, keyFunc, reversed) {
+    const sortArray = items.map(function(item, i) {
+        return [keyFunc(item), i];
+    });
+
+    sortArray.sort(function(a, b) {
+        const keyA = a[0];
+        const keyB = b[0];
+
+        if (keyA == keyB) return 0;
+
+        if (reversed) {
+            return keyA < keyB ? 1 : -1;
+        } else {
+            return keyA > keyB ? 1 : -1;
+        }
+    });
+
+    return sortArray.map(function(item) {
+        const index = item[1];
+        return items[index];
+    });
+}
+
+function keyAlpha(colIndex) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[colIndex].firstChild.data.toLowerCase();
+    };
+}
+
+function keyLink(colIndex) {
+    return function(elem) {
+        const dataCell = elem.childNodes[1].childNodes[colIndex].firstChild;
+        return dataCell == null ? '' : dataCell.innerText.toLowerCase();
+    };
+}
+
+function keyResult(colIndex) {
+    return function(elem) {
+        const strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+            'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[colIndex].firstChild.data);
+    };
+}
+
+function resetSortHeaders() {
+    findAll('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    findAll('.sortable').forEach(function(elem) {
+        const icon = document.createElement('div');
+        icon.className = 'sort-icon';
+        icon.textContent = 'vvv';
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove('desc', 'active');
+        elem.classList.add('asc', 'inactive');
+    });
+}
+
+function toggleSortStates(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        resetSortHeaders();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function isAllRowsHidden(value) {
+    return value.hidden == false;
+}
+
+function filterTable(elem) { // eslint-disable-line no-unused-vars
+    const outcomeAtt = 'data-test-result';
+    const outcome = elem.getAttribute(outcomeAtt);
+    const classOutcome = outcome + ' results-table-row';
+    const outcomeRows = document.getElementsByClassName(classOutcome);
+
+    for(let i = 0; i < outcomeRows.length; i++){
+        outcomeRows[i].hidden = !elem.checked;
+    }
+
+    const rows = findAll('.results-table-row').filter(isAllRowsHidden);
+    const allRowsHidden = rows.length == 0 ? true : false;
+    const notFoundMessage = document.getElementById('not-found-message');
+    notFoundMessage.hidden = !allRowsHidden;
+}
+</script>
+    <h1>report.html</h1>
+    <p>Report generated on 30-Mar-2021 at 21:53:16 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "0.13.1", "py": "1.10.0", "pytest": "6.2.2"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Windows-10-10.0.18362-SP0</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"html": "3.1.1", "metadata": "1.11.0", "ordering": "0.6"}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.9.1</td></tr></table>
+    <h2>Summary</h2>
+    <p>8 tests ran in 96.01 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">6 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable" col="duration">Duration</th>
+          <th class="sortable links" col="links">Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/Main/MainPageTest.py::MainPage_tests::test_mainLinks</td>
+          <td class="col-duration">61.40</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;MainPageTest.MainPage_tests testMethod=test_mainLinks&gt;<br/><br/>    @pytest.mark.run(order=1)<br/>    def test_mainLinks(self):<br/>        self.main.check_mainLinks()<br/>        boolResult = self.main.verify_mainLinks()<br/>&gt;       self.ts.markFinal(&quot;test_mainLinks&quot;, boolResult,<br/>                          &quot;MAIN_LINKS_WORKING &quot;, self.main.brokenContent)<br/><br/>tests\Main\MainPageTest.py:78: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;utilities.teststatus.TestStatus object at 0x000001E327153C70&gt;, testName = &#x27;test_mainLinks&#x27;, result = False, resultMessage = &#x27;MAIN_LINKS_WORKING &#x27;<br/>aditionalInfo = &#x27;Real Estate Financing_link_not_working http://demo.testfire.net/ | security_link_not_working http://demo.testfire.net/ | &#x27;<br/><br/>    def markFinal(self, testName, result, resultMessage, aditionalInfo = &#x27;&#x27;):<br/>        &quot;&quot;&quot;<br/>        Mark the final result of the verification point in a test case<br/>        This needs to be called at least once in a test case<br/>        This should be final test status of the test case<br/>        &quot;&quot;&quot;<br/>        self.setResult(result, resultMessage, aditionalInfo)<br/>    <br/>        if &quot;FAIL&quot; in self.resultList:<br/>            self.log.error(testName + &quot; ### TEST FAILED&quot;)<br/>            self.resultList.clear()<br/>&gt;           assert True == False<br/><span class="error">E           AssertionError</span><br/><br/>utilities\teststatus.py:61: AssertionError<br/> -----------------------------Captured stdout setup------------------------------ <br/>Running one time setUp
+Running method level setUp
+<br/> ------------------------------Captured stdout call------------------------------ <br/>Real Estate Financing_link_not_working http://demo.testfire.net/ | 
+security_link_not_working http://demo.testfire.net/ | 
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     MainPage:selenium_driver.py:87 Element list found with locator: //a[@href] and  locatorType: xpath
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/login.jsp
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=inside_contact.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside_contact.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/feedback.jsp
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/login.jsp
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=personal.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 8
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Personal&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Personal
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: PERSONAL
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=personal.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=business.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 14
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Small Business&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Small Business
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: SMALL
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=business.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=inside.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 13
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Inside Altoro&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Inside Altoro
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: INSIDE
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=personal.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 8
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Personal&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Personal
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: PERSONAL
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=personal.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=personal_deposit.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 16
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Deposit Products&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Deposit Products
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: Deposit
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=personal_deposit.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=personal_checking.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=personal_checking.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=personal_loans.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=personal_loans.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=personal_cards.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=personal_cards.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=personal_investments.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=personal_investments.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=personal_other.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 23
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Other Personal Services&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Other Personal Services
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: Other
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=personal_other.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=business.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 14
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Small Business&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Small Business
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: SMALL
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=business.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=business_deposit.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=business_deposit.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=business_lending.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 7
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Lending&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Lending
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: Lending
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=business_lending.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=business_cards.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=business_cards.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=business_insurance.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=business_insurance.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=business_retirement.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:78 Element not found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//iframe&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:232 Switched to iFrame: &lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session=&quot;485ef812-bfdc-4abe-b73c-12cfd51c41e4&quot;, element=&quot;7fe07657-b338-4605-a22a-828ccbe39f6e&quot;)&gt;
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:240 Switched back to default window
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=business_retirement.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=business_other.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=business_other.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=inside.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 13
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Inside Altoro&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Inside Altoro
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: INSIDE
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=inside_about.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 19
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;About Altoro Mutual&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: About Altoro Mutual
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: About
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside_about.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=inside_contact.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside_contact.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/cgi.exe
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=inside_investor.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside_investor.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=inside_press.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside_press.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=inside_careers.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 24
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Careers at Altoro Mutual&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Careers at Altoro Mutual
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: Careers
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside_careers.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/subscribe.jsp
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=personal_savings.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:78 Element not found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:78 Element not found with locator: &#x27;//iframe&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=personal_savings.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=personal_loans.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 13
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Loan Products&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Loan Products
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: Real
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 13
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Loan Products&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Loan Products
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: Estate
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 13
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Loan Products&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Loan Products
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: Financing
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+INFO     MainPage:selenium_driver.py:33 Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/Real Estate Financing_link_not_working .1617162749307.png
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=personal_loans.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=business_cards.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 5
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Cards&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Cards
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: Business
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 5
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Cards&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Cards
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: Credit
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 5
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Cards&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Cards
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: Cards
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=business_cards.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=business_retirement.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:78 Element not found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//iframe&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:232 Switched to iFrame: &lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session=&quot;485ef812-bfdc-4abe-b73c-12cfd51c41e4&quot;, element=&quot;1a2f5471-f604-4bf4-835b-eff69cc66fc0&quot;)&gt;
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:240 Switched back to default window
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=business_retirement.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=privacy.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 14
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;Privacy Policy&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Privacy Policy
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: privacy
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=privacy.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/default.jsp?content=security.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 21
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;An Error Has Occurred&#x27;
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: An Error Has Occurred
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: security
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+INFO     MainPage:selenium_driver.py:33 Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/security_link_not_working .1617162761483.png
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/default.jsp?content=security.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/survey_questions.jsp
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=privacy.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=privacy.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/index.jsp?content=security.htm
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     MainPage:selenium_driver.py:248 Switched to window about:blank
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=security.htm
+INFO     MainPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/status_check.jsp
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/swagger/index.html
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: https://github.com/AppSecDev/AltoroJ/
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: http://www-142.ibm.com/software/products/us/en/subcategory/SWI10
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: ?
+INFO     Util:util.py:87 ### VERIFICATION DOES NOT CONTAINS !!!
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: Real Estate Financing_link_not_working http://demo.testfire.net/ | security_link_not_working http://demo.testfire.net/ | 
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: 
+INFO     Util:util.py:104 ### VERIFICATION DOES NOT MATCHED !!!
+ERROR    TestStatus:teststatus.py:33 ### VERIFICATION FAILED :: + MAIN_LINKS_WORKING Real Estate Financing_link_not_working http://demo.testfire.net/ | security_link_not_working http://demo.testfire.net/ | 
+INFO     TestStatus:selenium_driver.py:33 Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/MAIN_LINKS_WORKING .1617162762349.png
+ERROR    TestStatus:teststatus.py:59 test_mainLinks ### TEST FAILED<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Running method level tearDown
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/Main/MainPageTest.py::MainPage_tests::test_links</td>
+          <td class="col-duration">27.40</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;MainPageTest.MainPage_tests testMethod=test_links&gt;<br/><br/>    @pytest.mark.run(order=2)<br/>    def test_links(self):<br/>        self.main.check_links()<br/>        boolResult = self.main.verify_brokenLink()<br/>&gt;       self.ts.markFinal(&quot;test_links&quot;, boolResult,<br/>                          &quot;BROKEN_LINKS &quot;, self.main.brokenLinks)<br/><br/>tests\Main\MainPageTest.py:71: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;utilities.teststatus.TestStatus object at 0x000001E32722AC10&gt;, testName = &#x27;test_links&#x27;, result = False, resultMessage = &#x27;BROKEN_LINKS &#x27;<br/>aditionalInfo = &#x27;http://demo.testfire.net/cgi.exe 404 http://demo.testfire.net/default.jsp?content=security.htm 404 http://www-142.ibm.com/software/products/us/en/subcategory/SWI10 Time out &#x27;<br/><br/>    def markFinal(self, testName, result, resultMessage, aditionalInfo = &#x27;&#x27;):<br/>        &quot;&quot;&quot;<br/>        Mark the final result of the verification point in a test case<br/>        This needs to be called at least once in a test case<br/>        This should be final test status of the test case<br/>        &quot;&quot;&quot;<br/>        self.setResult(result, resultMessage, aditionalInfo)<br/>    <br/>        if &quot;FAIL&quot; in self.resultList:<br/>            self.log.error(testName + &quot; ### TEST FAILED&quot;)<br/>            self.resultList.clear()<br/>&gt;           assert True == False<br/><span class="error">E           AssertionError</span><br/><br/>utilities\teststatus.py:61: AssertionError<br/> -----------------------------Captured stdout setup------------------------------ <br/>Running method level setUp
+<br/> ------------------------------Captured stdout call------------------------------ <br/>http://demo.testfire.net/index.jsp
+200
+http://demo.testfire.net/login.jsp
+200
+http://demo.testfire.net/index.jsp?content=inside_contact.htm
+200
+http://demo.testfire.net/feedback.jsp
+200
+http://demo.testfire.net/login.jsp
+200
+http://demo.testfire.net/index.jsp?content=personal.htm
+200
+http://demo.testfire.net/index.jsp?content=business.htm
+200
+http://demo.testfire.net/index.jsp?content=inside.htm
+200
+http://demo.testfire.net/index.jsp?content=personal.htm
+200
+http://demo.testfire.net/index.jsp?content=personal_deposit.htm
+200
+http://demo.testfire.net/index.jsp?content=personal_checking.htm
+200
+http://demo.testfire.net/index.jsp?content=personal_loans.htm
+200
+http://demo.testfire.net/index.jsp?content=personal_cards.htm
+200
+http://demo.testfire.net/index.jsp?content=personal_investments.htm
+200
+http://demo.testfire.net/index.jsp?content=personal_other.htm
+200
+http://demo.testfire.net/index.jsp?content=business.htm
+200
+http://demo.testfire.net/index.jsp?content=business_deposit.htm
+200
+http://demo.testfire.net/index.jsp?content=business_lending.htm
+200
+http://demo.testfire.net/index.jsp?content=business_cards.htm
+200
+http://demo.testfire.net/index.jsp?content=business_insurance.htm
+200
+http://demo.testfire.net/index.jsp?content=business_retirement.htm
+200
+http://demo.testfire.net/index.jsp?content=business_other.htm
+200
+http://demo.testfire.net/index.jsp?content=inside.htm
+200
+http://demo.testfire.net/index.jsp?content=inside_about.htm
+200
+http://demo.testfire.net/index.jsp?content=inside_contact.htm
+200
+http://demo.testfire.net/cgi.exe
+404
+http://demo.testfire.net/index.jsp?content=inside_investor.htm
+200
+http://demo.testfire.net/index.jsp?content=inside_press.htm
+200
+http://demo.testfire.net/index.jsp?content=inside_careers.htm
+200
+http://demo.testfire.net/subscribe.jsp
+200
+http://demo.testfire.net/index.jsp?content=personal_savings.htm
+200
+http://demo.testfire.net/index.jsp?content=personal_loans.htm
+200
+http://demo.testfire.net/index.jsp?content=business_cards.htm
+200
+http://demo.testfire.net/index.jsp?content=business_retirement.htm
+200
+http://demo.testfire.net/index.jsp?content=privacy.htm
+200
+http://demo.testfire.net/default.jsp?content=security.htm
+404
+http://demo.testfire.net/survey_questions.jsp
+200
+http://demo.testfire.net/index.jsp?content=privacy.htm
+200
+http://demo.testfire.net/index.jsp?content=security.htm
+200
+http://demo.testfire.net/status_check.jsp
+200
+http://demo.testfire.net/swagger/index.html
+200
+https://github.com/AppSecDev/AltoroJ/
+301
+http://www-142.ibm.com/software/products/us/en/subcategory/SWI10
+Time out
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     MainPage:selenium_driver.py:87 Element list found with locator: a and  locatorType: css
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: http://demo.testfire.net/cgi.exe 404 http://demo.testfire.net/default.jsp?content=security.htm 404 http://www-142.ibm.com/software/products/us/en/subcategory/SWI10 Time out 
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: 
+INFO     Util:util.py:104 ### VERIFICATION DOES NOT MATCHED !!!
+ERROR    TestStatus:teststatus.py:33 ### VERIFICATION FAILED :: + BROKEN_LINKS http://demo.testfire.net/cgi.exe 404 http://demo.testfire.net/default.jsp?content=security.htm 404 http://www-142.ibm.com/software/products/us/en/subcategory/SWI10 Time out 
+INFO     TestStatus:selenium_driver.py:33 Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/BROKEN_LINKS .1617162789765.png
+ERROR    TestStatus:teststatus.py:59 test_links ### TEST FAILED<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Running method level tearDown
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/Main/MainPageTest.py::MainPage_tests::test_successfulContactForm</td>
+          <td class="col-duration">0.53</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Running method level setUp
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;HyperLink4&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;HyperLink4&#x27; locatorType: id clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;name&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;name&#x27; locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;email_addr&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;email_addr&#x27; locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;subject&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;subject&#x27; locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;comments&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;comments&#x27; locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;submit&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;submit&#x27; locatorType: name clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//p&#x27; and locatorType: xpath
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Thank you for your comments, Efren. They will be reviewed by our Customer Service staff and given the full attention that they deserve. Our reply will be sent to your email: efren@gmail.com
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: Our reply will be sent to your email
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Form_successful_working 
+INFO     TestStatus:teststatus.py:63 test_successfulContactForm ### TEST SUCCESSFUL<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Running method level tearDown
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/Main/MainPageTest.py::MainPage_tests::test_unsuccessfulContactForm</td>
+          <td class="col-duration">0.29</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Running method level setUp
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;HyperLink4&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;HyperLink4&#x27; locatorType: id clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;name&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;name&#x27; locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;email_addr&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;email_addr&#x27; locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;subject&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;subject&#x27; locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;comments&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;comments&#x27; locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;submit&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;submit&#x27; locatorType: name clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//p&#x27; and locatorType: xpath
+INFO     Util:util.py:81 Actual Text From Application Web UI --&gt; :: Thank you for your comments, Efren. They will be reviewed by our Customer Service staff and given the full attention that they deserve. However, the email you gave is incorrect (efren) and you will not receive a response.
+INFO     Util:util.py:82 Expected Text From Application Web UI --&gt; :: the email you gave is incorrect
+INFO     Util:util.py:84 ### VERIFICATION CONTAINS !!!
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Form_unsuccessful_working 
+INFO     TestStatus:teststatus.py:63 test_unsuccessfulContactForm ### TEST SUCCESSFUL<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Running method level tearDown
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/Main/MainPageTest.py::MainPage_tests::test_clearForm</td>
+          <td class="col-duration">0.97</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Running method level setUp
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;HyperLink4&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;HyperLink4&#x27; locatorType: id clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;name&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;name&#x27; locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;email_addr&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;email_addr&#x27; locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;subject&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;subject&#x27; locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;comments&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;comments&#x27; locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;reset&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;reset&#x27; locatorType: name clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;name&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;email_addr&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;subject&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;comments&#x27; and locatorType: name
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 0
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: 
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: 
+INFO     Util:util.py:101 ### VERIFICATION MATCHED !!!
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 0
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: 
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: 
+INFO     Util:util.py:101 ### VERIFICATION MATCHED !!!
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 0
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: 
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: 
+INFO     Util:util.py:101 ### VERIFICATION MATCHED !!!
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 0
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: 
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: 
+INFO     Util:util.py:101 ### VERIFICATION MATCHED !!!
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Form_clear_successful 
+INFO     TestStatus:teststatus.py:63 test_clearForm ### TEST SUCCESSFUL<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Running method level tearDown
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/Main/MainPageTest.py::MainPage_tests::test_subscribeSuccessful</td>
+          <td class="col-duration">0.76</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Running method level setUp
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;MenuHyperLink19&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;MenuHyperLink19&#x27; locatorType: id clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;txtEmail&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;txtEmail&#x27; locatorType: id
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;btnSubmit&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;btnSubmit&#x27; locatorType: name clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;message&#x27; and locatorType: id
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Subscribe_working_correctly
+INFO     TestStatus:teststatus.py:63 test_subscribeSuccessful ### TEST SUCCESSFUL<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Running method level tearDown
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/Main/MainPageTest.py::MainPage_tests::test_subscribeUnsuccessful</td>
+          <td class="col-duration">0.42</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Running method level setUp
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;MenuHyperLink19&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;MenuHyperLink19&#x27; locatorType: id clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;txtEmail&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;txtEmail&#x27; locatorType: id
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;btnSubmit&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;btnSubmit&#x27; locatorType: name clickType: click
+INFO     MainPage:selenium_driver.py:209 Waiting for maximum :: 10 :: seconds for alert to be present
+INFO     MainPage:selenium_driver.py:214 Alert found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Subscribe_working_correctly
+INFO     TestStatus:teststatus.py:63 test_subscribeUnsuccessful ### TEST SUCCESSFUL<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Running method level tearDown
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/Main/MainPageTest.py::MainPage_tests::test_jobsList</td>
+          <td class="col-duration">3.86</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Running method level setUp
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;MenuHyperLink18&#x27; and locatorType: id
+INFO     JobsPage:selenium_driver.py:105 Clicked on element with locator: &#x27;MenuHyperLink18&#x27; locatorType: id clickType: click
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;Current Job Openings&#x27; and locatorType: link text
+INFO     JobsPage:selenium_driver.py:105 Clicked on element with locator: &#x27;Current Job Openings&#x27; locatorType: link clickType: click
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//table&#x27; and locatorType: xpath
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 14
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Administration&#x27;
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 11
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Oct-23-2006&#x27;
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 19
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Executive Assistant&#x27;
+INFO     JobsPage:selenium_driver.py:264 Executed script: window.open(&quot;http://demo.testfire.net/index.jsp?content=inside_jobs.htm&amp;job=ExecutiveAssistant:Administration&quot;,&quot;_blank&quot;);
+INFO     JobsPage:selenium_driver.py:248 Switched to window about:blank
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//table//tr[1]//td[2]&#x27; and locatorType: xpath
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//table//tr[2]//td[2]&#x27; and locatorType: xpath
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 11
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Date Posted&#x27;
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: Administration
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: Date Posted
+INFO     Util:util.py:104 ### VERIFICATION DOES NOT MATCHED !!!
+INFO     JobsPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 16
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Consumer Banking&#x27;
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 11
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Oct-19-2006&#x27;
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 6
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Teller&#x27;
+INFO     JobsPage:selenium_driver.py:264 Executed script: window.open(&quot;http://demo.testfire.net/index.jsp?content=inside_jobs.htm&amp;job=Teller:ConsumaerBanking&quot;,&quot;_blank&quot;);
+INFO     JobsPage:selenium_driver.py:248 Switched to window about:blank
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//table//tr[1]//td[2]&#x27; and locatorType: xpath
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//table//tr[2]//td[2]&#x27; and locatorType: xpath
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 11
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Date Posted&#x27;
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: Consumer Banking
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: Date Posted
+INFO     Util:util.py:104 ### VERIFICATION DOES NOT MATCHED !!!
+INFO     JobsPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 16
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Customer Service&#x27;
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 11
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Oct-26-2006&#x27;
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 31
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Customer Service Representative&#x27;
+INFO     JobsPage:selenium_driver.py:264 Executed script: window.open(&quot;http://demo.testfire.net/index.jsp?content=inside_jobs.htm&amp;job=CustomerServiceRepresentative:CustomerService&quot;,&quot;_blank&quot;);
+INFO     JobsPage:selenium_driver.py:248 Switched to window about:blank
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//table//tr[1]//td[2]&#x27; and locatorType: xpath
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//table//tr[2]//td[2]&#x27; and locatorType: xpath
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 11
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Date Posted&#x27;
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: Customer Service
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: Date Posted
+INFO     Util:util.py:104 ### VERIFICATION DOES NOT MATCHED !!!
+INFO     JobsPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 9
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Marketing&#x27;
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 11
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Oct-25-2006&#x27;
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 33
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Loyalty Marketing Program Manager&#x27;
+INFO     JobsPage:selenium_driver.py:264 Executed script: window.open(&quot;http://demo.testfire.net/index.jsp?content=inside_jobs.htm&amp;job=LoyaltyMarketingProgramManager:Marketing&quot;,&quot;_blank&quot;);
+INFO     JobsPage:selenium_driver.py:248 Switched to window about:blank
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//table//tr[1]//td[2]&#x27; and locatorType: xpath
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//table//tr[2]//td[2]&#x27; and locatorType: xpath
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 11
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Date Posted&#x27;
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: Marketing
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: Date Posted
+INFO     Util:util.py:104 ### VERIFICATION DOES NOT MATCHED !!!
+INFO     JobsPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 15
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Risk Management&#x27;
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 11
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Oct-17-2006&#x27;
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 24
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Operational Risk Manager&#x27;
+INFO     JobsPage:selenium_driver.py:264 Executed script: window.open(&quot;http://demo.testfire.net/index.jsp?content=inside_jobs.htm&amp;job=OperationalRiskManager:RiskManagement&quot;,&quot;_blank&quot;);
+INFO     JobsPage:selenium_driver.py:248 Switched to window about:blank
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//table//tr[1]//td[2]&#x27; and locatorType: xpath
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//table//tr[2]//td[2]&#x27; and locatorType: xpath
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 11
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Date Posted&#x27;
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: Risk Management
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: Date Posted
+INFO     Util:util.py:104 ### VERIFICATION DOES NOT MATCHED !!!
+INFO     JobsPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 5
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Sales&#x27;
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 11
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Oct-24-2006&#x27;
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 34
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Mortgage Lending Account Executive&#x27;
+INFO     JobsPage:selenium_driver.py:264 Executed script: window.open(&quot;http://demo.testfire.net/index.jsp?content=inside_jobs.htm&amp;job=MortgageLendingAccountExecutive:Sales&quot;,&quot;_blank&quot;);
+INFO     JobsPage:selenium_driver.py:248 Switched to window about:blank
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//table//tr[1]//td[2]&#x27; and locatorType: xpath
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//table//tr[2]//td[2]&#x27; and locatorType: xpath
+INFO     JobsPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+DEBUG    JobsPage:selenium_driver.py:117 Before finding text
+DEBUG    JobsPage:selenium_driver.py:119 After finding element, size is: 11
+INFO     JobsPage:selenium_driver.py:123 Getting text on element :: 
+INFO     JobsPage:selenium_driver.py:124 The text is :: &#x27;Date Posted&#x27;
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: Sales
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: Date Posted
+INFO     Util:util.py:104 ### VERIFICATION DOES NOT MATCHED !!!
+INFO     JobsPage:selenium_driver.py:248 Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: 
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: 
+INFO     Util:util.py:101 ### VERIFICATION MATCHED !!!
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + info_correct
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Jobs_info_correct
+INFO     TestStatus:teststatus.py:63 test_jobsList ### TEST SUCCESSFUL<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Running method level tearDown
+Running one time tearDown
+<br/></div></td></tr></tbody></table></body></html>

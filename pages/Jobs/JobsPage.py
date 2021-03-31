@@ -50,7 +50,9 @@ class JobsPage(BasePage):
         _category = self.getElement(self.CATEGORY, self.CATEGORY_LOCATOR)
         _date = self.getElement(self.DATE, self.DATE_LOCATOR)
         _title = self.getElement(self.CONTENT_TITLE, self.CONTENT_TITLE_LOCATOR)
-        if category == _category.text and date == _date.text and title == _title.text:
+        if self.util.verifyTextMatch(category, self.getText(element=_category)) and \
+                self.util.verifyTextMatch(date, self.getText(element=_date)) and \
+                self.util.verifyTextMatch(title, _title.text):
             self.writeBrokenContent(title, '_info_wrong')
 
     def jobsTableValues(self):
@@ -58,11 +60,11 @@ class JobsPage(BasePage):
         table = self.getElement(self.JOBS_TABLE, self.JOBS_TABLE_LOCATOR)
         for row in table.find_elements_by_xpath('.//tr[not(@class)]'):
             info = row.find_elements_by_xpath(".//td")
-            category = info[0].text
-            date = info[1].text
-            title = info[2].text
+            category = self.getText(element=info[0])
+            date = self.getText(element=info[1])
+            title = self.getText(element=info[2])
             link = info[2].find_element_by_xpath('.//a').get_property('href')
-            self.driver.execute_script('window.open("'+link+'","_blank");')
+            self.executeScript('window.open("' + link + '","_blank");')
             windows = self.driver.window_handles
             self.switchToWindow(windows[1])
             self.verifyJobInfo(category, date, title)
@@ -75,6 +77,6 @@ class JobsPage(BasePage):
         self.jobsTableValues()
 
     def verify_correctInfo(self):
-        if self.Error == '':
+        if self.util.verifyTextMatch(self.Error, ''):
             return True
         return False

@@ -1,4 +1,3 @@
-
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 
@@ -114,7 +113,7 @@ class MainPage(BasePage):
     def verify_loginSuccessful(self, _logOut=True):
         element = self.getElement(self.LOGIN_SUCCESSFUL, self.LOGIN_SUCCESSFUL_LOCATOR)
         result = False
-        if element.text == 'MY ACCOUNT':
+        if self.util.verifyTextMatch(self.getText(element=element), 'MY ACCOUNT'):
             result = True
         if _logOut:
             self.logOut()
@@ -143,7 +142,7 @@ class MainPage(BasePage):
                 self.brokenLinks += link.get_attribute('href') + ' Time out '
 
     def verify_brokenLink(self):
-        if self.brokenLinks == '':
+        if self.util.verifyTextMatch(self.brokenLinks, ''):
             return True
         return False
 
@@ -159,27 +158,27 @@ class MainPage(BasePage):
         else:
             return False, None
 
-    def writeBrokenContent(self, header, message):
-        self.brokenContent += header + message + ' | '
+    def writeBrokenContent(self, header, message, location):
+        print(header + message + location + ' | ')
+        self.brokenContent += header + message + location + ' | '
         self.screenShot(header + message)
 
-    def check_contentH1(self, header, message):
+    def check_contentH1(self, header, message, location):
         wordInText = True
         switchedToIframe = False
         element = self.getElement(self.CONTENT_TITLE, self.CONTENT_TITLE_LOCATOR)
         if element is None:
             switchedToIframe, element = self.iFrameInContent(header, message)
         elif element is not None and element.text != header:
-            print(element.text)
             for word in header.split():
-                if word.lower() in element.text.lower():
+                if self.util.verifyTextContains(self.getText(element=element), word):
                     if switchedToIframe:
                         self.switchToDefault()
                     return
                 else:
                     wordInText = False
             if not wordInText:
-                self.writeBrokenContent(header, message)
+                self.writeBrokenContent(header, message, location)
         if switchedToIframe:
             self.switchToDefault()
 
@@ -187,17 +186,17 @@ class MainPage(BasePage):
         self.brokenContent = ''
         uniqueLinks = self.getElementList(self.LINKS, self.LINKS_LOCATOR)
         for link in uniqueLinks:
-            print(link.text)
-            if '?' in link.get_attribute('href'):
+            if self.util.verifyTextContains(link.get_attribute('href'), '?'):
                 name = link.text
-                ActionChains(self.driver).\
-                    key_down(Keys.CONTROL).\
-                    click(link).\
-                    key_up(Keys.CONTROL).\
+                currentUrl = self.driver.current_url
+                ActionChains(self.driver). \
+                    key_down(Keys.CONTROL). \
+                    click(link). \
+                    key_up(Keys.CONTROL). \
                     perform()
                 windows = self.driver.window_handles
                 self.switchToWindow(windows[1])
-                self.check_contentH1(name, '_link_not_working')
+                self.check_contentH1(name, '_link_not_working ', currentUrl)
                 self.closeAllButMain()
                 self.switchToWindow(windows[0])
 
@@ -215,7 +214,6 @@ class MainPage(BasePage):
         return False, None
 
     def checkContentInLink(self):
-        print('Switched to content')
         uniqueLinks1 = self.getElementList(self.CONTENT_LINKS, self.CONTENT_LINKS_LOCATOR)
         switchedToIframe = False
         if uniqueLinks1 is None:
@@ -223,21 +221,22 @@ class MainPage(BasePage):
         if uniqueLinks1:
             for link1 in uniqueLinks1:
                 name = link1.text
-                ActionChains(self.driver).\
-                    key_down(Keys.CONTROL).\
-                    click(link1).\
-                    key_up(Keys.CONTROL).\
+                currentUrl = self.driver.current_url
+                ActionChains(self.driver). \
+                    key_down(Keys.CONTROL). \
+                    click(link1). \
+                    key_up(Keys.CONTROL). \
                     perform()
                 if switchedToIframe:
                     self.switchToDefault()
                 windows = self.driver.window_handles
                 self.switchToWindow(windows[2])
-                self.check_contentH1(name, '_link_not_working')
+                self.check_contentH1(name, '_link_not_working', currentUrl)
             return True
         return False
 
     def verify_mainLinks(self):
-        if self.brokenContent == '':
+        if self.util.verifyTextMatch(self.brokenContent, ''):
             return True
         return False
 
@@ -262,7 +261,7 @@ class MainPage(BasePage):
 
     def searchFormMessage(self, substring):
         element = self.getElement(self.FORM_MESSAGE, self.FORM_MESSAGE_LOCATOR)
-        if substring in element.text:
+        if self.util.verifyTextContains(element.text, substring):
             return True
         return False
 
@@ -274,7 +273,10 @@ class MainPage(BasePage):
         email = self.getElement(self.EMAIL, self.EMAIL_LOCATOR)
         subject = self.getElement(self.SUBJECT, self.SUBJECT_LOCATOR)
         comment = self.getElement(self.COMMENT, self.COMMENT_LOCATOR)
-        if name.text == '' and email.text == '' and subject.text == '' and comment.text == '':
+        if self.util.verifyTextMatch(self.getText(element=name), '') and \
+                self.util.verifyTextMatch(self.getText(element=email), '') and \
+                self.util.verifyTextMatch(self.getText(element=subject), '') and \
+                self.util.verifyTextMatch(self.getText(element=comment), ''):
             return True
         return False
 

@@ -1,160 +1,669 @@
-03/30/2021 05:28:00 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/30/2021 05:28:00 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/30/2021 05:28:00 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/30/2021 05:28:00 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/30/2021 05:28:00 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/30/2021 05:28:00 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/30/2021 05:28:00 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/30/2021 05:28:00 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/30/2021 05:28:00 PM - UserPage - INFO: Element list found with locator: //select//option and  locatorType: xpath
-03/30/2021 05:28:00 PM - UserPage - INFO: Element found with locator: '//select//option[1]' and locatorType: xpath
-03/30/2021 05:28:01 PM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
-03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
-03/30/2021 05:28:01 PM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
-03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: '//select//option[2]' and locatorType: xpath
-03/30/2021 05:28:01 PM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
-03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
-03/30/2021 05:28:01 PM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
-03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/30/2021 05:28:01 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + admin_account_summary_correct
-03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: 'Here' and locatorType: link text
-03/30/2021 05:28:01 PM - UserPage - INFO: Clicked on element with locator: 'Here' locatorType: Link clickType: click
-03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: 'passwd' and locatorType: name
-03/30/2021 05:28:01 PM - UserPage - INFO: Sent data on element with locator: 'passwd' locatorType: name
-03/30/2021 05:28:01 PM - UserPage - INFO: Element found with locator: 'Submit' and locatorType: name
-03/30/2021 05:28:02 PM - UserPage - INFO: Clicked on element with locator: 'Submit' locatorType: name clickType: click
-03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//span' and locatorType: xpath
-03/30/2021 05:28:02 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + admin_apply_form_correct
-03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink3' and locatorType: id
-03/30/2021 05:28:02 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink3' locatorType: id clickType: click
-03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'fromAccount' and locatorType: id
-03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'toAccount' and locatorType: id
-03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'transferAmount' and locatorType: id
-03/30/2021 05:28:02 PM - UserPage - INFO: Sent data on element with locator: 'transferAmount' locatorType: id
-03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'transfer' and locatorType: id
-03/30/2021 05:28:02 PM - UserPage - INFO: Clicked on element with locator: 'transfer' locatorType: id clickType: click
-03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: '//form[@id='tForm']//tr[6]//span//span' and locatorType: xpath
-03/30/2021 05:28:02 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + admin_transfer_successful_correct
-03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink3' and locatorType: id
-03/30/2021 05:28:02 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink3' locatorType: id clickType: click
-03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'fromAccount' and locatorType: id
-03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'toAccount' and locatorType: id
-03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'transfer' and locatorType: id
-03/30/2021 05:28:02 PM - UserPage - INFO: Clicked on element with locator: 'transfer' locatorType: id clickType: click
-03/30/2021 05:28:02 PM - UserPage - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
-03/30/2021 05:28:02 PM - UserPage - INFO: Alert found
-03/30/2021 05:28:02 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + admin_transfer_unsuccessful_correct
-03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink4' and locatorType: id
-03/30/2021 05:28:02 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink4' locatorType: id clickType: click
-03/30/2021 05:28:02 PM - UserPage - INFO: Element found with locator: 'query' and locatorType: id
-03/30/2021 05:28:02 PM - UserPage - INFO: Sent data on element with locator: 'query' locatorType: id
-03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'Button1' and locatorType: id
-03/30/2021 05:28:03 PM - UserPage - INFO: Clicked on element with locator: 'Button1' locatorType: id clickType: click
-03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'QueryXpath' and locatorType: id
-03/30/2021 05:28:03 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + admin_article_search_successful
-03/30/2021 05:28:03 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_article_search_successful.1617146883128.png
-03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink1' and locatorType: id
-03/30/2021 05:28:03 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink1' locatorType: id clickType: click
-03/30/2021 05:28:03 PM - UserPage - INFO: Element list found with locator: //select//option and  locatorType: xpath
-03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'Edit Users' and locatorType: link text
-03/30/2021 05:28:03 PM - UserPage - INFO: Clicked on element with locator: 'Edit Users' locatorType: link clickType: click
-03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: '(//form[@id='addAccount']/following-sibling::tbody//select)[1]' and locatorType: xpath
-03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'accttypes' and locatorType: name
-03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink1' and locatorType: id
-03/30/2021 05:28:03 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink1' locatorType: id clickType: click
-03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: '//select' and locatorType: xpath
-03/30/2021 05:28:03 PM - UserPage - INFO: Clicked on element with locator: '//select' locatorType: xpath clickType: click
-03/30/2021 05:28:03 PM - UserPage - INFO: Element list found with locator: //select//option and  locatorType: xpath
-03/30/2021 05:28:03 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + admin_add_account_successful
-03/30/2021 05:28:03 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_add_account_successful.1617146883821.png
-03/30/2021 05:28:03 PM - UserPage - INFO: Element found with locator: 'Edit Users' and locatorType: link text
-03/30/2021 05:28:03 PM - UserPage - INFO: Clicked on element with locator: 'Edit Users' locatorType: link clickType: click
-03/30/2021 05:28:04 PM - UserPage - INFO: Element found with locator: '((//form[@id='addAccount']/following-sibling::tbody//select)[3])//option[contains(text(),'admin')]' and locatorType: xpath
-03/30/2021 05:28:04 PM - UserPage - INFO: Clicked on element with locator: '((//form[@id='addAccount']/following-sibling::tbody//select)[3])//option[contains(text(),'admin')]' locatorType: xpath clickType: click
-03/30/2021 05:28:04 PM - UserPage - INFO: Element found with locator: '(//input[@name='password1'])[1]' and locatorType: xpath
-03/30/2021 05:28:04 PM - UserPage - INFO: Sent data on element with locator: '(//input[@name='password1'])[1]' locatorType: xpath
-03/30/2021 05:28:04 PM - UserPage - INFO: Element found with locator: '(//input[@name='password2'])[1]' and locatorType: xpath
-03/30/2021 05:28:04 PM - UserPage - INFO: Sent data on element with locator: '(//input[@name='password2'])[1]' locatorType: xpath
-03/30/2021 05:28:04 PM - UserPage - INFO: Element found with locator: 'change' and locatorType: name
-03/30/2021 05:28:04 PM - UserPage - INFO: Clicked on element with locator: 'change' locatorType: name clickType: click
-03/30/2021 05:28:04 PM - MainPage - INFO: Element found with locator: 'LoginLink' and locatorType: id
-03/30/2021 05:28:04 PM - MainPage - INFO: Clicked on element with locator: 'LoginLink' locatorType: id clickType: click
-03/30/2021 05:28:04 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/30/2021 05:28:04 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/30/2021 05:28:04 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/30/2021 05:28:04 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/30/2021 05:28:04 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/30/2021 05:28:04 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/30/2021 05:28:04 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/30/2021 05:28:04 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/30/2021 05:28:04 PM - MainPage - INFO: Element found with locator: 'AccountLink' and locatorType: id
-03/30/2021 05:28:04 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + admin_change_password_successful
-03/30/2021 05:28:04 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_change_password_successful.1617146884935.png
-03/30/2021 05:28:04 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + admin_test_successful
-03/30/2021 05:28:05 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_test_successful.1617146884989.png
-03/30/2021 05:28:05 PM - TestStatus - ERROR: test_accountOptions ### TEST FAILED
-03/30/2021 05:28:05 PM - MainPage - INFO: Element found with locator: 'ONLINE BANKING LOGIN' and locatorType: link text
-03/30/2021 05:28:05 PM - MainPage - INFO: Clicked on element with locator: 'ONLINE BANKING LOGIN' locatorType: link clickType: click
-03/30/2021 05:28:05 PM - MainPage - INFO: Element found with locator: 'uid' and locatorType: id
-03/30/2021 05:28:05 PM - MainPage - INFO: Sent data on element with locator: 'uid' locatorType: id
-03/30/2021 05:28:05 PM - MainPage - INFO: Element found with locator: 'passw' and locatorType: id
-03/30/2021 05:28:05 PM - MainPage - INFO: Sent data on element with locator: 'passw' locatorType: id
-03/30/2021 05:28:05 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
-03/30/2021 05:28:05 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
-03/30/2021 05:28:05 PM - UserPage - INFO: Element list found with locator: //select//option and  locatorType: xpath
-03/30/2021 05:28:05 PM - UserPage - INFO: Element found with locator: '//select//option[1]' and locatorType: xpath
-03/30/2021 05:28:05 PM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
-03/30/2021 05:28:05 PM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
-03/30/2021 05:28:05 PM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
-03/30/2021 05:28:05 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/30/2021 05:28:05 PM - UserPage - INFO: Element found with locator: '//select//option[2]' and locatorType: xpath
-03/30/2021 05:28:06 PM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
-03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
-03/30/2021 05:28:06 PM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
-03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: '//select//option[3]' and locatorType: xpath
-03/30/2021 05:28:06 PM - UserPage - INFO: Clicked on element with locator: '' locatorType: id clickType: click
-03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: 'btnGetAccount' and locatorType: id
-03/30/2021 05:28:06 PM - UserPage - INFO: Clicked on element with locator: 'btnGetAccount' locatorType: id clickType: click
-03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
-03/30/2021 05:28:06 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + jsmith_account_summary_correct
-03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: 'Here' and locatorType: link text
-03/30/2021 05:28:06 PM - UserPage - INFO: Clicked on element with locator: 'Here' locatorType: Link clickType: click
-03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: 'passwd' and locatorType: name
-03/30/2021 05:28:06 PM - UserPage - INFO: Sent data on element with locator: 'passwd' locatorType: name
-03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: 'Submit' and locatorType: name
-03/30/2021 05:28:06 PM - UserPage - INFO: Clicked on element with locator: 'Submit' locatorType: name clickType: click
-03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: '//div[@class='fl']//span' and locatorType: xpath
-03/30/2021 05:28:06 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + jsmith_apply_form_correct
-03/30/2021 05:28:06 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink3' and locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink3' locatorType: id clickType: click
-03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'fromAccount' and locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'toAccount' and locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'transferAmount' and locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Sent data on element with locator: 'transferAmount' locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'transfer' and locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Clicked on element with locator: 'transfer' locatorType: id clickType: click
-03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: '//form[@id='tForm']//tr[6]//span//span' and locatorType: xpath
-03/30/2021 05:28:07 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + jsmith_transfer_successful_correct
-03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink3' and locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink3' locatorType: id clickType: click
-03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'fromAccount' and locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'toAccount' and locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'transfer' and locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Clicked on element with locator: 'transfer' locatorType: id clickType: click
-03/30/2021 05:28:07 PM - UserPage - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
-03/30/2021 05:28:07 PM - UserPage - INFO: Alert found
-03/30/2021 05:28:07 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + jsmith_transfer_unsuccessful_correct
-03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'MenuHyperLink4' and locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Clicked on element with locator: 'MenuHyperLink4' locatorType: id clickType: click
-03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'query' and locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Sent data on element with locator: 'query' locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'Button1' and locatorType: id
-03/30/2021 05:28:07 PM - UserPage - INFO: Clicked on element with locator: 'Button1' locatorType: id clickType: click
-03/30/2021 05:28:07 PM - UserPage - INFO: Element found with locator: 'QueryXpath' and locatorType: id
-03/30/2021 05:28:07 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + jsmith_article_search_successful
-03/30/2021 05:28:08 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/jsmith_article_search_successful.1617146887987.png
-03/30/2021 05:28:08 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + jsmith_test_successful
-03/30/2021 05:28:08 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/jsmith_test_successful.1617146888039.png
-03/30/2021 05:28:08 PM - TestStatus - ERROR: test_accountOptions ### TEST FAILED
+03/30/2021 09:51:47 PM - MainPage - INFO: Element list found with locator: //a[@href] and  locatorType: xpath
+03/30/2021 09:51:47 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp
+03/30/2021 09:51:47 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:47 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:51:47 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/login.jsp
+03/30/2021 09:51:47 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:47 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:51:47 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=inside_contact.htm
+03/30/2021 09:51:47 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:47 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:47 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:47 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:47 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_contact.htm
+03/30/2021 09:51:47 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:47 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/feedback.jsp
+03/30/2021 09:51:47 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:47 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:51:47 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/login.jsp
+03/30/2021 09:51:47 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:47 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:51:47 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=personal.htm
+03/30/2021 09:51:47 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:47 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:47 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:47 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:47 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:51:47 PM - MainPage - DEBUG: After finding element, size is: 8
+03/30/2021 09:51:47 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:51:47 PM - MainPage - INFO: The text is :: 'Personal'
+03/30/2021 09:51:47 PM - Util - INFO: Actual Text From Application Web UI --> :: Personal
+03/30/2021 09:51:47 PM - Util - INFO: Expected Text From Application Web UI --> :: PERSONAL
+03/30/2021 09:51:47 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:47 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=personal.htm
+03/30/2021 09:51:47 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:48 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=business.htm
+03/30/2021 09:51:48 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:48 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:48 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:48 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:48 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:51:48 PM - MainPage - DEBUG: After finding element, size is: 14
+03/30/2021 09:51:48 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:51:48 PM - MainPage - INFO: The text is :: 'Small Business'
+03/30/2021 09:51:48 PM - Util - INFO: Actual Text From Application Web UI --> :: Small Business
+03/30/2021 09:51:48 PM - Util - INFO: Expected Text From Application Web UI --> :: SMALL
+03/30/2021 09:51:48 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:48 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=business.htm
+03/30/2021 09:51:48 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:48 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=inside.htm
+03/30/2021 09:51:48 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:48 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:48 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:48 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:48 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:51:48 PM - MainPage - DEBUG: After finding element, size is: 13
+03/30/2021 09:51:48 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:51:48 PM - MainPage - INFO: The text is :: 'Inside Altoro'
+03/30/2021 09:51:48 PM - Util - INFO: Actual Text From Application Web UI --> :: Inside Altoro
+03/30/2021 09:51:48 PM - Util - INFO: Expected Text From Application Web UI --> :: INSIDE
+03/30/2021 09:51:48 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:48 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside.htm
+03/30/2021 09:51:48 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:48 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=personal.htm
+03/30/2021 09:51:48 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:48 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:49 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:49 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:49 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:51:49 PM - MainPage - DEBUG: After finding element, size is: 8
+03/30/2021 09:51:49 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:51:49 PM - MainPage - INFO: The text is :: 'Personal'
+03/30/2021 09:51:49 PM - Util - INFO: Actual Text From Application Web UI --> :: Personal
+03/30/2021 09:51:49 PM - Util - INFO: Expected Text From Application Web UI --> :: PERSONAL
+03/30/2021 09:51:49 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:49 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=personal.htm
+03/30/2021 09:51:49 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:49 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=personal_deposit.htm
+03/30/2021 09:51:49 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:49 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:49 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:49 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:49 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:51:49 PM - MainPage - DEBUG: After finding element, size is: 16
+03/30/2021 09:51:49 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:51:49 PM - MainPage - INFO: The text is :: 'Deposit Products'
+03/30/2021 09:51:49 PM - Util - INFO: Actual Text From Application Web UI --> :: Deposit Products
+03/30/2021 09:51:49 PM - Util - INFO: Expected Text From Application Web UI --> :: Deposit
+03/30/2021 09:51:49 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:49 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=personal_deposit.htm
+03/30/2021 09:51:49 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:49 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=personal_checking.htm
+03/30/2021 09:51:49 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:49 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:49 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:50 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:50 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=personal_checking.htm
+03/30/2021 09:51:50 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:50 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=personal_loans.htm
+03/30/2021 09:51:50 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:50 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:50 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:50 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:50 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=personal_loans.htm
+03/30/2021 09:51:50 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:50 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=personal_cards.htm
+03/30/2021 09:51:50 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:50 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:50 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:50 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:50 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=personal_cards.htm
+03/30/2021 09:51:50 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:50 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=personal_investments.htm
+03/30/2021 09:51:50 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:50 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:51 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:51 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:51 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=personal_investments.htm
+03/30/2021 09:51:51 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:51 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=personal_other.htm
+03/30/2021 09:51:51 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:51 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:51 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:51 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:51 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:51:51 PM - MainPage - DEBUG: After finding element, size is: 23
+03/30/2021 09:51:51 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:51:51 PM - MainPage - INFO: The text is :: 'Other Personal Services'
+03/30/2021 09:51:51 PM - Util - INFO: Actual Text From Application Web UI --> :: Other Personal Services
+03/30/2021 09:51:51 PM - Util - INFO: Expected Text From Application Web UI --> :: Other
+03/30/2021 09:51:51 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:51 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=personal_other.htm
+03/30/2021 09:51:51 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:51 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=business.htm
+03/30/2021 09:51:51 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:51 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:51 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:52 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:52 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:51:52 PM - MainPage - DEBUG: After finding element, size is: 14
+03/30/2021 09:51:52 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:51:52 PM - MainPage - INFO: The text is :: 'Small Business'
+03/30/2021 09:51:52 PM - Util - INFO: Actual Text From Application Web UI --> :: Small Business
+03/30/2021 09:51:52 PM - Util - INFO: Expected Text From Application Web UI --> :: SMALL
+03/30/2021 09:51:52 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:52 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=business.htm
+03/30/2021 09:51:52 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:52 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=business_deposit.htm
+03/30/2021 09:51:52 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:52 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:52 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:52 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:52 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=business_deposit.htm
+03/30/2021 09:51:52 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:52 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=business_lending.htm
+03/30/2021 09:51:52 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:52 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:52 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:52 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:52 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:51:52 PM - MainPage - DEBUG: After finding element, size is: 7
+03/30/2021 09:51:52 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:51:52 PM - MainPage - INFO: The text is :: 'Lending'
+03/30/2021 09:51:52 PM - Util - INFO: Actual Text From Application Web UI --> :: Lending
+03/30/2021 09:51:52 PM - Util - INFO: Expected Text From Application Web UI --> :: Lending
+03/30/2021 09:51:52 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:52 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=business_lending.htm
+03/30/2021 09:51:52 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:52 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=business_cards.htm
+03/30/2021 09:51:52 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:52 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:53 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:53 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:53 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=business_cards.htm
+03/30/2021 09:51:53 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:53 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=business_insurance.htm
+03/30/2021 09:51:53 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:53 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:53 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:51:53 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:51:53 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=business_insurance.htm
+03/30/2021 09:51:53 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:51:53 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=business_retirement.htm
+03/30/2021 09:51:53 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:51:53 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:51:53 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:04 PM - MainPage - INFO: Element not found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:04 PM - MainPage - INFO: Element found with locator: '//iframe' and locatorType: xpath
+03/30/2021 09:52:04 PM - MainPage - INFO: Switched to iFrame: <selenium.webdriver.firefox.webelement.FirefoxWebElement (session="485ef812-bfdc-4abe-b73c-12cfd51c41e4", element="7fe07657-b338-4605-a22a-828ccbe39f6e")>
+03/30/2021 09:52:04 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:04 PM - MainPage - INFO: Switched back to default window
+03/30/2021 09:52:04 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=business_retirement.htm
+03/30/2021 09:52:04 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:04 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=business_other.htm
+03/30/2021 09:52:04 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:04 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:04 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:05 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:05 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=business_other.htm
+03/30/2021 09:52:05 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:05 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=inside.htm
+03/30/2021 09:52:05 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:05 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:05 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:05 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:05 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:52:05 PM - MainPage - DEBUG: After finding element, size is: 13
+03/30/2021 09:52:05 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:52:05 PM - MainPage - INFO: The text is :: 'Inside Altoro'
+03/30/2021 09:52:05 PM - Util - INFO: Actual Text From Application Web UI --> :: Inside Altoro
+03/30/2021 09:52:05 PM - Util - INFO: Expected Text From Application Web UI --> :: INSIDE
+03/30/2021 09:52:05 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:05 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside.htm
+03/30/2021 09:52:05 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:05 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=inside_about.htm
+03/30/2021 09:52:05 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:05 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:05 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:05 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:05 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:52:05 PM - MainPage - DEBUG: After finding element, size is: 19
+03/30/2021 09:52:05 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:52:05 PM - MainPage - INFO: The text is :: 'About Altoro Mutual'
+03/30/2021 09:52:05 PM - Util - INFO: Actual Text From Application Web UI --> :: About Altoro Mutual
+03/30/2021 09:52:05 PM - Util - INFO: Expected Text From Application Web UI --> :: About
+03/30/2021 09:52:05 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:05 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_about.htm
+03/30/2021 09:52:05 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:05 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=inside_contact.htm
+03/30/2021 09:52:05 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:05 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:06 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:06 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:06 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_contact.htm
+03/30/2021 09:52:06 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:06 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/cgi.exe
+03/30/2021 09:52:06 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:06 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:52:06 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=inside_investor.htm
+03/30/2021 09:52:06 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:06 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:06 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:06 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:06 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_investor.htm
+03/30/2021 09:52:06 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:06 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=inside_press.htm
+03/30/2021 09:52:06 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:06 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:06 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:07 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:07 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_press.htm
+03/30/2021 09:52:07 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:07 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=inside_careers.htm
+03/30/2021 09:52:07 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:07 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:07 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:07 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:07 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:52:07 PM - MainPage - DEBUG: After finding element, size is: 24
+03/30/2021 09:52:07 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:52:07 PM - MainPage - INFO: The text is :: 'Careers at Altoro Mutual'
+03/30/2021 09:52:07 PM - Util - INFO: Actual Text From Application Web UI --> :: Careers at Altoro Mutual
+03/30/2021 09:52:07 PM - Util - INFO: Expected Text From Application Web UI --> :: Careers
+03/30/2021 09:52:07 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:07 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_careers.htm
+03/30/2021 09:52:07 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:07 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/subscribe.jsp
+03/30/2021 09:52:07 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:07 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:52:07 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=personal_savings.htm
+03/30/2021 09:52:07 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:07 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:07 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:18 PM - MainPage - INFO: Element not found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:28 PM - MainPage - INFO: Element not found with locator: '//iframe' and locatorType: xpath
+03/30/2021 09:52:28 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=personal_savings.htm
+03/30/2021 09:52:28 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:28 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=personal_loans.htm
+03/30/2021 09:52:28 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:28 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:29 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:29 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:29 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:52:29 PM - MainPage - DEBUG: After finding element, size is: 13
+03/30/2021 09:52:29 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:52:29 PM - MainPage - INFO: The text is :: 'Loan Products'
+03/30/2021 09:52:29 PM - Util - INFO: Actual Text From Application Web UI --> :: Loan Products
+03/30/2021 09:52:29 PM - Util - INFO: Expected Text From Application Web UI --> :: Real
+03/30/2021 09:52:29 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:52:29 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:52:29 PM - MainPage - DEBUG: After finding element, size is: 13
+03/30/2021 09:52:29 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:52:29 PM - MainPage - INFO: The text is :: 'Loan Products'
+03/30/2021 09:52:29 PM - Util - INFO: Actual Text From Application Web UI --> :: Loan Products
+03/30/2021 09:52:29 PM - Util - INFO: Expected Text From Application Web UI --> :: Estate
+03/30/2021 09:52:29 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:52:29 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:52:29 PM - MainPage - DEBUG: After finding element, size is: 13
+03/30/2021 09:52:29 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:52:29 PM - MainPage - INFO: The text is :: 'Loan Products'
+03/30/2021 09:52:29 PM - Util - INFO: Actual Text From Application Web UI --> :: Loan Products
+03/30/2021 09:52:29 PM - Util - INFO: Expected Text From Application Web UI --> :: Financing
+03/30/2021 09:52:29 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:52:29 PM - MainPage - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/Real Estate Financing_link_not_working .1617162749307.png
+03/30/2021 09:52:29 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=personal_loans.htm
+03/30/2021 09:52:29 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:29 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=business_cards.htm
+03/30/2021 09:52:29 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:29 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:29 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:29 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:29 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:52:29 PM - MainPage - DEBUG: After finding element, size is: 5
+03/30/2021 09:52:29 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:52:29 PM - MainPage - INFO: The text is :: 'Cards'
+03/30/2021 09:52:29 PM - Util - INFO: Actual Text From Application Web UI --> :: Cards
+03/30/2021 09:52:29 PM - Util - INFO: Expected Text From Application Web UI --> :: Business
+03/30/2021 09:52:29 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:52:29 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:52:29 PM - MainPage - DEBUG: After finding element, size is: 5
+03/30/2021 09:52:29 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:52:29 PM - MainPage - INFO: The text is :: 'Cards'
+03/30/2021 09:52:29 PM - Util - INFO: Actual Text From Application Web UI --> :: Cards
+03/30/2021 09:52:29 PM - Util - INFO: Expected Text From Application Web UI --> :: Credit
+03/30/2021 09:52:29 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:52:29 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:52:29 PM - MainPage - DEBUG: After finding element, size is: 5
+03/30/2021 09:52:29 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:52:29 PM - MainPage - INFO: The text is :: 'Cards'
+03/30/2021 09:52:29 PM - Util - INFO: Actual Text From Application Web UI --> :: Cards
+03/30/2021 09:52:29 PM - Util - INFO: Expected Text From Application Web UI --> :: Cards
+03/30/2021 09:52:29 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:29 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=business_cards.htm
+03/30/2021 09:52:29 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:29 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=business_retirement.htm
+03/30/2021 09:52:29 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:29 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:30 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:40 PM - MainPage - INFO: Element not found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:40 PM - MainPage - INFO: Element found with locator: '//iframe' and locatorType: xpath
+03/30/2021 09:52:40 PM - MainPage - INFO: Switched to iFrame: <selenium.webdriver.firefox.webelement.FirefoxWebElement (session="485ef812-bfdc-4abe-b73c-12cfd51c41e4", element="1a2f5471-f604-4bf4-835b-eff69cc66fc0")>
+03/30/2021 09:52:40 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:40 PM - MainPage - INFO: Switched back to default window
+03/30/2021 09:52:40 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=business_retirement.htm
+03/30/2021 09:52:40 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:40 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=privacy.htm
+03/30/2021 09:52:40 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:40 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:40 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:41 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:41 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:52:41 PM - MainPage - DEBUG: After finding element, size is: 14
+03/30/2021 09:52:41 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:52:41 PM - MainPage - INFO: The text is :: 'Privacy Policy'
+03/30/2021 09:52:41 PM - Util - INFO: Actual Text From Application Web UI --> :: Privacy Policy
+03/30/2021 09:52:41 PM - Util - INFO: Expected Text From Application Web UI --> :: privacy
+03/30/2021 09:52:41 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:41 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=privacy.htm
+03/30/2021 09:52:41 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:41 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/default.jsp?content=security.htm
+03/30/2021 09:52:41 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:41 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:41 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:41 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:41 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:52:41 PM - MainPage - DEBUG: After finding element, size is: 21
+03/30/2021 09:52:41 PM - MainPage - INFO: Getting text on element :: 
+03/30/2021 09:52:41 PM - MainPage - INFO: The text is :: 'An Error Has Occurred'
+03/30/2021 09:52:41 PM - Util - INFO: Actual Text From Application Web UI --> :: An Error Has Occurred
+03/30/2021 09:52:41 PM - Util - INFO: Expected Text From Application Web UI --> :: security
+03/30/2021 09:52:41 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:52:41 PM - MainPage - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/security_link_not_working .1617162761483.png
+03/30/2021 09:52:41 PM - MainPage - INFO: Switched to window http://demo.testfire.net/default.jsp?content=security.htm
+03/30/2021 09:52:41 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:41 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/survey_questions.jsp
+03/30/2021 09:52:41 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:41 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:52:41 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=privacy.htm
+03/30/2021 09:52:41 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:41 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:41 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:41 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:41 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=privacy.htm
+03/30/2021 09:52:41 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:41 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/index.jsp?content=security.htm
+03/30/2021 09:52:41 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:41 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:52:42 PM - MainPage - INFO: Switched to window about:blank
+03/30/2021 09:52:42 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:52:42 PM - MainPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=security.htm
+03/30/2021 09:52:42 PM - MainPage - INFO: Switched to window http://demo.testfire.net/
+03/30/2021 09:52:42 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/status_check.jsp
+03/30/2021 09:52:42 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:42 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:52:42 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/swagger/index.html
+03/30/2021 09:52:42 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:42 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:52:42 PM - Util - INFO: Actual Text From Application Web UI --> :: https://github.com/AppSecDev/AltoroJ/
+03/30/2021 09:52:42 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:42 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:52:42 PM - Util - INFO: Actual Text From Application Web UI --> :: http://www-142.ibm.com/software/products/us/en/subcategory/SWI10
+03/30/2021 09:52:42 PM - Util - INFO: Expected Text From Application Web UI --> :: ?
+03/30/2021 09:52:42 PM - Util - INFO: ### VERIFICATION DOES NOT CONTAINS !!!
+03/30/2021 09:52:42 PM - Util - INFO: Actual Text From Application Web UI --> :: Real Estate Financing_link_not_working http://demo.testfire.net/ | security_link_not_working http://demo.testfire.net/ | 
+03/30/2021 09:52:42 PM - Util - INFO: Expected Text From Application Web UI --> :: 
+03/30/2021 09:52:42 PM - Util - INFO: ### VERIFICATION DOES NOT MATCHED !!!
+03/30/2021 09:52:42 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + MAIN_LINKS_WORKING Real Estate Financing_link_not_working http://demo.testfire.net/ | security_link_not_working http://demo.testfire.net/ | 
+03/30/2021 09:52:42 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/MAIN_LINKS_WORKING .1617162762349.png
+03/30/2021 09:52:42 PM - TestStatus - ERROR: test_mainLinks ### TEST FAILED
+03/30/2021 09:52:42 PM - MainPage - INFO: Element list found with locator: a and  locatorType: css
+03/30/2021 09:53:09 PM - Util - INFO: Actual Text From Application Web UI --> :: http://demo.testfire.net/cgi.exe 404 http://demo.testfire.net/default.jsp?content=security.htm 404 http://www-142.ibm.com/software/products/us/en/subcategory/SWI10 Time out 
+03/30/2021 09:53:09 PM - Util - INFO: Expected Text From Application Web UI --> :: 
+03/30/2021 09:53:09 PM - Util - INFO: ### VERIFICATION DOES NOT MATCHED !!!
+03/30/2021 09:53:09 PM - TestStatus - ERROR: ### VERIFICATION FAILED :: + BROKEN_LINKS http://demo.testfire.net/cgi.exe 404 http://demo.testfire.net/default.jsp?content=security.htm 404 http://www-142.ibm.com/software/products/us/en/subcategory/SWI10 Time out 
+03/30/2021 09:53:09 PM - TestStatus - INFO: Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/BROKEN_LINKS .1617162789765.png
+03/30/2021 09:53:09 PM - TestStatus - ERROR: test_links ### TEST FAILED
+03/30/2021 09:53:09 PM - MainPage - INFO: Element found with locator: 'HyperLink4' and locatorType: id
+03/30/2021 09:53:10 PM - MainPage - INFO: Clicked on element with locator: 'HyperLink4' locatorType: id clickType: click
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'name' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Sent data on element with locator: 'name' locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'email_addr' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Sent data on element with locator: 'email_addr' locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'subject' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Sent data on element with locator: 'subject' locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'comments' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Sent data on element with locator: 'comments' locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'submit' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Clicked on element with locator: 'submit' locatorType: name clickType: click
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//p' and locatorType: xpath
+03/30/2021 09:53:10 PM - Util - INFO: Actual Text From Application Web UI --> :: Thank you for your comments, Efren. They will be reviewed by our Customer Service staff and given the full attention that they deserve. Our reply will be sent to your email: efren@gmail.com
+03/30/2021 09:53:10 PM - Util - INFO: Expected Text From Application Web UI --> :: Our reply will be sent to your email
+03/30/2021 09:53:10 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:53:10 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Form_successful_working 
+03/30/2021 09:53:10 PM - TestStatus - INFO: test_successfulContactForm ### TEST SUCCESSFUL
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'HyperLink4' and locatorType: id
+03/30/2021 09:53:10 PM - MainPage - INFO: Clicked on element with locator: 'HyperLink4' locatorType: id clickType: click
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'name' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Sent data on element with locator: 'name' locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'email_addr' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Sent data on element with locator: 'email_addr' locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'subject' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Sent data on element with locator: 'subject' locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'comments' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Sent data on element with locator: 'comments' locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'submit' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Clicked on element with locator: 'submit' locatorType: name clickType: click
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: '//div[@class='fl']//p' and locatorType: xpath
+03/30/2021 09:53:10 PM - Util - INFO: Actual Text From Application Web UI --> :: Thank you for your comments, Efren. They will be reviewed by our Customer Service staff and given the full attention that they deserve. However, the email you gave is incorrect (efren) and you will not receive a response.
+03/30/2021 09:53:10 PM - Util - INFO: Expected Text From Application Web UI --> :: the email you gave is incorrect
+03/30/2021 09:53:10 PM - Util - INFO: ### VERIFICATION CONTAINS !!!
+03/30/2021 09:53:10 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Form_unsuccessful_working 
+03/30/2021 09:53:10 PM - TestStatus - INFO: test_unsuccessfulContactForm ### TEST SUCCESSFUL
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'HyperLink4' and locatorType: id
+03/30/2021 09:53:10 PM - MainPage - INFO: Clicked on element with locator: 'HyperLink4' locatorType: id clickType: click
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'name' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Sent data on element with locator: 'name' locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'email_addr' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Sent data on element with locator: 'email_addr' locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'subject' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Sent data on element with locator: 'subject' locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'comments' and locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Sent data on element with locator: 'comments' locatorType: name
+03/30/2021 09:53:10 PM - MainPage - INFO: Element found with locator: 'reset' and locatorType: name
+03/30/2021 09:53:11 PM - MainPage - INFO: Clicked on element with locator: 'reset' locatorType: name clickType: click
+03/30/2021 09:53:11 PM - MainPage - INFO: Element found with locator: 'name' and locatorType: name
+03/30/2021 09:53:11 PM - MainPage - INFO: Element found with locator: 'email_addr' and locatorType: name
+03/30/2021 09:53:11 PM - MainPage - INFO: Element found with locator: 'subject' and locatorType: name
+03/30/2021 09:53:11 PM - MainPage - INFO: Element found with locator: 'comments' and locatorType: name
+03/30/2021 09:53:11 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:53:11 PM - MainPage - DEBUG: After finding element, size is: 0
+03/30/2021 09:53:11 PM - Util - INFO: Actual Text From Application Web UI --> :: 
+03/30/2021 09:53:11 PM - Util - INFO: Expected Text From Application Web UI --> :: 
+03/30/2021 09:53:11 PM - Util - INFO: ### VERIFICATION MATCHED !!!
+03/30/2021 09:53:11 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:53:11 PM - MainPage - DEBUG: After finding element, size is: 0
+03/30/2021 09:53:11 PM - Util - INFO: Actual Text From Application Web UI --> :: 
+03/30/2021 09:53:11 PM - Util - INFO: Expected Text From Application Web UI --> :: 
+03/30/2021 09:53:11 PM - Util - INFO: ### VERIFICATION MATCHED !!!
+03/30/2021 09:53:11 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:53:11 PM - MainPage - DEBUG: After finding element, size is: 0
+03/30/2021 09:53:11 PM - Util - INFO: Actual Text From Application Web UI --> :: 
+03/30/2021 09:53:11 PM - Util - INFO: Expected Text From Application Web UI --> :: 
+03/30/2021 09:53:11 PM - Util - INFO: ### VERIFICATION MATCHED !!!
+03/30/2021 09:53:11 PM - MainPage - DEBUG: Before finding text
+03/30/2021 09:53:11 PM - MainPage - DEBUG: After finding element, size is: 0
+03/30/2021 09:53:11 PM - Util - INFO: Actual Text From Application Web UI --> :: 
+03/30/2021 09:53:11 PM - Util - INFO: Expected Text From Application Web UI --> :: 
+03/30/2021 09:53:11 PM - Util - INFO: ### VERIFICATION MATCHED !!!
+03/30/2021 09:53:11 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Form_clear_successful 
+03/30/2021 09:53:11 PM - TestStatus - INFO: test_clearForm ### TEST SUCCESSFUL
+03/30/2021 09:53:11 PM - MainPage - INFO: Element found with locator: 'MenuHyperLink19' and locatorType: id
+03/30/2021 09:53:12 PM - MainPage - INFO: Clicked on element with locator: 'MenuHyperLink19' locatorType: id clickType: click
+03/30/2021 09:53:12 PM - MainPage - INFO: Element found with locator: 'txtEmail' and locatorType: id
+03/30/2021 09:53:12 PM - MainPage - INFO: Sent data on element with locator: 'txtEmail' locatorType: id
+03/30/2021 09:53:12 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/30/2021 09:53:12 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/30/2021 09:53:12 PM - MainPage - INFO: Element found with locator: 'message' and locatorType: id
+03/30/2021 09:53:12 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Subscribe_working_correctly
+03/30/2021 09:53:12 PM - TestStatus - INFO: test_subscribeSuccessful ### TEST SUCCESSFUL
+03/30/2021 09:53:12 PM - MainPage - INFO: Element found with locator: 'MenuHyperLink19' and locatorType: id
+03/30/2021 09:53:12 PM - MainPage - INFO: Clicked on element with locator: 'MenuHyperLink19' locatorType: id clickType: click
+03/30/2021 09:53:12 PM - MainPage - INFO: Element found with locator: 'txtEmail' and locatorType: id
+03/30/2021 09:53:12 PM - MainPage - INFO: Sent data on element with locator: 'txtEmail' locatorType: id
+03/30/2021 09:53:12 PM - MainPage - INFO: Element found with locator: 'btnSubmit' and locatorType: name
+03/30/2021 09:53:12 PM - MainPage - INFO: Clicked on element with locator: 'btnSubmit' locatorType: name clickType: click
+03/30/2021 09:53:12 PM - MainPage - INFO: Waiting for maximum :: 10 :: seconds for alert to be present
+03/30/2021 09:53:12 PM - MainPage - INFO: Alert found
+03/30/2021 09:53:12 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Subscribe_working_correctly
+03/30/2021 09:53:12 PM - TestStatus - INFO: test_subscribeUnsuccessful ### TEST SUCCESSFUL
+03/30/2021 09:53:12 PM - JobsPage - INFO: Element found with locator: 'MenuHyperLink18' and locatorType: id
+03/30/2021 09:53:13 PM - JobsPage - INFO: Clicked on element with locator: 'MenuHyperLink18' locatorType: id clickType: click
+03/30/2021 09:53:13 PM - JobsPage - INFO: Element found with locator: 'Current Job Openings' and locatorType: link text
+03/30/2021 09:53:13 PM - JobsPage - INFO: Clicked on element with locator: 'Current Job Openings' locatorType: link clickType: click
+03/30/2021 09:53:13 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table' and locatorType: xpath
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: After finding element, size is: 14
+03/30/2021 09:53:13 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:13 PM - JobsPage - INFO: The text is :: 'Administration'
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: After finding element, size is: 11
+03/30/2021 09:53:13 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:13 PM - JobsPage - INFO: The text is :: 'Oct-23-2006'
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: After finding element, size is: 19
+03/30/2021 09:53:13 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:13 PM - JobsPage - INFO: The text is :: 'Executive Assistant'
+03/30/2021 09:53:13 PM - JobsPage - INFO: Executed script: window.open("http://demo.testfire.net/index.jsp?content=inside_jobs.htm&job=ExecutiveAssistant:Administration","_blank");
+03/30/2021 09:53:13 PM - JobsPage - INFO: Switched to window about:blank
+03/30/2021 09:53:13 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[1]//td[2]' and locatorType: xpath
+03/30/2021 09:53:13 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[2]//td[2]' and locatorType: xpath
+03/30/2021 09:53:13 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: After finding element, size is: 11
+03/30/2021 09:53:13 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:13 PM - JobsPage - INFO: The text is :: 'Date Posted'
+03/30/2021 09:53:13 PM - Util - INFO: Actual Text From Application Web UI --> :: Administration
+03/30/2021 09:53:13 PM - Util - INFO: Expected Text From Application Web UI --> :: Date Posted
+03/30/2021 09:53:13 PM - Util - INFO: ### VERIFICATION DOES NOT MATCHED !!!
+03/30/2021 09:53:13 PM - JobsPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: After finding element, size is: 16
+03/30/2021 09:53:13 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:13 PM - JobsPage - INFO: The text is :: 'Consumer Banking'
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: After finding element, size is: 11
+03/30/2021 09:53:13 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:13 PM - JobsPage - INFO: The text is :: 'Oct-19-2006'
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:13 PM - JobsPage - DEBUG: After finding element, size is: 6
+03/30/2021 09:53:13 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:13 PM - JobsPage - INFO: The text is :: 'Teller'
+03/30/2021 09:53:13 PM - JobsPage - INFO: Executed script: window.open("http://demo.testfire.net/index.jsp?content=inside_jobs.htm&job=Teller:ConsumaerBanking","_blank");
+03/30/2021 09:53:13 PM - JobsPage - INFO: Switched to window about:blank
+03/30/2021 09:53:14 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[1]//td[2]' and locatorType: xpath
+03/30/2021 09:53:14 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[2]//td[2]' and locatorType: xpath
+03/30/2021 09:53:14 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: After finding element, size is: 11
+03/30/2021 09:53:14 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:14 PM - JobsPage - INFO: The text is :: 'Date Posted'
+03/30/2021 09:53:14 PM - Util - INFO: Actual Text From Application Web UI --> :: Consumer Banking
+03/30/2021 09:53:14 PM - Util - INFO: Expected Text From Application Web UI --> :: Date Posted
+03/30/2021 09:53:14 PM - Util - INFO: ### VERIFICATION DOES NOT MATCHED !!!
+03/30/2021 09:53:14 PM - JobsPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: After finding element, size is: 16
+03/30/2021 09:53:14 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:14 PM - JobsPage - INFO: The text is :: 'Customer Service'
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: After finding element, size is: 11
+03/30/2021 09:53:14 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:14 PM - JobsPage - INFO: The text is :: 'Oct-26-2006'
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: After finding element, size is: 31
+03/30/2021 09:53:14 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:14 PM - JobsPage - INFO: The text is :: 'Customer Service Representative'
+03/30/2021 09:53:14 PM - JobsPage - INFO: Executed script: window.open("http://demo.testfire.net/index.jsp?content=inside_jobs.htm&job=CustomerServiceRepresentative:CustomerService","_blank");
+03/30/2021 09:53:14 PM - JobsPage - INFO: Switched to window about:blank
+03/30/2021 09:53:14 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[1]//td[2]' and locatorType: xpath
+03/30/2021 09:53:14 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[2]//td[2]' and locatorType: xpath
+03/30/2021 09:53:14 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: After finding element, size is: 11
+03/30/2021 09:53:14 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:14 PM - JobsPage - INFO: The text is :: 'Date Posted'
+03/30/2021 09:53:14 PM - Util - INFO: Actual Text From Application Web UI --> :: Customer Service
+03/30/2021 09:53:14 PM - Util - INFO: Expected Text From Application Web UI --> :: Date Posted
+03/30/2021 09:53:14 PM - Util - INFO: ### VERIFICATION DOES NOT MATCHED !!!
+03/30/2021 09:53:14 PM - JobsPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: After finding element, size is: 9
+03/30/2021 09:53:14 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:14 PM - JobsPage - INFO: The text is :: 'Marketing'
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: After finding element, size is: 11
+03/30/2021 09:53:14 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:14 PM - JobsPage - INFO: The text is :: 'Oct-25-2006'
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:14 PM - JobsPage - DEBUG: After finding element, size is: 33
+03/30/2021 09:53:14 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:14 PM - JobsPage - INFO: The text is :: 'Loyalty Marketing Program Manager'
+03/30/2021 09:53:14 PM - JobsPage - INFO: Executed script: window.open("http://demo.testfire.net/index.jsp?content=inside_jobs.htm&job=LoyaltyMarketingProgramManager:Marketing","_blank");
+03/30/2021 09:53:14 PM - JobsPage - INFO: Switched to window about:blank
+03/30/2021 09:53:15 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[1]//td[2]' and locatorType: xpath
+03/30/2021 09:53:15 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[2]//td[2]' and locatorType: xpath
+03/30/2021 09:53:15 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: After finding element, size is: 11
+03/30/2021 09:53:15 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:15 PM - JobsPage - INFO: The text is :: 'Date Posted'
+03/30/2021 09:53:15 PM - Util - INFO: Actual Text From Application Web UI --> :: Marketing
+03/30/2021 09:53:15 PM - Util - INFO: Expected Text From Application Web UI --> :: Date Posted
+03/30/2021 09:53:15 PM - Util - INFO: ### VERIFICATION DOES NOT MATCHED !!!
+03/30/2021 09:53:15 PM - JobsPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: After finding element, size is: 15
+03/30/2021 09:53:15 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:15 PM - JobsPage - INFO: The text is :: 'Risk Management'
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: After finding element, size is: 11
+03/30/2021 09:53:15 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:15 PM - JobsPage - INFO: The text is :: 'Oct-17-2006'
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: After finding element, size is: 24
+03/30/2021 09:53:15 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:15 PM - JobsPage - INFO: The text is :: 'Operational Risk Manager'
+03/30/2021 09:53:15 PM - JobsPage - INFO: Executed script: window.open("http://demo.testfire.net/index.jsp?content=inside_jobs.htm&job=OperationalRiskManager:RiskManagement","_blank");
+03/30/2021 09:53:15 PM - JobsPage - INFO: Switched to window about:blank
+03/30/2021 09:53:15 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[1]//td[2]' and locatorType: xpath
+03/30/2021 09:53:15 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[2]//td[2]' and locatorType: xpath
+03/30/2021 09:53:15 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: After finding element, size is: 11
+03/30/2021 09:53:15 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:15 PM - JobsPage - INFO: The text is :: 'Date Posted'
+03/30/2021 09:53:15 PM - Util - INFO: Actual Text From Application Web UI --> :: Risk Management
+03/30/2021 09:53:15 PM - Util - INFO: Expected Text From Application Web UI --> :: Date Posted
+03/30/2021 09:53:15 PM - Util - INFO: ### VERIFICATION DOES NOT MATCHED !!!
+03/30/2021 09:53:15 PM - JobsPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: After finding element, size is: 5
+03/30/2021 09:53:15 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:15 PM - JobsPage - INFO: The text is :: 'Sales'
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: After finding element, size is: 11
+03/30/2021 09:53:15 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:15 PM - JobsPage - INFO: The text is :: 'Oct-24-2006'
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:15 PM - JobsPage - DEBUG: After finding element, size is: 34
+03/30/2021 09:53:15 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:15 PM - JobsPage - INFO: The text is :: 'Mortgage Lending Account Executive'
+03/30/2021 09:53:15 PM - JobsPage - INFO: Executed script: window.open("http://demo.testfire.net/index.jsp?content=inside_jobs.htm&job=MortgageLendingAccountExecutive:Sales","_blank");
+03/30/2021 09:53:15 PM - JobsPage - INFO: Switched to window about:blank
+03/30/2021 09:53:16 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[1]//td[2]' and locatorType: xpath
+03/30/2021 09:53:16 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//table//tr[2]//td[2]' and locatorType: xpath
+03/30/2021 09:53:16 PM - JobsPage - INFO: Element found with locator: '//div[@class='fl']//h1' and locatorType: xpath
+03/30/2021 09:53:16 PM - JobsPage - DEBUG: Before finding text
+03/30/2021 09:53:16 PM - JobsPage - DEBUG: After finding element, size is: 11
+03/30/2021 09:53:16 PM - JobsPage - INFO: Getting text on element :: 
+03/30/2021 09:53:16 PM - JobsPage - INFO: The text is :: 'Date Posted'
+03/30/2021 09:53:16 PM - Util - INFO: Actual Text From Application Web UI --> :: Sales
+03/30/2021 09:53:16 PM - Util - INFO: Expected Text From Application Web UI --> :: Date Posted
+03/30/2021 09:53:16 PM - Util - INFO: ### VERIFICATION DOES NOT MATCHED !!!
+03/30/2021 09:53:16 PM - JobsPage - INFO: Switched to window http://demo.testfire.net/index.jsp?content=inside_jobs.htm
+03/30/2021 09:53:16 PM - Util - INFO: Actual Text From Application Web UI --> :: 
+03/30/2021 09:53:16 PM - Util - INFO: Expected Text From Application Web UI --> :: 
+03/30/2021 09:53:16 PM - Util - INFO: ### VERIFICATION MATCHED !!!
+03/30/2021 09:53:16 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + info_correct
+03/30/2021 09:53:16 PM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: + Jobs_info_correct
+03/30/2021 09:53:16 PM - TestStatus - INFO: test_jobsList ### TEST SUCCESSFUL
