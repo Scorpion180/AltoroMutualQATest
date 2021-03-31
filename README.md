@@ -2,6 +2,8 @@
 
 This is a project for automated AQ testing with selenium for the practice page [Alroto Mutual](http://demo.testfire.net)
 
+## [Testing report](https://drive.google.com/file/d/1lI52cRBTGv8ybQnSWUMS71iWY--Ii4ZN/view?usp=sharing)
+
 ### Requirements 📋
 
 - Python 3
