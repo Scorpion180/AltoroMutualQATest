@@ -89,10 +89,8 @@ class RecentTransactions(BasePage):
         tableRows = self.getElementList(self.TABLE, self.TABLE_LOCATOR)
         #Delete first element because it's the header
         del tableRows[0]
-        print(len(tableRows))
         for row in tableRows:
             if row.text != '':
-                print(row.text.split()[1])
                 dateArray = row.text.split()[1].split('-')
                 _date = datetime.datetime(int(dateArray[0]), int(dateArray[1]), int(dateArray[2]))
                 if type == "AFTER":

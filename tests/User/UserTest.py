@@ -38,7 +38,8 @@ class User_tests(unittest.TestCase):
         self.rt.check_dates('2020-11-20', '2021-03-20')
         results.append(self.rt.verify_datesOnTable('2020-11-20', '2021-03-20', 'BOTH'))
         self.ts.mark(results[-1], "Valid_dates_verified")
-        self.ts.markFinal('test_validDate', all(x == results[0] for x in results), "dates_test_successful")
+        self.ts.mark(all(x == results[0] for x in results), "dates_test_successful")
+        return all(x == results[0] for x in results)
 
     def invalidDate(self):
         results = []
@@ -49,18 +50,18 @@ class User_tests(unittest.TestCase):
         self.rt.check_beforeDate('02/12/2015')
         results.append(self.rt.verify_invalidDate())
         self.ts.mark(results[-1], "Before_date_verified")
-        self.ts.markFinal("test_invalidDate", all(x == results[0] for x in results),
-                          "invalid_date_test_successful")
+        self.ts.mark(all(x == results[0] for x in results), "invalid_date_test_successful")
+        return all(x == results[0] for x in results)
 
     @pytest.mark.run(order=1)
-    @data(('admin', 'admin', 'watchfire', 'Savings', '456datil'), ('jsmith', 'demo1234',  'watchfire', '', ''))
+    @data(('admin', 'admin', 'watchfire', 'Savings', '456datil'), ('jsmith', 'demo1234', 'watchfire', '', ''))
     @unpack
     def test_accountOptions(self, username, password, articleName, accountType, newPswd):
         results = []
         self.main.check_Login(username, password)
         self.page.check_accountSummary()
         results.append(self.page.verify_accountInfo())
-        self.ts.mark(results[-1], username+'_account_summary_correct')
+        self.ts.mark(results[-1], username + '_account_summary_correct')
 
         self.page.check_apply(password)
         results.append(self.page.verify_aplly())
@@ -78,20 +79,36 @@ class User_tests(unittest.TestCase):
         results.append(self.page.verify_querySuccessful())
         self.ts.mark(results[-1], username + '_article_search_successful')
 
-        self.validDate()
+        results.append(self.validDate())
 
-        self.invalidDate()
+        results.append(self.invalidDate())
 
         if username == 'admin':
-
             self.page.check_addAccount(username, accountType)
             results.append(self.page.verify_addedAccount())
             self.ts.mark(results[-1], username + '_add_account_successful')
 
             self.page.check_changePassword(username, newPswd)
+
+            self.page.check_addNewUser('Juan', 'Lopez', 'jl2020', '123', '1')
+            results.append(self.page.verify_addNewUserUnsuccessful())
+            self.ts.mark(results[-1], username + '_user_add_unsuccessful')
+
+            self.page.check_addNewUser('Juan', 'Lopez', 'jl2020', '123', '123')
+
             self.main.logOut()
+
+            self.main.check_Login('jl2020', '123')
+            print('checking new user')
+            time.sleep(5)
+            results.append(self.main.verify_loginSuccessful(False))
+            self.ts.mark(results[-1], username + '_add_new_user_successful')
+
+            if results[-1]:
+                print('logout')
+                self.main.logOut()
+
             self.main.check_Login(username, newPswd)
             results.append(self.main.verify_loginSuccessful(False))
             self.ts.mark(results[-1], username + '_change_password_successful')
-        self.ts.markFinal('test_accountOptions', all(x == results[0] for x in results), username+'_test_successful')
-
+        self.ts.markFinal('test_accountOptions', all(x == results[0] for x in results), username + '_test_successful')

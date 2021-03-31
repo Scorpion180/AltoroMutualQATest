@@ -106,6 +106,24 @@ class UserPage(BasePage):
     PSWD_BTN = 'change'
     PSWD_BTN_LOCATOR = 'name'
 
+    FIRST_NAME = '//input[@name=\'firstname\']'
+    FIRST_NAME_LOCATOR = 'xpath'
+
+    LAST_NAME = '//input[@name=\'lastname\']'
+    LAST_NAME_LOCATOR = 'xpath'
+
+    USER_NAME = '//input[@name=\'username\']'
+    USER_NAME_LOCATOR = 'xpath'
+
+    NEW_USER_PSWD = '(//input[@name=\'password1\'])[2]'
+    NEW_USER_PSWD_LOCATOR = 'xpath'
+
+    NEW_USER_PSWD_CONFIRM = '(//input[@name=\'password2\'])[2]'
+    NEW_USER_PSWD_CONFIRM_LOCATOR = 'xpath'
+
+    ADD_NEW_USER = '//input[@value=\'Add User\']'
+    ADD_NEW_USER_LOCATOR = 'xpath'
+
     def writeBrokenContent(self, header, message):
         self.Error += header + message + ' | '
         self.screenShot(header + message)
@@ -271,3 +289,31 @@ class UserPage(BasePage):
         self.sendPswdConfirm(password)
         self.clickChangePswd()
 
+    def sendFirstName(self, firstName):
+        self.sendKeys(firstName, self.FIRST_NAME, self.FIRST_NAME_LOCATOR)
+
+    def sendLastName(self, lastName):
+        self.sendKeys(lastName, self.LAST_NAME, self.LAST_NAME_LOCATOR)
+
+    def sendUserName(self, userName):
+        self.sendKeys(userName, self.USER_NAME, self.USER_NAME_LOCATOR)
+
+    def sendPassword(self, password):
+        self.sendKeys(password, self.NEW_USER_PSWD, self.NEW_USER_PSWD_LOCATOR)
+
+    def sendPasswordConfirm(self, passwordConfirm):
+        self.sendKeys(passwordConfirm, self.NEW_USER_PSWD_CONFIRM, self.NEW_USER_PSWD_CONFIRM_LOCATOR)
+
+    def clickAddUser(self):
+        self.elementClick(self.ADD_NEW_USER, self.ADD_NEW_USER_LOCATOR)
+
+    def check_addNewUser(self, firstName, lastName, userName, password, passwordConfirm):
+        self.sendFirstName(firstName)
+        self.sendLastName(lastName)
+        self.sendUserName(userName)
+        self.sendPassword(password)
+        self.sendPasswordConfirm(passwordConfirm)
+        self.clickAddUser()
+
+    def verify_addNewUserUnsuccessful(self):
+        return self.waitForAlert()

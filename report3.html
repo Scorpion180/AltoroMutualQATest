@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) { // eslint-disable-line no-redeclare
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function findAll(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sortColumn(elem) {
+    toggleSortStates(elem);
+    const colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    let key;
+    if (elem.classList.contains('result')) {
+        key = keyResult;
+    } else if (elem.classList.contains('links')) {
+        key = keyLink;
+    } else {
+        key = keyAlpha;
+    }
+    sortTable(elem, key(colIndex));
+}
+
+function showAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(showExtras);
+}
+
+function hideAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(hideExtras);
+}
+
+function showExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.remove('collapsed');
+    expandcollapse.classList.remove('expander');
+    expandcollapse.classList.add('collapser');
+}
+
+function hideExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.add('collapsed');
+    expandcollapse.classList.remove('collapser');
+    expandcollapse.classList.add('expander');
+}
+
+function showFilters() {
+    const filterItems = document.getElementsByClassName('filter');
+    for (let i = 0; i < filterItems.length; i++)
+        filterItems[i].hidden = false;
+}
+
+function addCollapse() {
+    // Add links for show/hide all
+    const resulttable = find('table#results-table');
+    const showhideall = document.createElement('p');
+    showhideall.innerHTML = '<a href="javascript:showAllExtras()">Show all details</a> / ' +
+                            '<a href="javascript:hideAllExtras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    findAll('.col-result').forEach(function(elem) {
+        const collapsed = getQueryParameter('collapsed') || 'Passed';
+        const extras = elem.parentNode.nextElementSibling;
+        const expandcollapse = document.createElement('span');
+        if (extras.classList.contains('collapsed')) {
+            expandcollapse.classList.add('expander');
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add('collapsed');
+            expandcollapse.classList.add('expander');
+        } else {
+            expandcollapse.classList.add('collapser');
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener('click', function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains('collapsed')) {
+                showExtras(event.currentTarget);
+            } else {
+                hideExtras(event.currentTarget);
+            }
+        });
+    });
+}
+
+function getQueryParameter(name) {
+    const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () { // eslint-disable-line no-unused-vars
+    resetSortHeaders();
+
+    addCollapse();
+
+    showFilters();
+
+    sortColumn(find('.initial-sort'));
+
+    findAll('.sortable').forEach(function(elem) {
+        elem.addEventListener('click',
+            function() {
+                sortColumn(elem);
+            }, false);
+    });
+}
+
+function sortTable(clicked, keyFunc) {
+    const rows = findAll('.results-table-row');
+    const reversed = !clicked.classList.contains('asc');
+    const sortedRows = sort(rows, keyFunc, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    const thead = document.getElementById('results-table-head');
+    document.getElementById('results-table').remove();
+    const parent = document.createElement('table');
+    parent.id = 'results-table';
+    parent.appendChild(thead);
+    sortedRows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName('BODY')[0].appendChild(parent);
+}
+
+function sort(items, keyFunc, reversed) {
+    const sortArray = items.map(function(item, i) {
+        return [keyFunc(item), i];
+    });
+
+    sortArray.sort(function(a, b) {
+        const keyA = a[0];
+        const keyB = b[0];
+
+        if (keyA == keyB) return 0;
+
+        if (reversed) {
+            return keyA < keyB ? 1 : -1;
+        } else {
+            return keyA > keyB ? 1 : -1;
+        }
+    });
+
+    return sortArray.map(function(item) {
+        const index = item[1];
+        return items[index];
+    });
+}
+
+function keyAlpha(colIndex) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[colIndex].firstChild.data.toLowerCase();
+    };
+}
+
+function keyLink(colIndex) {
+    return function(elem) {
+        const dataCell = elem.childNodes[1].childNodes[colIndex].firstChild;
+        return dataCell == null ? '' : dataCell.innerText.toLowerCase();
+    };
+}
+
+function keyResult(colIndex) {
+    return function(elem) {
+        const strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+            'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[colIndex].firstChild.data);
+    };
+}
+
+function resetSortHeaders() {
+    findAll('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    findAll('.sortable').forEach(function(elem) {
+        const icon = document.createElement('div');
+        icon.className = 'sort-icon';
+        icon.textContent = 'vvv';
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove('desc', 'active');
+        elem.classList.add('asc', 'inactive');
+    });
+}
+
+function toggleSortStates(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        resetSortHeaders();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function isAllRowsHidden(value) {
+    return value.hidden == false;
+}
+
+function filterTable(elem) { // eslint-disable-line no-unused-vars
+    const outcomeAtt = 'data-test-result';
+    const outcome = elem.getAttribute(outcomeAtt);
+    const classOutcome = outcome + ' results-table-row';
+    const outcomeRows = document.getElementsByClassName(classOutcome);
+
+    for(let i = 0; i < outcomeRows.length; i++){
+        outcomeRows[i].hidden = !elem.checked;
+    }
+
+    const rows = findAll('.results-table-row').filter(isAllRowsHidden);
+    const allRowsHidden = rows.length == 0 ? true : false;
+    const notFoundMessage = document.getElementById('not-found-message');
+    notFoundMessage.hidden = !allRowsHidden;
+}
+</script>
+    <h1>report3.html</h1>
+    <p>Report generated on 31-Mar-2021 at 00:40:53 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "0.13.1", "py": "1.10.0", "pytest": "6.2.2"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Windows-10-10.0.18362-SP0</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"html": "3.1.1", "metadata": "1.11.0", "ordering": "0.6"}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.9.1</td></tr></table>
+    <h2>Summary</h2>
+    <p>2 tests ran in 68.01 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable" col="duration">Duration</th>
+          <th class="sortable links" col="links">Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/User/UserTest.py::User_tests::test_accountOptions_1___admin____admin____watchfire____Savings____456datil__</td>
+          <td class="col-duration">38.69</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;UserTest.User_tests testMethod=test_accountOptions_1___admin____admin____watchfire____Savings____456datil__&gt;, username = &#x27;admin&#x27;, password = &#x27;admin&#x27;<br/>articleName = &#x27;watchfire&#x27;, accountType = &#x27;Savings&#x27;, newPswd = &#x27;456datil&#x27;<br/><br/>    @pytest.mark.run(order=1)<br/>    @data((&#x27;admin&#x27;, &#x27;admin&#x27;, &#x27;watchfire&#x27;, &#x27;Savings&#x27;, &#x27;456datil&#x27;), (&#x27;jsmith&#x27;, &#x27;demo1234&#x27;, &#x27;watchfire&#x27;, &#x27;&#x27;, &#x27;&#x27;))<br/>    @unpack<br/>    def test_accountOptions(self, username, password, articleName, accountType, newPswd):<br/>        results = []<br/>        self.main.check_Login(username, password)<br/>        self.page.check_accountSummary()<br/>        results.append(self.page.verify_accountInfo())<br/>        self.ts.mark(results[-1], username + &#x27;_account_summary_correct&#x27;)<br/>    <br/>        self.page.check_apply(password)<br/>        results.append(self.page.verify_aplly())<br/>        self.ts.mark(results[-1], username + &#x27;_apply_form_correct&#x27;)<br/>    <br/>        self.page.check_transferFounds(1, testError=False)<br/>        results.append(self.page.verify_transferSuccessful())<br/>        self.ts.mark(results[-1], username + &#x27;_transfer_successful_correct&#x27;)<br/>    <br/>        self.page.check_transferFounds(1, testError=True)<br/>        results.append(self.page.verify_transferUnsuccessful())<br/>        self.ts.mark(results[-1], username + &#x27;_transfer_unsuccessful_correct&#x27;)<br/>    <br/>        self.page.check_articlesSearch(articleName)<br/>        results.append(self.page.verify_querySuccessful())<br/>        self.ts.mark(results[-1], username + &#x27;_article_search_successful&#x27;)<br/>    <br/>        results.append(self.validDate())<br/>    <br/>        results.append(self.invalidDate())<br/>    <br/>        if username == &#x27;admin&#x27;:<br/>            self.page.check_addAccount(username, accountType)<br/>            results.append(self.page.verify_addedAccount())<br/>            self.ts.mark(results[-1], username + &#x27;_add_account_successful&#x27;)<br/>    <br/>            self.page.check_changePassword(username, newPswd)<br/>    <br/>            self.page.check_addNewUser(&#x27;Juan&#x27;, &#x27;Lopez&#x27;, &#x27;jl2020&#x27;, &#x27;123&#x27;, &#x27;1&#x27;)<br/>            results.append(self.page.verify_addNewUserUnsuccessful())<br/>            self.ts.mark(results[-1], username + &#x27;_user_add_unsuccessful&#x27;)<br/>    <br/>            self.page.check_addNewUser(&#x27;Juan&#x27;, &#x27;Lopez&#x27;, &#x27;jl2020&#x27;, &#x27;123&#x27;, &#x27;123&#x27;)<br/>    <br/>            self.main.logOut()<br/>    <br/>            self.main.check_Login(&#x27;jl2020&#x27;, &#x27;123&#x27;)<br/>            print(&#x27;checking new user&#x27;)<br/>            time.sleep(5)<br/>            results.append(self.main.verify_loginSuccessful(False))<br/>            self.ts.mark(results[-1], username + &#x27;_add_new_user_successful&#x27;)<br/>    <br/>            if results[-1]:<br/>                print(&#x27;logout&#x27;)<br/>                self.main.logOut()<br/>    <br/>            self.main.check_Login(username, newPswd)<br/>            results.append(self.main.verify_loginSuccessful(False))<br/>            self.ts.mark(results[-1], username + &#x27;_change_password_successful&#x27;)<br/>&gt;       self.ts.markFinal(&#x27;test_accountOptions&#x27;, all(x == results[0] for x in results), username + &#x27;_test_successful&#x27;)<br/><br/>tests\User\UserTest.py:114: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;utilities.teststatus.TestStatus object at 0x000001711D762E80&gt;, testName = &#x27;test_accountOptions&#x27;, result = False, resultMessage = &#x27;admin_test_successful&#x27;<br/>aditionalInfo = &#x27;&#x27;<br/><br/>    def markFinal(self, testName, result, resultMessage, aditionalInfo = &#x27;&#x27;):<br/>        &quot;&quot;&quot;<br/>        Mark the final result of the verification point in a test case<br/>        This needs to be called at least once in a test case<br/>        This should be final test status of the test case<br/>        &quot;&quot;&quot;<br/>        self.setResult(result, resultMessage, aditionalInfo)<br/>    <br/>        if &quot;FAIL&quot; in self.resultList:<br/>            self.log.error(testName + &quot; ### TEST FAILED&quot;)<br/>            self.resultList.clear()<br/>&gt;           assert True == False<br/><span class="error">E           AssertionError</span><br/><br/>utilities\teststatus.py:61: AssertionError<br/> -----------------------------Captured stdout setup------------------------------ <br/>Running one time setUp
+Running method level setUp
+<br/> ------------------------------Captured stdout call------------------------------ <br/>checking new user
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;ONLINE BANKING LOGIN&#x27; and locatorType: link text
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;ONLINE BANKING LOGIN&#x27; locatorType: link clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;uid&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;uid&#x27; locatorType: id
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;passw&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;passw&#x27; locatorType: id
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;btnSubmit&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;btnSubmit&#x27; locatorType: name clickType: click
+INFO     UserPage:selenium_driver.py:87 Element list found with locator: //select//option and  locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//select//option[1]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;btnGetAccount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;btnGetAccount&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//select//option[2]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;btnGetAccount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;btnGetAccount&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + admin_account_summary_correct
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;Here&#x27; and locatorType: link text
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;Here&#x27; locatorType: Link clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;passwd&#x27; and locatorType: name
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;passwd&#x27; locatorType: name
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;Submit&#x27; and locatorType: name
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;Submit&#x27; locatorType: name clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//span&#x27; and locatorType: xpath
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + admin_apply_form_correct
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;MenuHyperLink3&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;MenuHyperLink3&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;fromAccount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;toAccount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;transferAmount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;transferAmount&#x27; locatorType: id
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;transfer&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;transfer&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//form[@id=&#x27;tForm&#x27;]//tr[6]//span//span&#x27; and locatorType: xpath
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + admin_transfer_successful_correct
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;MenuHyperLink3&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;MenuHyperLink3&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;fromAccount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;toAccount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;transfer&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;transfer&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:209 Waiting for maximum :: 10 :: seconds for alert to be present
+INFO     UserPage:selenium_driver.py:214 Alert found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + admin_transfer_unsuccessful_correct
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;MenuHyperLink4&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;MenuHyperLink4&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;query&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;query&#x27; locatorType: id
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;Button1&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;Button1&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;QueryXpath&#x27; and locatorType: id
+ERROR    TestStatus:teststatus.py:33 ### VERIFICATION FAILED :: + admin_article_search_successful
+INFO     TestStatus:selenium_driver.py:33 Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_article_search_successful.1617172794424.png
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;View Recent Transactions&#x27; and locatorType: link text
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;View Recent Transactions&#x27; locatorType: link clickType: click
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;startDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:139 Sent data on element with locator: &#x27;startDate&#x27; locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; and locatorType: xpath
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; locatorType: xpath clickType: click
+INFO     RecentTransactions:selenium_driver.py:209 Waiting for maximum :: 10 :: seconds for alert to be present
+INFO     RecentTransactions:selenium_driver.py:217 Alert not found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + After_date_verified
+INFO     RecentTransactions:selenium_driver.py:87 Element list found with locator: //table[contains(@id,&#x27;MyTransactions&#x27;)]//tbody//tr and  locatorType: xpath
+INFO     RecentTransactions:RecentTransactions.py:108 No invalid date found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Dates_After_on_Table_verified
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;View Recent Transactions&#x27; and locatorType: link text
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;View Recent Transactions&#x27; locatorType: link clickType: click
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;endDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:139 Sent data on element with locator: &#x27;endDate&#x27; locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; and locatorType: xpath
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; locatorType: xpath clickType: click
+INFO     RecentTransactions:selenium_driver.py:209 Waiting for maximum :: 10 :: seconds for alert to be present
+INFO     RecentTransactions:selenium_driver.py:217 Alert not found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+INFO     RecentTransactions:selenium_driver.py:87 Element list found with locator: //table[contains(@id,&#x27;MyTransactions&#x27;)]//tbody//tr and  locatorType: xpath
+INFO     RecentTransactions:RecentTransactions.py:108 No invalid date found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Dates_Before_on_Table_verified
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;View Recent Transactions&#x27; and locatorType: link text
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;View Recent Transactions&#x27; locatorType: link clickType: click
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;endDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:139 Sent data on element with locator: &#x27;endDate&#x27; locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;startDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:139 Sent data on element with locator: &#x27;startDate&#x27; locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; and locatorType: xpath
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; locatorType: xpath clickType: click
+INFO     RecentTransactions:selenium_driver.py:87 Element list found with locator: //table[contains(@id,&#x27;MyTransactions&#x27;)]//tbody//tr and  locatorType: xpath
+INFO     RecentTransactions:RecentTransactions.py:108 No invalid date found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Valid_dates_verified
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + dates_test_successful
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;View Recent Transactions&#x27; and locatorType: link text
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;View Recent Transactions&#x27; locatorType: link clickType: click
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;startDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:139 Sent data on element with locator: &#x27;startDate&#x27; locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; and locatorType: xpath
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; locatorType: xpath clickType: click
+INFO     RecentTransactions:selenium_driver.py:209 Waiting for maximum :: 10 :: seconds for alert to be present
+INFO     RecentTransactions:selenium_driver.py:214 Alert found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + After_date_verified
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;startDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;endDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;View Recent Transactions&#x27; and locatorType: link text
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;View Recent Transactions&#x27; locatorType: link clickType: click
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;endDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:139 Sent data on element with locator: &#x27;endDate&#x27; locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; and locatorType: xpath
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; locatorType: xpath clickType: click
+INFO     RecentTransactions:selenium_driver.py:209 Waiting for maximum :: 10 :: seconds for alert to be present
+INFO     RecentTransactions:selenium_driver.py:214 Alert found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + invalid_date_test_successful
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;MenuHyperLink1&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;MenuHyperLink1&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:87 Element list found with locator: //select//option and  locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;Edit Users&#x27; and locatorType: link text
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;Edit Users&#x27; locatorType: link clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;(//form[@id=&#x27;addAccount&#x27;]/following-sibling::tbody//select)[1]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;accttypes&#x27; and locatorType: name
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;MenuHyperLink1&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;MenuHyperLink1&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//select&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;//select&#x27; locatorType: xpath clickType: click
+INFO     UserPage:selenium_driver.py:87 Element list found with locator: //select//option and  locatorType: xpath
+ERROR    TestStatus:teststatus.py:33 ### VERIFICATION FAILED :: + admin_add_account_successful
+INFO     TestStatus:selenium_driver.py:33 Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_add_account_successful.1617172817626.png
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;Edit Users&#x27; and locatorType: link text
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;Edit Users&#x27; locatorType: link clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;((//form[@id=&#x27;addAccount&#x27;]/following-sibling::tbody//select)[3])//option[contains(text(),&#x27;admin&#x27;)]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;((//form[@id=&#x27;addAccount&#x27;]/following-sibling::tbody//select)[3])//option[contains(text(),&#x27;admin&#x27;)]&#x27; locatorType: xpath clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;(//input[@name=&#x27;password1&#x27;])[1]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;(//input[@name=&#x27;password1&#x27;])[1]&#x27; locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;(//input[@name=&#x27;password2&#x27;])[1]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;(//input[@name=&#x27;password2&#x27;])[1]&#x27; locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;change&#x27; and locatorType: name
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;change&#x27; locatorType: name clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//input[@name=&#x27;firstname&#x27;]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;//input[@name=&#x27;firstname&#x27;]&#x27; locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//input[@name=&#x27;lastname&#x27;]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;//input[@name=&#x27;lastname&#x27;]&#x27; locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//input[@name=&#x27;username&#x27;]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;//input[@name=&#x27;username&#x27;]&#x27; locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;(//input[@name=&#x27;password1&#x27;])[2]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;(//input[@name=&#x27;password1&#x27;])[2]&#x27; locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;(//input[@name=&#x27;password2&#x27;])[2]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;(//input[@name=&#x27;password2&#x27;])[2]&#x27; locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//input[@value=&#x27;Add User&#x27;]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;//input[@value=&#x27;Add User&#x27;]&#x27; locatorType: xpath clickType: click
+INFO     UserPage:selenium_driver.py:209 Waiting for maximum :: 10 :: seconds for alert to be present
+INFO     UserPage:selenium_driver.py:214 Alert found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + admin_user_add_unsuccessful
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//input[@name=&#x27;firstname&#x27;]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;//input[@name=&#x27;firstname&#x27;]&#x27; locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//input[@name=&#x27;lastname&#x27;]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;//input[@name=&#x27;lastname&#x27;]&#x27; locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//input[@name=&#x27;username&#x27;]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;//input[@name=&#x27;username&#x27;]&#x27; locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;(//input[@name=&#x27;password1&#x27;])[2]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;(//input[@name=&#x27;password1&#x27;])[2]&#x27; locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;(//input[@name=&#x27;password2&#x27;])[2]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;(//input[@name=&#x27;password2&#x27;])[2]&#x27; locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//input[@value=&#x27;Add User&#x27;]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;//input[@value=&#x27;Add User&#x27;]&#x27; locatorType: xpath clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;LoginLink&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;LoginLink&#x27; locatorType: id clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;ONLINE BANKING LOGIN&#x27; and locatorType: link text
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;ONLINE BANKING LOGIN&#x27; locatorType: link clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;uid&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;uid&#x27; locatorType: id
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;passw&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;passw&#x27; locatorType: id
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;btnSubmit&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;btnSubmit&#x27; locatorType: name clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;AccountLink&#x27; and locatorType: id
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 20
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;ONLINE BANKING LOGIN&#x27;
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: ONLINE BANKING LOGIN
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: MY ACCOUNT
+INFO     Util:util.py:104 ### VERIFICATION DOES NOT MATCHED !!!
+ERROR    TestStatus:teststatus.py:33 ### VERIFICATION FAILED :: + admin_add_new_user_successful
+INFO     TestStatus:selenium_driver.py:33 Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_add_new_user_successful.1617172824004.png
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;ONLINE BANKING LOGIN&#x27; and locatorType: link text
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;ONLINE BANKING LOGIN&#x27; locatorType: link clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;uid&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;uid&#x27; locatorType: id
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;passw&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;passw&#x27; locatorType: id
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;btnSubmit&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;btnSubmit&#x27; locatorType: name clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;AccountLink&#x27; and locatorType: id
+DEBUG    MainPage:selenium_driver.py:117 Before finding text
+DEBUG    MainPage:selenium_driver.py:119 After finding element, size is: 20
+INFO     MainPage:selenium_driver.py:123 Getting text on element :: 
+INFO     MainPage:selenium_driver.py:124 The text is :: &#x27;ONLINE BANKING LOGIN&#x27;
+INFO     Util:util.py:98 Actual Text From Application Web UI --&gt; :: ONLINE BANKING LOGIN
+INFO     Util:util.py:99 Expected Text From Application Web UI --&gt; :: MY ACCOUNT
+INFO     Util:util.py:104 ### VERIFICATION DOES NOT MATCHED !!!
+ERROR    TestStatus:teststatus.py:33 ### VERIFICATION FAILED :: + admin_change_password_successful
+INFO     TestStatus:selenium_driver.py:33 Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_change_password_successful.1617172824391.png
+ERROR    TestStatus:teststatus.py:33 ### VERIFICATION FAILED :: + admin_test_successful
+INFO     TestStatus:selenium_driver.py:33 Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/admin_test_successful.1617172824444.png
+ERROR    TestStatus:teststatus.py:59 test_accountOptions ### TEST FAILED<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Running method level tearDown
+<br/></div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">tests/User/UserTest.py::User_tests::test_accountOptions_2___jsmith____demo1234____watchfire__________</td>
+          <td class="col-duration">28.93</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;UserTest.User_tests testMethod=test_accountOptions_2___jsmith____demo1234____watchfire__________&gt;, username = &#x27;jsmith&#x27;, password = &#x27;demo1234&#x27;<br/>articleName = &#x27;watchfire&#x27;, accountType = &#x27;&#x27;, newPswd = &#x27;&#x27;<br/><br/>    @pytest.mark.run(order=1)<br/>    @data((&#x27;admin&#x27;, &#x27;admin&#x27;, &#x27;watchfire&#x27;, &#x27;Savings&#x27;, &#x27;456datil&#x27;), (&#x27;jsmith&#x27;, &#x27;demo1234&#x27;, &#x27;watchfire&#x27;, &#x27;&#x27;, &#x27;&#x27;))<br/>    @unpack<br/>    def test_accountOptions(self, username, password, articleName, accountType, newPswd):<br/>        results = []<br/>        self.main.check_Login(username, password)<br/>        self.page.check_accountSummary()<br/>        results.append(self.page.verify_accountInfo())<br/>        self.ts.mark(results[-1], username + &#x27;_account_summary_correct&#x27;)<br/>    <br/>        self.page.check_apply(password)<br/>        results.append(self.page.verify_aplly())<br/>        self.ts.mark(results[-1], username + &#x27;_apply_form_correct&#x27;)<br/>    <br/>        self.page.check_transferFounds(1, testError=False)<br/>        results.append(self.page.verify_transferSuccessful())<br/>        self.ts.mark(results[-1], username + &#x27;_transfer_successful_correct&#x27;)<br/>    <br/>        self.page.check_transferFounds(1, testError=True)<br/>        results.append(self.page.verify_transferUnsuccessful())<br/>        self.ts.mark(results[-1], username + &#x27;_transfer_unsuccessful_correct&#x27;)<br/>    <br/>        self.page.check_articlesSearch(articleName)<br/>        results.append(self.page.verify_querySuccessful())<br/>        self.ts.mark(results[-1], username + &#x27;_article_search_successful&#x27;)<br/>    <br/>        results.append(self.validDate())<br/>    <br/>        results.append(self.invalidDate())<br/>    <br/>        if username == &#x27;admin&#x27;:<br/>            self.page.check_addAccount(username, accountType)<br/>            results.append(self.page.verify_addedAccount())<br/>            self.ts.mark(results[-1], username + &#x27;_add_account_successful&#x27;)<br/>    <br/>            self.page.check_changePassword(username, newPswd)<br/>    <br/>            self.page.check_addNewUser(&#x27;Juan&#x27;, &#x27;Lopez&#x27;, &#x27;jl2020&#x27;, &#x27;123&#x27;, &#x27;1&#x27;)<br/>            results.append(self.page.verify_addNewUserUnsuccessful())<br/>            self.ts.mark(results[-1], username + &#x27;_user_add_unsuccessful&#x27;)<br/>    <br/>            self.page.check_addNewUser(&#x27;Juan&#x27;, &#x27;Lopez&#x27;, &#x27;jl2020&#x27;, &#x27;123&#x27;, &#x27;123&#x27;)<br/>    <br/>            self.main.logOut()<br/>    <br/>            self.main.check_Login(&#x27;jl2020&#x27;, &#x27;123&#x27;)<br/>            print(&#x27;checking new user&#x27;)<br/>            time.sleep(5)<br/>            results.append(self.main.verify_loginSuccessful(False))<br/>            self.ts.mark(results[-1], username + &#x27;_add_new_user_successful&#x27;)<br/>    <br/>            if results[-1]:<br/>                print(&#x27;logout&#x27;)<br/>                self.main.logOut()<br/>    <br/>            self.main.check_Login(username, newPswd)<br/>            results.append(self.main.verify_loginSuccessful(False))<br/>            self.ts.mark(results[-1], username + &#x27;_change_password_successful&#x27;)<br/>&gt;       self.ts.markFinal(&#x27;test_accountOptions&#x27;, all(x == results[0] for x in results), username + &#x27;_test_successful&#x27;)<br/><br/>tests\User\UserTest.py:114: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;utilities.teststatus.TestStatus object at 0x000001711D7A99D0&gt;, testName = &#x27;test_accountOptions&#x27;, result = False, resultMessage = &#x27;jsmith_test_successful&#x27;<br/>aditionalInfo = &#x27;&#x27;<br/><br/>    def markFinal(self, testName, result, resultMessage, aditionalInfo = &#x27;&#x27;):<br/>        &quot;&quot;&quot;<br/>        Mark the final result of the verification point in a test case<br/>        This needs to be called at least once in a test case<br/>        This should be final test status of the test case<br/>        &quot;&quot;&quot;<br/>        self.setResult(result, resultMessage, aditionalInfo)<br/>    <br/>        if &quot;FAIL&quot; in self.resultList:<br/>            self.log.error(testName + &quot; ### TEST FAILED&quot;)<br/>            self.resultList.clear()<br/>&gt;           assert True == False<br/><span class="error">E           AssertionError</span><br/><br/>utilities\teststatus.py:61: AssertionError<br/> -----------------------------Captured stdout setup------------------------------ <br/>Running method level setUp
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;ONLINE BANKING LOGIN&#x27; and locatorType: link text
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;ONLINE BANKING LOGIN&#x27; locatorType: link clickType: click
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;uid&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;uid&#x27; locatorType: id
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;passw&#x27; and locatorType: id
+INFO     MainPage:selenium_driver.py:139 Sent data on element with locator: &#x27;passw&#x27; locatorType: id
+INFO     MainPage:selenium_driver.py:76 Element found with locator: &#x27;btnSubmit&#x27; and locatorType: name
+INFO     MainPage:selenium_driver.py:105 Clicked on element with locator: &#x27;btnSubmit&#x27; locatorType: name clickType: click
+INFO     UserPage:selenium_driver.py:87 Element list found with locator: //select//option and  locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//select//option[1]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;btnGetAccount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;btnGetAccount&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//select//option[2]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;btnGetAccount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;btnGetAccount&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//select//option[3]&#x27; and locatorType: xpath
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;btnGetAccount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;btnGetAccount&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//h1&#x27; and locatorType: xpath
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + jsmith_account_summary_correct
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;Here&#x27; and locatorType: link text
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;Here&#x27; locatorType: Link clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;passwd&#x27; and locatorType: name
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;passwd&#x27; locatorType: name
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;Submit&#x27; and locatorType: name
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;Submit&#x27; locatorType: name clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//div[@class=&#x27;fl&#x27;]//span&#x27; and locatorType: xpath
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + jsmith_apply_form_correct
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;MenuHyperLink3&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;MenuHyperLink3&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;fromAccount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;toAccount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;transferAmount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;transferAmount&#x27; locatorType: id
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;transfer&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;transfer&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;//form[@id=&#x27;tForm&#x27;]//tr[6]//span//span&#x27; and locatorType: xpath
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + jsmith_transfer_successful_correct
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;MenuHyperLink3&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;MenuHyperLink3&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;fromAccount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;toAccount&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;transfer&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;transfer&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:209 Waiting for maximum :: 10 :: seconds for alert to be present
+INFO     UserPage:selenium_driver.py:214 Alert found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + jsmith_transfer_unsuccessful_correct
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;MenuHyperLink4&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;MenuHyperLink4&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;query&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:139 Sent data on element with locator: &#x27;query&#x27; locatorType: id
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;Button1&#x27; and locatorType: id
+INFO     UserPage:selenium_driver.py:105 Clicked on element with locator: &#x27;Button1&#x27; locatorType: id clickType: click
+INFO     UserPage:selenium_driver.py:76 Element found with locator: &#x27;QueryXpath&#x27; and locatorType: id
+ERROR    TestStatus:teststatus.py:33 ### VERIFICATION FAILED :: + jsmith_article_search_successful
+INFO     TestStatus:selenium_driver.py:33 Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/jsmith_article_search_successful.1617172827265.png
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;View Recent Transactions&#x27; and locatorType: link text
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;View Recent Transactions&#x27; locatorType: link clickType: click
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;startDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:139 Sent data on element with locator: &#x27;startDate&#x27; locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; and locatorType: xpath
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; locatorType: xpath clickType: click
+INFO     RecentTransactions:selenium_driver.py:209 Waiting for maximum :: 10 :: seconds for alert to be present
+INFO     RecentTransactions:selenium_driver.py:217 Alert not found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + After_date_verified
+INFO     RecentTransactions:selenium_driver.py:87 Element list found with locator: //table[contains(@id,&#x27;MyTransactions&#x27;)]//tbody//tr and  locatorType: xpath
+INFO     RecentTransactions:RecentTransactions.py:108 No invalid date found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Dates_After_on_Table_verified
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;View Recent Transactions&#x27; and locatorType: link text
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;View Recent Transactions&#x27; locatorType: link clickType: click
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;endDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:139 Sent data on element with locator: &#x27;endDate&#x27; locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; and locatorType: xpath
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; locatorType: xpath clickType: click
+INFO     RecentTransactions:selenium_driver.py:209 Waiting for maximum :: 10 :: seconds for alert to be present
+INFO     RecentTransactions:selenium_driver.py:217 Alert not found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+INFO     RecentTransactions:selenium_driver.py:87 Element list found with locator: //table[contains(@id,&#x27;MyTransactions&#x27;)]//tbody//tr and  locatorType: xpath
+INFO     RecentTransactions:RecentTransactions.py:108 No invalid date found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Dates_Before_on_Table_verified
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;View Recent Transactions&#x27; and locatorType: link text
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;View Recent Transactions&#x27; locatorType: link clickType: click
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;endDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:139 Sent data on element with locator: &#x27;endDate&#x27; locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;startDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:139 Sent data on element with locator: &#x27;startDate&#x27; locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; and locatorType: xpath
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; locatorType: xpath clickType: click
+INFO     RecentTransactions:selenium_driver.py:87 Element list found with locator: //table[contains(@id,&#x27;MyTransactions&#x27;)]//tbody//tr and  locatorType: xpath
+INFO     RecentTransactions:RecentTransactions.py:108 No invalid date found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Valid_dates_verified
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + dates_test_successful
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;View Recent Transactions&#x27; and locatorType: link text
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;View Recent Transactions&#x27; locatorType: link clickType: click
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;startDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:139 Sent data on element with locator: &#x27;startDate&#x27; locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; and locatorType: xpath
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; locatorType: xpath clickType: click
+INFO     RecentTransactions:selenium_driver.py:209 Waiting for maximum :: 10 :: seconds for alert to be present
+INFO     RecentTransactions:selenium_driver.py:214 Alert found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + After_date_verified
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;startDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;endDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;View Recent Transactions&#x27; and locatorType: link text
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;View Recent Transactions&#x27; locatorType: link clickType: click
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;endDate&#x27; and locatorType: id
+INFO     RecentTransactions:selenium_driver.py:139 Sent data on element with locator: &#x27;endDate&#x27; locatorType: id
+INFO     RecentTransactions:selenium_driver.py:76 Element found with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; and locatorType: xpath
+INFO     RecentTransactions:selenium_driver.py:105 Clicked on element with locator: &#x27;//input[@value=&#x27;Submit&#x27;]&#x27; locatorType: xpath clickType: click
+INFO     RecentTransactions:selenium_driver.py:209 Waiting for maximum :: 10 :: seconds for alert to be present
+INFO     RecentTransactions:selenium_driver.py:214 Alert found
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + Before_date_verified
+INFO     TestStatus:teststatus.py:30 ### VERIFICATION SUCCESSFUL :: + invalid_date_test_successful
+ERROR    TestStatus:teststatus.py:33 ### VERIFICATION FAILED :: + jsmith_test_successful
+INFO     TestStatus:selenium_driver.py:33 Screenshot save to directory: D:\Python\PHP-Travels\base\../screenshots/jsmith_test_successful.1617172852810.png
+ERROR    TestStatus:teststatus.py:59 test_accountOptions ### TEST FAILED<br/> ----------------------------Captured stdout teardown---------------------------- <br/>Running method level tearDown
+Running one time tearDown
+<br/></div></td></tr></tbody></table></body></html>
